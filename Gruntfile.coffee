@@ -88,6 +88,9 @@ module.exports = (grunt) ->
                 commit: true
                 push: true
                 message: 'Built from %sourceCommit% on branch %sourceBranch%'
+		config:
+			user.name: 'Sean Ho'
+			user.email: 'travis@seanho.com'
             pages:
                 options:
                     remote: '<%= pkg.repository.url %>'
