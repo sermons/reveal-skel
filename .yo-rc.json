@@ -1,0 +1,11 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Reveal Skel",
+    "packageVersion": "0.2.0",
+    "revealTheme": "black",
+    "useSass": false,
+    "deployToGithubPages": true,
+    "githubUsername": "seanho00",
+    "githubRepository": "reveal-skel"
+  }
+}

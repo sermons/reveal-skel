@@ -1,0 +1,8 @@
+language: node_js
+node_js: node
+deploy:
+- skip_cleanup: true
+- npm run deploy
+env:
+  global:
+  - ENC_LABEL: ""
