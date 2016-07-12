@@ -7,4 +7,4 @@ before_install:
 - chmod 600 .travis/deploy_key
 - ssh-add .travis/deploy_key
 after_success:
-- npm deploy
+- npm run deploy
