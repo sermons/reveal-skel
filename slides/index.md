@@ -5,7 +5,7 @@
 [![Node dependencies](https://david-dm.org/seanho00/reveal-skel.svg)](https://david-dm.org/seanho00/reveal-skel)
 [![Node dev status](https://david-dm.org/seanho00/reveal-skel/dev-status.svg)](https://david-dm.org/seanho00/reveal-skel#info=devDependencies)
 
-[reveal-skel.seanho.com](http://reveal-skel.seanho.com)
+[On GitHub](https://github.com/seanho00/reveal-skel)
 
 note:
 Speaker notes go here.
