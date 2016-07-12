@@ -1,10 +1,10 @@
 
 # Reveal Skel
+## A template for Reveal.js-based presentations
+[reveal-skel.seanho.com](http://reveal-skel.seanho.com)
 
-From the terminal, pop in:
+<notes>
+Speaker notes go here.
+</notes>
 
-  ```yo reveal:slide "Slide Title"```
-
-Available options:
-
- ```--markdown --attributes --notes```
+## Second slide
