@@ -3,8 +3,11 @@
 ## A template for Reveal.js-based presentations
 [reveal-skel.seanho.com](http://reveal-skel.seanho.com)
 
-<notes>
+note:
 Speaker notes go here.
-</notes>
+
+---
 
 ## Second slide
+* Bullet list
+* Unordered
