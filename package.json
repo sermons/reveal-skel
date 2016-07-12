@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "private": true,
   "devDependencies": {
+    "bower": "^1.7.9",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
@@ -22,7 +23,7 @@
     "url": "git@github.com:seanho00/reveal-skel.git"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
     "deploy": "grunt deploy"
   }
 }
