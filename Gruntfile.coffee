@@ -75,7 +75,7 @@ module.exports = (grunt) ->
                     dest: 'dist/'
                 },{
                     expand: true
-                    src: ['index.html']
+                    src: ['index.html', 'CNAME']
                     dest: 'dist/'
                     filter: 'isFile'
                 }]
