@@ -1,0 +1,74 @@
+/* Shading background images */
+@media print {
+  section[data-background-image] .slide-background {
+    background-color: rgba(0,0,0,0.85);
+    background-blend-mode: overlay;
+  }
+}
+section[data-background-image] {
+  background-color: rgba(0,0,0,0.85);
+}
+@media print {
+  section.empty[data-background-image] .slide-background {
+    background-color: rgba(0,0,0,0);
+  }
+}
+section.empty[data-background-image] {
+  background-color: rgba(0,0,0,0);
+}
+
+/* Slide Text */
+.reveal section strong {
+  color: yellow;
+}
+.reveal section.has-light-background strong {
+  color: #e20606;
+}
+
+/* Special theme for review/application questions */
+.reveal section.Q * {
+  text-transform: none;
+}
+
+/* Titles / headers */
+.reveal section h1, .reveal section h2 {
+  text-transform: capitalize;
+}
+.reveal section h2 {
+  margin-bottom: 2rem;
+}
+.reveal section h2:after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 30%;
+  border-bottom: 1px solid;
+}
+
+/* Flexbox layout for images */
+.imgbox {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.imgbox > div {
+  flex: 1;
+}
+.reveal section .imgbox img {
+  border: none;
+}
+
+/* Common slide header/footer */
+.slides .header, .slides .footer {
+  position: absolute;
+  left: 0;
+  font-size: 60%;
+}
+.slides .header {
+  top: 0;
+}
+.slides .footer {
+  bottom: 0;
+}
