@@ -7,16 +7,16 @@
 
 [On GitHub](https://github.com/seanho00/reveal-skel)
 
-note:
+>>>
 Speaker notes go here.
 
 ---
-<!-- .slide: data-background-image="static/img/unsplash-Jztmx9yqjBw-stars.jpg" -->
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 
 ## Second slide
 * Bullet list
 * Unordered
 
-note:
+>>>
 + Slide 2 speaker notes
 + are a bulleted list, too
