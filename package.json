@@ -24,6 +24,6 @@
   },
   "scripts": {
     "test": "grunt test",
-    "deploy": "grunt deploy"
+    "deploy": "bower install && grunt deploy"
   }
 }
