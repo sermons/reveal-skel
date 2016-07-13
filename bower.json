@@ -1,5 +1,5 @@
 {
-  "name": "fragrant-gospel",
+  "name": "reveal-skel",
   "version": "0.2.0",
   "dependencies": {
     "reveal.js": "~3.3.0",
