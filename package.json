@@ -1,5 +1,5 @@
 {
-  "name": "reveal-skel",
+  "name": "fragrant-gospel",
   "version": "0.2.0",
   "private": true,
   "devDependencies": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:seanho00/reveal-skel.git"
+    "url": "git@github.com:seanho00/fragrant-gospel.git"
   },
   "scripts": {
     "test": "grunt test",
