@@ -1,11 +1,5 @@
-# Reveal Skel
-## A template for Reveal.js-based presentations
-
-[![Travis-CI build status](https://travis-ci.org/seanho00/reveal-skel.svg)](https://travis-ci.org/seanho00/reveal-skel)
-[![Node dependencies](https://david-dm.org/seanho00/reveal-skel.svg)](https://david-dm.org/seanho00/reveal-skel)
-[![Node dev status](https://david-dm.org/seanho00/reveal-skel/dev-status.svg)](https://david-dm.org/seanho00/reveal-skel#info=devDependencies)
-
-[On GitHub](https://github.com/seanho00/reveal-skel)
+# The Fragrant Gospel
+## Acts 28:23-31
 
 >>>
 Speaker notes go here.
