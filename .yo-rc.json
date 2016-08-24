@@ -5,7 +5,7 @@
     "revealTheme": "black",
     "useSass": false,
     "deployToGithubPages": true,
-    "githubUsername": "seanho00",
+    "githubUsername": "sermons",
     "githubRepository": "reveal-skel"
   }
 }
