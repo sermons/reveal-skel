@@ -38,7 +38,7 @@ Speaker notes go here.
 ## Outline
 1. Point *One* <span class="hl2">(v1)</span>
 2. **Point Two** <span class="hl2">(v2)</span>
-3. Point **Three** <span class="hl2">(v3)</span>
+3. Point *Three* <span class="hl2">(v3)</span>
 
 ---
 ## Point Two

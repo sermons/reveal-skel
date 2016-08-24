@@ -1,6 +1,6 @@
 [
   {
-    "filename": "slides.md",
+    "filename": "sample.md",
     "attr": {
       "data-separator": "^\\s{0,3}-\\s*-\\s*-[-\\s]*$",
       "data-separator-vertical": "^\\s{0,3}\\*\\s*\\*\\s*\\*[\\*\\s]*$",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "filename": "sample.md",
+    "filename": "slides.md",
     "attr": {
       "data-separator": "^\\s{0,3}-\\s*-\\s*-[-\\s]*$",
       "data-separator-vertical": "^\\s{0,3}\\*\\s*\\*\\s*\\*[\\*\\s]*$",
