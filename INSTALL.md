@@ -33,65 +33,69 @@ into a separate directory, and pushes that subdir to the gh-pages branch.
   + Grunt will copy this dir as-is to the deploy directory
 
 ## Deploy key for Travis
-+ Make sure Travis is aware of your repo:
-  + Connect [Travis](https://travis-ci.org) to your Github account, if you haven't already
-  + If you don't see your repo under "Accounts", hit the "Sync Account" button
-  + Enable builds on your repo
-+ Create a new SSH public/private keypair: `ssh-keygen -f deploy_key`
-+ On Github in your repo, add the deploy key: Settings &rarr; Deploy Keys
++ Make sure Travis is **aware** of your repo:
+  + **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
+  + If you don't see your repo under "*Accounts*", hit the "**Sync Account**" button
+  + **Enable builds** on your repo
++ Create a new SSH public/private **keypair**: `ssh-keygen -f deploy_key`
++ On Github in your repo, **add** the deploy key: Settings &rarr; Deploy Keys
   + Title: "Travis push to gh-pages", or whatever you like
   + Paste the contents of the **public** key: `deploy_key.pub`
-  + Check the box for "Allow write access"
-+ Install the Travis gem, if you haven't before:
+  + Check the box for "*Allow write access*"
++ Install the Travis **gem**, if you haven't before:
   + `apt-get install ruby-dev`, or similar
   + `gem install travis`
   + See [Travis docs](https://github.com/travis-ci/travis.rb#installation) for further info
-+ Encrypt your deploy private key:
++ **Encrypt** your deploy private key:
   + From in your repo: `travis encrypt-file deploy_key .travis/deploy_key.enc`
-    + You might need to authenticate Travis to Github
+    + You might need to **authenticate** Travis to Github
   + Travis will edit your `.travis.yml` to insert commands to decrypt
-    + You may want to double-check `.travis.yml`
-  + Move your unencrypted private key somewhere safe (i.e., not in your repo):
+    + You may want to **double-check** `.travis.yml`
+  + **Move** your unencrypted private key somewhere safe (i.e., not in your repo):
     + `mv deploy_key deploy_key.pub ~/.ssh/`
-+ Push!
-  + Check the [build logs](https://travis-ci.org/) for errors:
++ **Push**!
+  + Check the [build logs](https://travis-ci.org/) for **errors**:
     + You should see Travis [decrypt the deploy key](.travis.yml), then
     + it will run `npm install` for [Node dependencies](package.json), then
     + it will run `npm run deploy`, which does a [Bower install](bower.json), and lastly
     + the [Grunt task](Gruntfile.coffee) pushes to the gh-pages branch
-  + If the push to gh-pages fails, the build still succeeds (issue #13), so double-check that the gh-pages branch contains the final output
+  + If the push to gh-pages **fails**, the build still **succeeds** (issue #13), so double-check that the gh-pages branch contains the final output
 
 ## Bot user for Travis deploy
-If you want finer-grained access control, or want to reuse the same deploy key on multiple repos, you may want to create a special user just for pushing to gh-pages.  This is what I do:
+If you want finer-grained access control, or want to reuse the same
+deploy key on multiple repos, you may want to create a **special user**
+just for pushing to gh-pages.  This is what I do:
 
-+ Create a new Github user (a 'bot')
-+ Create a SSH keypair and add the public key to the bot's account:
-  Settings (Personal Settings) &rarr; SSH and GPG keys
-+ Add the bot as a collaborator on your repo:
-  Settings &rarr; Collaborators &amp; teams &rarr; Collaborators
-  + Give the bot Write access so it can push
-+ Prevent the bot from pushing to master:
-  + Settings &rarr; Branches &rarr; Protected branches &rarr; master
-  + Check "Protect this branch" and "Restrict who can push to this branch"
-  + Now the bot can only push to gh-pages
-+ You don't need any repo-specific deploy keys now
-+ You still need to `travis encrypt` the private key for each new repo
-  + The symmetric decryption keys are stored in Travis environment vars, which are repo-specific
-  + If you tell Travis to use the same Key and IV, you can reuse the encrypted deploy key file
++ Create a new Github **user** (a 'bot')
++ Create a SSH **keypair** and add the public key to the bot's account:
+  "*Settings*" (Personal Settings) &rarr; "*SSH and GPG keys*"
++ Add the bot as a **collaborator** on your repo:
+  "*Settings*" &rarr; "*Collaborators &amp; teams*" &rarr; "*Collaborators*"
+  + Give the bot **Write** access so it can push
++ **Prevent** the bot from pushing to master:
+  + "*Settings*" &rarr; "*Branches*" &rarr; "*Protected branches*" &rarr; "*master*"
+  + Check "*Protect this branch*" and "*Restrict who can push to this branch*"
+  + Now the bot can **only** push to gh-pages
++ You don't need any **repo-specific** deploy keys now
++ You **still** need to `travis encrypt` the private key for each new repo
+  + The symmetric decryption keys are stored in Travis **environment vars**, which are repo-specific
+  + If you tell Travis to use the same **Key** and **IV**, you can reuse the encrypted deploy key file
 
 ## Multiplex (remote-control)
-At a minimum, you want to remove the multiplex ID from [_index.html](templates/_index.html), otherwise your presentation might be remote-controlled by anyone with the corresponding secret key (which is public).  You could get random slide changes.
+At a minimum, you want to remove the multiplex ID from
+[_index.html](templates/_index.html), otherwise your presentation
+might be remote-controlled by anyone with the corresponding secret
+key (which is public).  You could get random slide changes.
 
-If you want to use the multiplex functionality, you'll need a Socket.io server.
-You may use [mine](https://mp-seanho00.rhcloud.com/), hosted on OpenShift, but
-it would be nice if you could let me know if you do.  I also can't guarantee
-it'll always be up.  It's really easy to setup on your own VPS, though;
-I have a separate repo for
+If you want to use the multiplex functionality, you'll need a Socket.io
+server.  You may use [mine](https://mp-seanho00.rhcloud.com/), hosted
+on OpenShift, but it would be nice if you could let me know if you do.
+I also can't guarantee it'll always be up.  It's really easy to setup
+on your own VPS, though; I have a separate repo for
 [a simple Reveal.js socket.io server](https://github.com/seanho00/reveal-multiplex).
-
 
 After getting a [token](https://mp-seanho00.rhcloud.com/token),
 put the ID in your `_index.html`, and don't post the secret token
 anywhere (e.g., in your repo).  Append `/?s=00SECRET00` to your URL
-(obviously, replacing `00SECRET00` with your secret token), and you should
-be able to remote-control anyone who views your presentation.
+(obviously, replacing `00SECRET00` with your secret token), and you
+should be able to remote-control anyone who views your presentation.
