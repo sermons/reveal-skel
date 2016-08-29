@@ -72,6 +72,7 @@ just for pushing to gh-pages.  This is what I do:
 + Add the bot as a **collaborator** on your repo:
   "*Settings*" &rarr; "*Collaborators &amp; teams*" &rarr; "*Collaborators*"
   + Give the bot **Write** access so it can push
+  + See also: [Add machine user to organization](https://developer.github.com/guides/managing-deploy-keys/#machine-users)
 + **Prevent** the bot from pushing to master:
   + "*Settings*" &rarr; "*Branches*" &rarr; "*Protected branches*" &rarr; "*master*"
   + Check "*Protect this branch*" and "*Restrict who can push to this branch*"
