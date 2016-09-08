@@ -51,11 +51,22 @@
 
     <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
     <script src="bower_components/reveal.js/js/reveal.js"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        "HTML-CSS": { scale: 77 }
+      });
+    </script>
+
     <script>
       Reveal.initialize({
         history: false,
         maxScale: 4.0,
         slideNumber: 'c/t',
+
+        math: {
+          config: 'AM_HTMLorMML'
+        },
 
         multiplex: {
           url: 'https://mp-seanho00.rhcloud.com:8443/',
@@ -75,7 +86,6 @@
         ]
       });
 
-        </script>
-    </body>
-
+    </script>
+  </body>
 </html>
