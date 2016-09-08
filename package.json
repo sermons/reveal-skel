@@ -9,7 +9,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
-    "load-grunt-tasks": "^3.5.0", 
+    "load-grunt-tasks": "^3.5.0",
     "grunt-build-control": "^0.7.0",
     "grunt-coffeelint": "^0.0.16",
     "coffeelint": "^1.15.7"
@@ -21,6 +21,10 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:sermons/reveal-skel.git"
+  },
+  "git": {
+    "name": "Sean Ho",
+    "email": "travis@seanho.com"
   },
   "scripts": {
     "test": "grunt test",
