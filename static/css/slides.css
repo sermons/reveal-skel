@@ -111,14 +111,14 @@ section.empty[data-background-image] {
 }
 
 /* Common slide header/footer */
-.slides .header, .slides .footer {
+#header, #footer {
   position: absolute;
   left: 0;
   font-size: 60%;
 }
-.slides .header {
+#header {
   top: 0;
 }
-.slides .footer {
+#footer {
   bottom: 0;
 }
