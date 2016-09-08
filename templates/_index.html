@@ -1,94 +1,79 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reveal-Skel</title><!-- CUSTOM -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css" />
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css" />
+	<link rel="stylesheet" href="static/css/slides.css" />
 
-    <head>
-        <meta charset="utf-8">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
-        <title>Reveal-Skel</title><!-- CUSTOM -->
+    <!--[if lt IE 9]>
+      <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <% _.forEach(slides, function(slide) { %>
+          <% if (!_.isArray(slide)) { %>
+            <%= section(slide) %>
+          <% } %>
+          <% if (_.isArray(slide)) { %>
+            <section>
+              <% _.forEach(slide, function(verticalslide) { %>
+                <%= section(verticalslide) %>
+              <% }); %>
+            </section>
+          <% } %>
+        <% }); %>
 
-        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
-
-        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
-
-        <!-- For syntax highlighting -->
-        <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css">
-
-	<link rel="stylesheet" href="static/css/slides.css"><!-- CUSTOM -->
-
-        <!-- Printing and PDF exports -->
-        <script>
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
-
-        <!--[if lt IE 9]>
-        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
-        <![endif]-->
-    </head>
-
-    <body>
-
-        <div class="reveal">
-
-            <div class="slides">
-
-                <% _.forEach(slides, function(slide) { %>
-                    <% if (!_.isArray(slide)) { %>
-                        <%= section(slide) %>
-                    <% } %>
-                    <% if (_.isArray(slide)) { %>
-                        <section>
-                            <% _.forEach(slide, function(verticalslide) { %>
-                                <%= section(verticalslide) %>
-                            <% }); %>
-                        </section>
-                    <% } %>
-                <% }); %>
-
-		<div class="footer"><!-- CUSTOM -->
-			reveal-skel.seanho.com
-		</div>
-            </div>
-
+        <div class="footer">
+          reveal-skel.seanho.com
         </div>
 
-        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
-        <script src="bower_components/reveal.js/js/reveal.js"></script>
-        <script>
+      </div>
+    </div>
 
-          // CUSTOM
-          Reveal.initialize({
-            history: false,
-	    maxScale: 4.0,
-	    slideNumber: 'c/t',
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        history: false,
+        maxScale: 4.0,
+        slideNumber: 'c/t',
 
-	    multiplex: {
-	      url: 'https://mp-seanho00.rhcloud.com:8443/',
-	      id: '22bc761ffc97809b',	// secret: 45ba034647cea150
-	      secret: Reveal.getQueryHash().s || null
-	    },
+        multiplex: {
+          url: 'https://mp-seanho00.rhcloud.com:8443/',
+          id: '22bc761ffc97809b',	// secret: 45ba034647cea150
+          secret: Reveal.getQueryHash().s || null
+        },
 
-            // Optional reveal.js plugins
-            dependencies: [
-	      { src: '//cdn.socket.io/socket.io-1.4.5.js', async: true },
-              Reveal.getQueryHash().s ? { src: 'bower_components/reveal.js/plugin/multiplex/master.js', async: true } : { src: 'bower_components/reveal.js/plugin/multiplex/client.js', async: true },
-              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
-              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
-            ]
-          });
+        dependencies: [
+          { src: 'bower_components/reveal.js/plugin/markdown/marked.js' },
+          { src: 'bower_components/reveal.js/plugin/markdown/markdown.js' },
+          { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '//cdn.socket.io/socket.io-1.4.5.js', async: true },
+          Reveal.getQueryHash().s ? { src: 'bower_components/reveal.js/plugin/multiplex/master.js', async: true } : { src: 'bower_components/reveal.js/plugin/multiplex/client.js', async: true },
+          { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+          { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        ]
+      });
 
         </script>
     </body>
