@@ -82,8 +82,8 @@
           { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: '//cdn.socket.io/socket.io-1.4.5.js', async: true },
           Reveal.getQueryHash().s ? { src: 'bower_components/reveal.js/plugin/multiplex/master.js', async: true } : { src: 'bower_components/reveal.js/plugin/multiplex/client.js', async: true },
-          { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
-          { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } },
+          { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } }
         ]
       });
 
