@@ -110,9 +110,9 @@ module.exports = (grunt) ->
 
             html = grunt.template.process indexTemplate, data:
                 title:
-                    '<%= pkg.title %>'
+                    '<%= pkg.info.title %>'
                 disp_url:
-                    '<%= pkg.disp_url %>'
+                    '<%= pkg.info.disp_url %>'
                 slides:
                     slides
                 section: (slide) ->

@@ -1,7 +1,5 @@
 {
   "name": "reveal-skel",
-  "title": "Reveal Skel",
-  "disp_url": "reveal-skel.seanho.com",
   "version": "0.3.0",
   "private": true,
   "devDependencies": {
@@ -23,6 +21,10 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:sermons/reveal-skel.git"
+  },
+  "info": {
+    "title": "Reveal Skel",
+    "disp_url": "reveal-skel.seanho.com"
   },
   "git": {
     "name": "Sean Ho",
