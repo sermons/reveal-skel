@@ -134,6 +134,11 @@ module.exports = (grunt) ->
             'watch'
         ]
 
+    grunt.registerTask 'pdf',
+        'Render a PDF copy of the presentation (using PhantomJS)', [
+            'serve'
+        ]
+
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
             'test'
@@ -141,13 +146,11 @@ module.exports = (grunt) ->
             'copy'
         ]
 
-
     grunt.registerTask 'deploy',
         'Deploy to Github Pages', [
             'dist'
             'buildcontrol'
         ]
-
 
     # Define default task.
     grunt.registerTask 'default', [
