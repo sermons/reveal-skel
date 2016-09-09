@@ -61,6 +61,12 @@ module.exports = (grunt) ->
 
             all: ['js/*.js']
 
+        bower:
+            dev:
+                dest: 'lib/'
+                options:
+                    expand: true
+
         copy:
 
             dist:
@@ -100,6 +106,8 @@ module.exports = (grunt) ->
 
     # Load all grunt tasks.
     require('load-grunt-tasks')(grunt)
+
+    grunt.loadNpmTasks 'grunt-bower'
 
     grunt.registerTask 'buildIndex',
         'Build index.html from templates/_index.html and slides/list.json.',
