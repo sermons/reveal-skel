@@ -3,7 +3,7 @@
 ~*
 *~
 node_modules
-bower_components
+bow
 dist
 *.log
 .sass-cache
