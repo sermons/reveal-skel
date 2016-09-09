@@ -109,6 +109,10 @@ module.exports = (grunt) ->
             slides = grunt.file.readJSON 'slides/list.json'
 
             html = grunt.template.process indexTemplate, data:
+                title:
+                    '<%= pkg.title %>'
+                disp_url:
+                    '<%= pkg.disp_url %>'
                 slides:
                     slides
                 section: (slide) ->
