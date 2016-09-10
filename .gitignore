@@ -3,7 +3,7 @@
 ~*
 *~
 node_modules
-bow
+lib
 dist
 *.log
 .sass-cache

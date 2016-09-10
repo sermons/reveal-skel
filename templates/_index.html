@@ -6,9 +6,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
-    <link rel="stylesheet" href="bow/reveal.js/css/reveal.css" />
-    <link rel="stylesheet" href="bow/reveal.js/css/theme/black.css" id="theme" />
-    <link rel="stylesheet" href="bow/highlightjs/styles/zenburn.css" />
+    <link rel="stylesheet" href="lib/css/reveal.css" />
+    <link rel="stylesheet" href="lib/css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="lib/css/hljs/zenburn.css" />
 	<link rel="stylesheet" href="static/css/slides.css" />
 
     <!-- Printing and PDF exports -->
@@ -16,12 +16,12 @@
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'bow/reveal.js/css/print/pdf.css' : 'bow/reveal.js/css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
     <!--[if lt IE 9]>
-      <script src="bow/reveal.js/lib/js/html5shiv.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 
   </head>
@@ -46,8 +46,8 @@
       </div>
     </div>
 
-    <script src="bow/reveal.js/lib/js/head.min.js"></script>
-    <script src="bow/reveal.js/js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="lib/js/reveal.js"></script>
 
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -72,15 +72,15 @@
         },
 
         dependencies: [
-          { src: 'bow/reveal.js/plugin/markdown/marked.js' },
-          { src: 'bow/reveal.js/plugin/markdown/markdown.js' },
-          { src: 'bow/reveal.js/plugin/notes/notes.js', async: true },
-          { src: 'bow/reveal.js/plugin/math/math.js', async: true },
-          { src: 'bow/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'lib/plugin/markdown/marked.js' },
+          { src: 'lib/plugin/markdown/markdown.js' },
+          { src: 'lib/plugin/notes/notes.js', async: true },
+          { src: 'lib/plugin/math/math.js', async: true },
+          { src: 'lib/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: '//cdn.socket.io/socket.io-1.4.5.js', async: true },
-          Reveal.getQueryHash().s ? { src: 'bow/reveal.js/plugin/multiplex/master.js', async: true } : { src: 'bow/reveal.js/plugin/multiplex/client.js', async: true },
+          Reveal.getQueryHash().s ? { src: 'lib/plugin/multiplex/master.js', async: true } : { src: 'lib/plugin/multiplex/client.js', async: true },
           { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } },
-          { src: 'bow/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } }
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js', condition: function() { return !document.body.classList; } }
         ]
       });
 

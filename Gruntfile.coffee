@@ -12,7 +12,6 @@ module.exports = (grunt) ->
                 files: [
                     'index.html'
                     'slides/{,*/}*.{md,html}'
-                    'js/*.js'
                     'static/**'
                 ]
 
@@ -65,7 +64,18 @@ module.exports = (grunt) ->
             dev:
                 dest: 'lib/'
                 options:
-                    expand: true
+                    keepExpandedHierarchy: false
+                    packageSpecific:
+                        'headjs':
+                            files: [ 'dist/1.0.0/head.min.js' ]
+                            js_dest: 'lib/js/'
+                        'highlightjs':
+                            files: [ 'highlight.pack.js', 'styles/*.css' ]
+                            js_dest: 'lib/js/'
+                            css_dest: 'lib/css/hljs/'
+                        'reveal.js':
+                            keepExpandedHierarchy: true
+                            files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
         copy:
 
@@ -74,8 +84,7 @@ module.exports = (grunt) ->
                     expand: true
                     src: [
                         'slides/**'
-                        'bow/**'
-                        'js/**'
+                        'lib/**'
                         'static/**'
                     ]
                     dest: 'dist/'
@@ -138,6 +147,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'serve',
         'Run presentation locally and start watch process (living document).', [
             'buildIndex'
+            'bower'
             'connect:livereload'
             'watch'
         ]
@@ -151,6 +161,7 @@ module.exports = (grunt) ->
         'Save presentation files to *dist* directory.', [
             'test'
             'buildIndex'
+            'bower'
             'copy'
         ]
 
