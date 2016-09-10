@@ -33,6 +33,7 @@
   },
   "scripts": {
     "test": "grunt test",
+    "postinstall": "bower install",
     "deploy": "grunt deploy"
   }
 }
