@@ -76,9 +76,6 @@ module.exports = (grunt) ->
                             css_dest: 'lib/css/hljs/'
                         'reveal.js':
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
-                        'source-sans-pro':
-                            files: [ '*.css', '{EOT,OTF,TTF,WOFF,WOFF2}/**' ]
-                            dest: 'lib/fonts/'
 
         copy:
 
