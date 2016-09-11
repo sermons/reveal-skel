@@ -44,20 +44,16 @@ module.exports = (grunt) ->
                     livereload: true
 
         coffeelint:
-
             options:
                 indentation:
                     value: 4
                 max_line_length:
                     level: 'ignore'
-
             all: ['Gruntfile.coffee']
 
         jshint:
-
             options:
                 jshintrc: '.jshintrc'
-
             all: ['js/*.js']
 
         bower:
@@ -78,7 +74,6 @@ module.exports = (grunt) ->
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
         copy:
-
             dist:
                 files: [{
                     expand: true
@@ -97,7 +92,6 @@ module.exports = (grunt) ->
 
 
         buildcontrol:
-
             options:
                 dir: 'dist'
                 commit: true
@@ -110,8 +104,6 @@ module.exports = (grunt) ->
                 options:
                     remote: '<%= pkg.repository.url %>'
                     branch: 'gh-pages'
-
-
 
     # Load all grunt tasks.
     require('load-grunt-tasks')(grunt)
