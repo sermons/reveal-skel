@@ -64,18 +64,21 @@ module.exports = (grunt) ->
             dev:
                 dest: 'lib/'
                 options:
-                    keepExpandedHierarchy: false
                     packageSpecific:
                         'headjs':
                             files: [ 'dist/1.0.0/head.min.js' ]
+                            keepExpandedHierarchy: false
                             js_dest: 'lib/js/'
                         'highlightjs':
                             files: [ 'highlight.pack.js', 'styles/*.css' ]
+                            keepExpandedHierarchy: false
                             js_dest: 'lib/js/'
                             css_dest: 'lib/css/hljs/'
                         'reveal.js':
-                            keepExpandedHierarchy: true
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
+                        'source-sans-pro':
+                            files: [ '*.css', '{EOT,OTF,TTF,WOFF,WOFF2}/**' ]
+                            dest: 'lib/fonts/'
 
         copy:
 

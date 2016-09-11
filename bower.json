@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "dependencies": {
     "reveal.js": "~3.3.0",
-    "highlightjs": "~9.4.0"
+    "highlightjs": "~9.4.0",
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release"
   }
 }
