@@ -156,6 +156,7 @@ module.exports = (grunt) ->
             'test'
             'buildIndex'
             'bower'
+            'pdf'
             'copy'
         ]
 
