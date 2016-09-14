@@ -73,6 +73,9 @@ module.exports = (grunt) ->
                         'reveal.js':
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
+        exec:
+          print: 'phantomjs rasterise.js http://localhost:9000 <%= pkg.name %>.pdf'
+
         copy:
             dist:
                 files: [{
@@ -145,6 +148,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'pdf',
         'Render a PDF copy of the presentation (using PhantomJS)', [
             'serve'
+            'print'
         ]
 
     grunt.registerTask 'dist',
