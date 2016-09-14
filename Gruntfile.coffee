@@ -74,7 +74,7 @@ module.exports = (grunt) ->
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
         exec:
-            print: 'phantomjs rasterise.js http://localhost:9000 <%= pkg.name %>.pdf'
+            print: 'phantomjs rasterise.js http://localhost:9000 static/<%= pkg.name %>.pdf'
 
         copy:
             dist:
@@ -156,8 +156,6 @@ module.exports = (grunt) ->
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
             'test'
-            'buildIndex'
-            'bower'
             'pdf'
             'copy'
         ]
