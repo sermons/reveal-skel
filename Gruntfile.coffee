@@ -74,7 +74,7 @@ module.exports = (grunt) ->
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
         exec:
-          print: 'phantomjs rasterise.js http://localhost:9000 <%= pkg.name %>.pdf'
+            print: 'phantomjs rasterise.js http://localhost:9000 static/<%= pkg.name %>.pdf'
 
         copy:
             dist:
@@ -88,7 +88,7 @@ module.exports = (grunt) ->
                     dest: 'dist/'
                 },{
                     expand: true
-                    src: ['index.html', 'CNAME', 'favicon.ico']
+                    src: ['index.html', 'CNAME', 'favicon.ico', '.nojekyll']
                     dest: 'dist/'
                     filter: 'isFile'
                 }]
@@ -147,15 +147,16 @@ module.exports = (grunt) ->
 
     grunt.registerTask 'pdf',
         'Render a PDF copy of the presentation (using PhantomJS)', [
-            'serve'
-            'print'
+            'buildIndex'
+            'bower'
+            'connect:livereload'
+            'exec:print'
         ]
 
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
             'test'
-            'buildIndex'
-            'bower'
+            'pdf'
             'copy'
         ]
 
