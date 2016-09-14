@@ -13,6 +13,7 @@
     "grunt-bower": "^0.21.2",
     "grunt-exec": "^1.0.0",
     "grunt-build-control": "^0.7.1",
+    "phantom": "^2.1.21",
     "grunt-coffeelint": "^0.0.16",
     "coffeelint": "^1.15.7"
   },
