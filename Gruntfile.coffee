@@ -74,7 +74,7 @@ module.exports = (grunt) ->
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
         exec:
-          print: 'phantomjs rasterise.js http://localhost:9000 <%= pkg.name %>.pdf'
+            print: 'phantomjs rasterise.js http://localhost:9000 <%= pkg.name %>.pdf'
 
         copy:
             dist:
