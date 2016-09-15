@@ -155,7 +155,6 @@ module.exports = (grunt) ->
 
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
-            'test'
             'pdf'
             'copy'
         ]
