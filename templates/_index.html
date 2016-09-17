@@ -79,7 +79,7 @@
           { src: 'lib/plugin/notes/notes.js', async: true },
           { src: 'lib/plugin/math/math.js', async: true },
           { src: 'lib/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: '//cdn.socket.io/socket.io-1.4.5.js', async: true },
+          { src: 'https://cdn.socket.io/socket.io-1.4.5.js', async: true },
           Reveal.getQueryHash().s ? { src: 'lib/plugin/multiplex/master.js', async: true } : { src: 'lib/plugin/multiplex/client.js', async: true },
           { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js', condition: function() { return !document.body.classList; } }
