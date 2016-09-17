@@ -75,6 +75,7 @@ module.exports = (grunt) ->
 
         exec:
             print: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.name %>.pdf'
+            thumbnail: 'convert -resize 50% static/<%= pkg.name %>.pdf[0] static/img/thumbnail.jpg'
 
         copy:
             dist:
@@ -151,6 +152,7 @@ module.exports = (grunt) ->
             'bower'
             'connect:livereload'
             'exec:print'
+            'exec:thumbnail'
         ]
 
     grunt.registerTask 'dist',
