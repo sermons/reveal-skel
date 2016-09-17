@@ -44,7 +44,7 @@
         <% }); %>
 
         <div id="footer"><%= pkg.info.disp_url %>
-            <a href="<%= pkg.repository.url.replace('/^git@/', 'https://').replace('.com:', '.com/').replace('/\.git$/', '') %>"><img src="static/img/GitHub-Mark-Light-32px.png" style="height:1em" /></a>
+            <a href="<%= pkg.repository.url.replace(new RegExp('^git@'), 'https://').replace('.com:', '.com/').replace(new RegExp('\.git$'), '') %>"><img src="static/img/GitHub-Mark-Light-32px.png" style="height:1em" /></a>
         </div>
       </div>
     </div>
