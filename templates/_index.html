@@ -43,7 +43,9 @@
           <% } %>
         <% }); %>
 
-        <div id="footer"><%= pkg.info.disp_url %></div>
+        <div id="footer"><%= pkg.info.disp_url %>
+            <a href="<%= pkg.git.repository.replace('^git@', 'https://').replace('\.com:', '.com/').replace('\.git$', '') %>"><img src="static/img/GitHub-Mark-Light-32px.png" width=32 height=32 /></a>
+        </div>
       </div>
     </div>
 
