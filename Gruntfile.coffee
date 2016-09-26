@@ -100,13 +100,13 @@ module.exports = (grunt) ->
                 dir: 'dist'
                 commit: true
                 push: true
-                message: 'Built from %sourceCommit% on branch %sourceBranch%'
+                fetchProgress: false
                 config:
                     'user.name': '<%= pkg.git.name %>'
                     'user.email': '<%= pkg.git.email %>'
-            pages:
+            github:
                 options:
-                    remote: '<%= pkg.repository.url %>'
+                    remote: 'git@github.com:<%= pkg.repository %>'
                     branch: 'gh-pages'
 
     # Load all grunt tasks.

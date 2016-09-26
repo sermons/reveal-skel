@@ -25,10 +25,7 @@
     "node": ">=0.10.0",
     "npm": ">=1.3.7"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:sermons/reveal-skel.git"
-  },
+  "repository": "sermons/reveal-skel",
   "info": {
     "title": "Reveal Skel",
     "disp_url": "reveal-skel.seanho.com"
