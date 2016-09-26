@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title><%= pkg.info.title %></title><!-- CUSTOM -->
+    <title><%= pkg.description %></title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
@@ -45,7 +45,7 @@
 
         <div id="footer"><%= pkg.config.pretty-url %>
           <a href="https://github.com/<%= pkg.repository.url %>"><img src="static/img/GitHub-Mark-Light-32px.png" style="height:1em" /></a>
-          <a href="static/<%= pkg.name %>.pdf">(pdf)</a>
+          <a href="static/<%= pkg.name.replace(/.*\//, '') %>.pdf">(pdf)</a>
         </div>
       </div>
     </div>
