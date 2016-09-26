@@ -6,7 +6,7 @@
   "keywords": ["presentation", "slides", "template", "ppt"],
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
-    "pretty-url": "reveal-skel.seanho.com",
+    "pretty_url": "reveal-skel.seanho.com",
     "multiplex": {
       "url": "https://mp-seanho00.rhcloud.com:8443/",
       "id": "22bc761ffc97809b"
