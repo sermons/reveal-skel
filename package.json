@@ -21,7 +21,6 @@
   "devDependencies": {
     "bower": "^1.7.9",
     "grunt": "^1.0.1",
-    "lodash": "^4.16.2",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
