@@ -70,8 +70,8 @@
         },
 
         multiplex: {
-          url: 'https://mp-seanho00.rhcloud.com:8443/',
-          id: '22bc761ffc97809b',	// secret: 45ba034647cea150
+          url: '<%= pkg.config.multiplex.url %>',
+          id : '<%= pkg.config.multiplex.id  %>',
           secret: Reveal.getQueryHash().s || null
         },
 

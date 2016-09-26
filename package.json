@@ -9,6 +9,12 @@
     "name": "Sean Ho",
     "email": "travis@seanho.com"
   },
+  "config": {
+    "multiplex": {
+      "url": "https://mp-seanho00.rhcloud.com:8443/",
+      "id": "22bc761ffc97809b"
+    }
+  },
   "license": "CC-BY-SA-4.0",
   "private": true,
   "devDependencies": {
