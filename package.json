@@ -2,7 +2,7 @@
   "name": "reveal-skel",
   "version": "0.4.0",
   "repository": "sermons/reveal-skel",
-  "description": "Template for presentation based on Reveal.js",
+  "description": "A template Reveal.js-based presentations",
   "keywords": ["presentation", "slides", "template", "ppt"],
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "git": {
