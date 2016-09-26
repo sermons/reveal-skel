@@ -4,6 +4,8 @@ module.exports = (grunt) ->
     grunt.initConfig
         pkg:
             grunt.file.readJSON 'package.json'
+
+        pkg:
             shortname: <%= pkg.name.replace("/", "") %>
 
         watch:
