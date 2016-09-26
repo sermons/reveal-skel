@@ -4,7 +4,7 @@ module.exports = (grunt) ->
     grunt.initConfig
         pkg: grunt.file.readJSON('package.json')
         config:
-            shortname: '<%= pkg.name.replace("/", "") %>'
+            shortname: '<%= pkg.name.replace(/.*\//, "") %>'
 
         watch:
 
@@ -122,10 +122,9 @@ module.exports = (grunt) ->
             slides = grunt.file.readJSON 'slides/list.json'
 
             html = grunt.template.process indexTemplate, data:
-                pkg:
-                    grunt.config 'pkg'
-                slides:
-                    slides
+                pkg: grunt.config 'pkg'
+                config: grunt.config 'config'
+                slides: slides
                 section: (slide) ->
                     grunt.template.process sectionTemplate, data:
                         slide:
