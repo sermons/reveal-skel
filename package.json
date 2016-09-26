@@ -21,7 +21,6 @@
   "devDependencies": {
     "bower": "^1.7.9",
     "grunt": "^1.0.1",
-    "lodash": "^4.16.2",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -31,7 +30,8 @@
     "grunt-exec": "^1.0.0",
     "grunt-build-control": "^0.7.1",
     "grunt-coffeelint": "^0.0.16",
-    "coffeelint": "^1.15.7"
+    "coffeelint": "^1.15.7",
+    "phantom": "^2.1.21"
   },
   "engines": {
     "node": ">=0.10.0",
