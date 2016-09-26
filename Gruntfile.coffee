@@ -74,7 +74,7 @@ module.exports = (grunt) ->
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
         exec:
-            print: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.name.replace(/.*\///) %>.pdf'
+            print: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.name.replace(/.*\//g, "") %>.pdf'
             thumbnail: 'convert -resize 50% static/<%= pkg.name.replace(/.*\//, "") %>.pdf[0] static/img/thumbnail.jpg'
 
         copy:
