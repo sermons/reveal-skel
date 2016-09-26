@@ -2,7 +2,8 @@
 module.exports = (grunt) ->
 
     grunt.initConfig
-        pkg: grunt.file.readJSON('package.json').concat
+        pkg: grunt.file.readJSON('package.json')
+        config:
             shortname: '<%= pkg.name.replace("/", "") %>'
 
         watch:
@@ -73,8 +74,8 @@ module.exports = (grunt) ->
                             files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
 
         exec:
-            print: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.shortname %>.pdf'
-            thumbnail: 'convert -resize 50% static/<%= pkg.shortname %>.pdf[0] static/img/thumbnail.jpg'
+            print: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>.pdf'
+            thumbnail: 'convert -resize 50% static/<%= config.shortname %>.pdf[0] static/img/thumbnail.jpg'
 
         copy:
             dist:
