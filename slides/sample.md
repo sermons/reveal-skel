@@ -8,8 +8,6 @@
 [![Node dev status](https://david-dm.org/sermons/reveal-skel/dev-status.svg)](https://david-dm.org/sermons/reveal-skel#info=devDependencies)
 </div></div>
 
-[(PDF)](static/reveal-skel.pdf)
-
 >>>
 Speaker notes go here.
 
