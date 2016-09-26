@@ -40,8 +40,6 @@ module.exports = (grunt) ->
             livereload:
                 options:
                     port: 9000
-                    # Change hostname to '0.0.0.0' to access
-                    # the server from outside.
                     hostname: 'localhost'
                     base: '.'
                     open: true
