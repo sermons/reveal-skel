@@ -4,7 +4,7 @@ module.exports = (grunt) ->
     grunt.initConfig
         pkg: grunt.file.readJSON('package.json')
         config:
-            shortname: '<%= pkg.name.replace(new RegExp(".*-"), "") %>'
+            shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
 
         watch:
 
