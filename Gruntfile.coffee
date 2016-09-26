@@ -102,8 +102,8 @@ module.exports = (grunt) ->
                 push: true
                 fetchProgress: false
                 config:
-                    'user.name': '<%= pkg.git.name %>'
-                    'user.email': '<%= pkg.git.email %>'
+                    'user.name': '<%= pkg.config.git.name %>'
+                    'user.email': '<%= pkg.config.git.email %>'
             github:
                 options:
                     remote: 'git@github.com:<%= pkg.repository %>'

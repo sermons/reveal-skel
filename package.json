@@ -5,14 +5,15 @@
   "description": "A template Reveal.js-based presentations",
   "keywords": ["presentation", "slides", "template", "ppt"],
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
-  "git": {
-    "name": "Sean Ho",
-    "email": "travis@seanho.com"
-  },
   "config": {
+    "pretty-url": "reveal-skel.seanho.com",
     "multiplex": {
       "url": "https://mp-seanho00.rhcloud.com:8443/",
       "id": "22bc761ffc97809b"
+    },
+    "git": {
+      "name": "Sean Ho",
+      "email": "travis@seanho.com"
     }
   },
   "license": "CC-BY-SA-4.0",
@@ -35,10 +36,6 @@
   "engines": {
     "node": ">=0.10.0",
     "npm": ">=1.3.7"
-  },
-  "info": {
-    "title": "Reveal Skel",
-    "disp_url": "reveal-skel.seanho.com"
   },
   "scripts": {
     "test": "grunt test",
