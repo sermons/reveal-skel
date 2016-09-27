@@ -2,8 +2,8 @@
   "name": "reveal-skel",
   "version": "0.5.0",
   "repository": "sermons/reveal-skel",
-  "description": "A template Reveal.js-based presentations",
-  "keywords": ["presentation", "slides", "template", "ppt"],
+  "description": "A template for Reveal.js-based presentations",
+  "keywords": ["slides", "lectures", "talks", "ppt"],
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
     "pretty_url": "reveal-skel.seanho.com",
