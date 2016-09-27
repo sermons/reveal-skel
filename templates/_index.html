@@ -9,6 +9,7 @@
     <link rel=icon href="static/img/cross.svg" sizes="any" type="image/svg+xml" />
     <link rel="stylesheet" href="lib/css/reveal.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
     <link rel="stylesheet" href="lib/css/theme/black.css" id="theme" />
     <link rel="stylesheet" href="lib/css/hljs/zenburn.css" />
 	<link rel="stylesheet" href="static/css/slides.css" />
@@ -44,8 +45,10 @@
         <% }); %>
 
         <div id="footer"><%= pkg.config.pretty_url %>
-          <a href="https://github.com/<%= pkg.repository %>"><img src="static/img/GitHub-Mark-Light-32px.png" style="height:1em" /></a>
-          <a href="static/<%= config.shortname %>.pdf">(pdf)</a>
+          <a href="https://github.com/<%= pkg.repository %>">
+            <i class="fa fa-github fa-inverse"></i></a>
+          <a href="static/<%= config.shortname %>.pdf">
+            <i class="fa fa-file-pdf-o fa-inverse"></i></a>
         </div>
       </div>
     </div>
