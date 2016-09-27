@@ -134,7 +134,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'cname',
         'Create CNAME from NPM config if needed.', ->
             if grunt.config 'pkg.config.cname'
-                grunt.file.write 'CNAME', '<%= pkg.config.cname %>'
+                grunt.file.write 'CNAME', grunt.config 'pkg.config.cname'
 
     grunt.registerTask 'test',
         '*Lint* javascript and coffee files.', [
