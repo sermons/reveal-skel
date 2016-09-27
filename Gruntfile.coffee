@@ -131,6 +131,11 @@ module.exports = (grunt) ->
                             slide
             grunt.file.write 'index.html', html
 
+    grunt.registerTask 'cname',
+        'Create CNAME from NPM config if needed.', ->
+            if grunt.config 'pkg.config.cname'
+                grunt.file.write 'CNAME', '<%= pkg.config.cname %>'
+
     grunt.registerTask 'test',
         '*Lint* javascript and coffee files.', [
             'coffeelint'
@@ -157,6 +162,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
             'pdf'
+            'cname'
             'copy'
         ]
 
