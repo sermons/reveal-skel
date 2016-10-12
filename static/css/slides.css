@@ -45,6 +45,9 @@ section.empty[data-background-image] {
 .reveal section .hl3 {
   color: #ff2c2d;
 }
+.reveal section .ref {
+  color: #19b1ff;
+}
 .reveal section.has-light-background strong {
   color: #e20606;
 }
