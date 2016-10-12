@@ -1,21 +1,15 @@
 /* Shading background images */
 @media print {
-  section[data-background-image] .slide-background {
-    background-color: rgba(0,0,0,0.85);
-    background-blend-mode: overlay;
+  section[data-background-image] {
+    text-shadow: 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black;
   }
 }
 section[data-background-image] {
   background-color: rgba(0,0,0,0.85);
 }
-@media print {
-  section.empty[data-background-image] .slide-background {
-    background-color: rgba(0,0,0,0);
-  }
-}
 section.empty[data-background-image] {
   background-color: rgba(0,0,0,0);
-  text-shadow: black 0 0 0.35em;
+  text-shadow: 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black;
 }
 
 /* Override slide centering */
