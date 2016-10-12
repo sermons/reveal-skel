@@ -60,16 +60,7 @@ section.empty[data-background-image] {
   border: none;
 }
 
-/* Titles / headers */
-.reveal section h1,
-.reveal section h2,
-.reveal section h3,
-.reveal section h4,
-.reveal section h5,
-.reveal section h6 {
-  text-transform: none;
-  text-shadow: inherit;
-}
+/* Line separator below H2 */
 .reveal section h2 {
   margin-bottom: 2rem;
 }
