@@ -100,6 +100,7 @@ section.has-light-background h6 {
 
 .reveal ol { list-style-type: decimal; }
 .reveal ul { list-style-type: disc; }
+.reveal ol ol { list-style-type: lower-alpha; }
 .reveal ul ul { list-style-type: square; }
 .reveal ul ul ul { list-style-type: circle; }
 
