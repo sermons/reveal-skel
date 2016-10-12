@@ -23,12 +23,6 @@ section.empty[data-background-image] {
   }
 }
 
-/* Small text, e.g., Scripture refs.
- * Override black.css: .reveal small {} */
-.reveal section small {
-  vertical-align: inherit;
-}
-
 /* Highlighted Text */
 .reveal section strong {
   color: yellow;
