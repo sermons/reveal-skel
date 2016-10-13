@@ -6,35 +6,36 @@ var page = require('webpage').create(),
     address, output, paper, pageW, pageH, size;
 
 if (system.args.length < 3 || system.args.length > 5) {
-    console.log('Usage: rasterize.js URL filename [paperwidth*paperheight|paperformat] [zoom]');
-    console.log('  paper: e.g., "1024px*768px" (default), "1920px*1080px", "800px" (4:3 aspect)');
-    console.log('  PDF paper: e.g., "10cm*15cm", "Letter", "A4"');
+    console.log('Usage: rasterize.js URL filename [width[*height]|format] [zoom]');
+    console.log('  dims: e.g., "1024px*768px" (default), "1920px*1080px", "800px" (4:3 aspect)');
+    console.log('  PDF paper format: e.g., "10cm*15cm", "Letter", "A4"');
     phantom.exit(1);
 } else {
     address = system.args[1];
     output = system.args[2];
-    paper = '1024px*768px';
-    pageW = '1024px';
-    pageH = '768px';
-    if (system.args.length > 3) {
-        paper = system.args[3];
-    }
+    size = '1024px*768px';
+    if (system.args.length > 3) size = system.args[3];
 
-    if (paper.indexOf('*') > -1) {
-        size = paper.split('*');
-        pageW = parseInt(size[0], 10);
-        pageH = parseInt(size[1], 10);
-    } else if (output.substr(-4) === ".pdf") {
-        console.log('PDF paper size:', paper);
-        page.paperSize = { format: paper, orientation: 'portrait', margin: '1cm' };
+    ispdf = output.substr(-4) === ".pdf"
+    isdim = size.indexOf('*') > -1
+
+    if (ispdf && !isdim) {
+        console.log('PDF paper format:', size);
+        page.paperSize = { format: size, orientation: 'portrait', margin: '1cm' };
     } else {
-        pageW = parseInt(size, 10);
-        pageH = Math.round(pageW * 3/4);
+        pageW = 0
+        pageH = 0
+        if (isdim) {
+            dims = size.split('*');
+            pageW = parseInt(dims[0], 10);
+            pageH = parseInt(dims[1], 10);
+        } else {
+            pageW = parseInt(size, 10);
+            pageH = Math.round(pageW * 3/4);
+        }
+        console.log('Page size:', pageW, 'x', pageH);
+        page.viewportSize = { width: pageW, height: pageH };
     }
-
-    console.log('Page size:', pageW, 'x', pageH);
-    page.viewportSize = { width: pageW, height: pageH };
-    page.clipRect = { top: 0, left: 0, width: pageW, height: pageH };
 
     if (system.args.length > 4) {
         page.zoomFactor = system.args[4];
