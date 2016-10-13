@@ -29,6 +29,12 @@
   </head>
   <body>
     <div class="reveal">
+      <noscript>
+        <h1 style="padding: 25% 0"><%= pkg.description %><br/>
+          <a href="static/<%= config.shortname %>.pdf">
+            <i class="fa fa-file-pdf-o fa-inverse"></i></a>
+        </h1>
+      </noscript>
       <div class="slides">
 
         <% _.forEach(slides, function(slide) { %>
