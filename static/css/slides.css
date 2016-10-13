@@ -50,4 +50,5 @@
 /* Placeholder if Javascript is disabled */
 .noscript {
   padding: 20% 5%;
+  text-align: center;
 }
