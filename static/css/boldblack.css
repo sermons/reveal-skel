@@ -22,7 +22,7 @@ body { background: #222; }
 }
 
 ::selection {
-  color: #fff;
+  color: inherit;
   background: #bee4fd;
   text-shadow: none;
 }
