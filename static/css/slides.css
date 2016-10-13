@@ -48,7 +48,7 @@
 #footer { bottom: 0; }
 
 /* Placeholder if Javascript is disabled */
-.noscript {
+noscript .noscript {
   padding: 20% 5%;
   text-align: center;
 }
