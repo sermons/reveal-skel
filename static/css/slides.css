@@ -47,3 +47,7 @@
 #header { top: 0; }
 #footer { bottom: 0; }
 
+/* Placeholder if Javascript is disabled */
+.noscript {
+  padding: 20% 5%;
+}
