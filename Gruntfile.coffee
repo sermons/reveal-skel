@@ -39,9 +39,13 @@ module.exports = (grunt) ->
                 options:
                     port: 9000
                     hostname: 'localhost'
-                    base: '.'
-                    open: true
                     livereload: true
+                    open: true
+
+            serve:
+                options:
+                    port: 9000
+                    hostname: 'localhost'
 
         coffeelint:
             options:
@@ -155,7 +159,7 @@ module.exports = (grunt) ->
         'Render a PDF copy of the presentation (using PhantomJS)', [
             'buildIndex'
             'bower'
-            'connect:livereload'
+            'connect:serve'
             'exec:print'
             'exec:printHD'
             'exec:thumbnail'
