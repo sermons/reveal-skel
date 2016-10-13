@@ -38,11 +38,6 @@
   font-size: 50%;
   color: #aaa;
 }
-@media screen {
-  .reveal section.empty .caption {
-    background-color: rgba(0,0,0,0.85);
-  }
-}
 
 /* Common slide header/footer */
 #header, #footer {
