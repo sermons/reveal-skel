@@ -75,7 +75,7 @@ module.exports = (grunt) ->
 
         exec:
             print: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>.pdf'
-            printHD: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>-HD.pdf 1920px*1080px'
+            printHD: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>-HD.pdf 1920px*1080px'
             thumbnail: 'convert -resize 50% static/<%= config.shortname %>.pdf[0] static/img/thumbnail.jpg'
 
         copy:
