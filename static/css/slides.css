@@ -12,7 +12,7 @@ section.empty[data-background-image] {
   text-shadow: 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black;
 }
 
-/* Override slide centering */
+/* Override slide centering (interferes with print-pdf?) */
 @media screen {
   section.top {
     top: 0 !important;
@@ -21,37 +21,6 @@ section.empty[data-background-image] {
     top: initial !important;
     bottom: 0;
   }
-}
-
-/* Highlighted Text */
-.reveal section strong {
-  color: yellow;
-}
-.reveal section em {
-  color: #17ff2e;
-}
-.reveal section .hl1 {
-  color: #17ff2e;
-}
-.reveal section .hl2 {
-  color: #19b1ff;
-}
-.reveal section .hl3 {
-  color: #ff2c2d;
-}
-.reveal section .ref {
-  color: #19b1ff;
-}
-.reveal section.has-light-background strong {
-  color: #e20606;
-}
-
-/* Special theme for review/application questions */
-.reveal section.Q * {
-  text-transform: none;
-}
-.reveal section.Q h2:after {
-  border: none;
 }
 
 /* Line separator below H2 */
@@ -65,6 +34,8 @@ section.empty[data-background-image] {
   width: 30%;
   border-bottom: 1px solid;
 }
+/* Except on special reverse-color slides */
+.reveal section.has-light-background h2:after { display: none; }
 
 /* Flexbox layout for images */
 .imgbox {
