@@ -89,10 +89,7 @@ section.empty[data-background-image] {
 }
 
 /* References/links, e.g., Bible verses */
-.reveal .ref {
-  font-size: 0.75em;
-  vertical-align: text-top;
-}
+.reveal .ref { font-size: 0.75em; }
 
 /* Text highlight colors */
 .reveal strong { color: yellow; }
