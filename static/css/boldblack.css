@@ -9,17 +9,14 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-body { background: #222; }
-
-.reveal {
+html {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
   color: #fff;
 }
-.reveal .has-light-background {
-  color: #222;
-}
+body { background: #222; }
+.reveal .has-light-background { color: #222; }
 
 ::selection {
   color: inherit;
