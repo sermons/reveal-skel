@@ -54,10 +54,10 @@ section.empty[data-background-image] {
   word-wrap: break-word;
 }
 
-.reveal h1 { font-size: 2.4em; }
-.reveal h2 { font-size: 1.6em; }
-.reveal h3 { font-size: 1.2em; }
-.reveal h4 { font-size: 1em; }
+.reveal h1 { font-size: 2.4rem; }
+.reveal h2 { font-size: 1.6rem; }
+.reveal h3 { font-size: 1.2rem; }
+.reveal h4 { font-size: 1rem; }
 
 /*********************************************
  * TEXT
@@ -237,7 +237,7 @@ section.empty[data-background-image] {
  * IMAGES/MEDIA
  *********************************************/
 .reveal section img {
-  margin: 1em 0;
+  margin: 1rem 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 .reveal section img.plain { box-shadow: none; }
