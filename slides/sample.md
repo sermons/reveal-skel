@@ -18,9 +18,9 @@ Speaker notes go here.
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline
-1. Point **One** <span class="hl2">(v1)</span>
-2. Point **Two** <span class="hl2">(v2)</span>
-3. Point **Three** <span class="hl2">(v3)</span>
+1. Point **One** <span class="ref">(v1)</span>
+2. Point **Two** <span class="ref">(v2)</span>
+3. Point **Three** <span class="ref">(v3)</span>
 
 ---
 ## Point One
@@ -32,9 +32,9 @@ Speaker notes go here.
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline
-1. Point *One* <span class="hl2">(v1)</span>
-2. **Point Two** <span class="hl2">(v2)</span>
-3. Point *Three* <span class="hl2">(v3)</span>
+1. Point *One* <span class="ref">(v1)</span>
+2. **Point Two** <span class="ref">(v2)</span>
+3. Point *Three* <span class="ref">(v3)</span>
 
 ---
 ## Point Two
@@ -46,9 +46,9 @@ Speaker notes go here.
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline
-1. Point *One* <span class="hl2">(v1)</span>
-2. Point *Two* <span class="hl2">(v2)</span>
-3. **Point Three** <span class="hl2">(v3)</span>
+1. Point *One* <span class="ref">(v1)</span>
+2. Point *Two* <span class="ref">(v2)</span>
+3. **Point Three** <span class="ref">(v3)</span>
 
 ---
 ## Point Three
@@ -60,9 +60,9 @@ Speaker notes go here.
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
 ## Outline
-1. Point **One** <span class="hl2">(v1)</span>
-2. Point **Two** <span class="hl2">(v2)</span>
-3. Point **Three** <span class="hl2">(v3)</span>
+1. Point **One** <span class="ref">(v1)</span>
+2. Point **Two** <span class="ref">(v2)</span>
+3. Point **Three** <span class="ref">(v3)</span>
 
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" class="empty" -->
