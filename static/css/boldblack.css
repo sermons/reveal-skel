@@ -33,6 +33,20 @@ body { background: #222; }
   font-weight: inherit;
 }
 
+/* Shading background images */
+@media print {
+  section[data-background-image] {
+    text-shadow: 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black;
+  }
+}
+section[data-background-image] {
+  background-color: rgba(0,0,0,0.85);
+}
+section.empty[data-background-image] {
+  background-color: rgba(0,0,0,0);
+  text-shadow: 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black;
+}
+
 /*********************************************
  * HEADERS
  *********************************************/
