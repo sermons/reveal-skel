@@ -12,7 +12,7 @@
 Speaker notes go here.
 
 ---
-<!-- .slide: class="Q" data-background="white" -->
+<!-- .slide: data-background="white" -->
 # Opening **Question**
 
 ---
@@ -26,7 +26,7 @@ Speaker notes go here.
 ## Point One
 
 ---
-<!-- .slide: class="Q" data-background="white" -->
+<!-- .slide: data-background="white" -->
 # Review question for Point **One**
 
 ---
@@ -40,7 +40,7 @@ Speaker notes go here.
 ## Point Two
 
 ---
-<!-- .slide: class="Q" data-background="white" -->
+<!-- .slide: data-background="white" -->
 # Review question for Point **Two**
 
 ---
@@ -54,7 +54,7 @@ Speaker notes go here.
 ## Point Three
 
 ---
-<!-- .slide: class="Q" data-background="white" -->
+<!-- .slide: data-background="white" -->
 # Review question for Point **Three**
 
 ---
