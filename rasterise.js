@@ -33,7 +33,6 @@ if (system.args.length < 3 || system.args.length > 5) {
     }
 
     console.log('Page size:', pageW, 'x', pageH);
-    page.paperSize = { width: pageW, height: pageH, margin: '0px' };
     page.viewportSize = { width: pageW, height: pageH };
     page.clipRect = { top: 0, left: 0, width: pageW, height: pageH };
 
