@@ -4,9 +4,7 @@
 
 /* Override slide centering (interferes with print-pdf?) */
 @media screen {
-  section.top {
-    top: 0 !important;
-  }
+  section.top { top: 0 !important; }
   section.bottom {
     top: initial !important;
     bottom: 0;
@@ -14,9 +12,7 @@
 }
 
 /* Line separator below H2 */
-.reveal section h2 {
-  margin-bottom: 2rem;
-}
+.reveal section h2 { margin-bottom: 2rem; }
 .reveal section h2:after {
   content: "";
   display: block;
@@ -35,12 +31,7 @@
   align-items: flex-start;
   align-content: flex-start;
 }
-.imgbox > div {
-  flex: 1;
-}
-.reveal section .imgbox img {
-  border: none;
-}
+.imgbox > div { flex: 1; }
 
 /* Image captions */
 .reveal section .caption {
@@ -59,9 +50,6 @@
   left: 0;
   font-size: 60%;
 }
-#header {
-  top: 0;
-}
-#footer {
-  bottom: 0;
-}
+#header { top: 0; }
+#footer { bottom: 0; }
+
