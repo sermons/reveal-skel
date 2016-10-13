@@ -7,9 +7,8 @@ var page = require('webpage').create(),
 
 if (system.args.length < 3 || system.args.length > 5) {
     console.log('Usage: rasterize.js URL filename [paperwidth*paperheight|paperformat] [zoom]');
-    console.log('  paper (pdf output) examples: "5in*7.5in", "10cm*20cm", "A4", "Letter"');
-    console.log('  image (png/jpg output) examples: "1920px" entire page, window width 1920px');
-    console.log('                                   "800px*600px" window, clipped to 800x600');
+    console.log('  paper: e.g., "1024px*768px" (default), "1920px*1080px", "800px" (4:3 aspect)');
+    console.log('  PDF paper: e.g., "10cm*15cm", "Letter", "A4"');
     phantom.exit(1);
 } else {
     address = system.args[1];
@@ -51,7 +50,7 @@ if (system.args.length < 3 || system.args.length > 5) {
         } else {
             window.setTimeout(function () {
                 page.render(output);
-                phantom.exit();
+                phantom.exit(0);
             }, 15000);
         }
     });
