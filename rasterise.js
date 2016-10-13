@@ -42,7 +42,7 @@ if (system.args.length < 3 || system.args.length > 5) {
         console.log('Zoom:', page.zoomFactor);
     }
 
-    console.log('Wait 15 sec for render...');
+    console.log('Wait 10 sec for render...');
     page.open(address, function (status) {
         if (status !== 'success') {
             console.log('Unable to load the address!');
@@ -51,7 +51,7 @@ if (system.args.length < 3 || system.args.length > 5) {
             window.setTimeout(function () {
                 page.render(output);
                 phantom.exit(0);
-            }, 15000);
+            }, 10000);
         }
     });
 }
