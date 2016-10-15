@@ -93,9 +93,9 @@ section.empty[data-background-image] {
   line-height: 1.2em;
 }
 
-.reveal sup,
-.reveal sub,
-.reveal small {
+.reveal section sup,
+.reveal section sub,
+.reveal section small {
   font-size: 0.5em;
 }
 
