@@ -90,8 +90,13 @@ section.empty[data-background-image] {
 
 .reveal small {
   display: inline-block;
-  font-size: 0.6em;
   line-height: 1.2em;
+}
+
+.reveal sup,
+.reveal sub,
+.reveal small {
+  font-size: 0.5em;
 }
 
 /* References/links, e.g., Bible verses */
