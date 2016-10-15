@@ -33,7 +33,7 @@ body { background: #222; }
 /* background blend doesn't work on PhantomJS */
 section[data-background-image] {
   background-color: rgba(0,0,0,0.85);
-  text-shadow: 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black;
+  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black;
 }
 section.empty[data-background-image] {
   background-color: rgba(0,0,0,0);
@@ -46,7 +46,7 @@ section.empty[data-background-image] {
   section[data-background-image] h4,
   section[data-background-image] h5,
   section[data-background-image] h6 {
-    text-shadow: 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black, 0 0 0.5em black !important;
+    text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black !important;
   }
 }
 
