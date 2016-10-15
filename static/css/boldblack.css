@@ -138,6 +138,13 @@ section.empty[data-background-image] {
   margin-left: 40px;
 }
 
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ul,
+.reveal ol ol {
+  font-size: 0.8em
+}
+
 .reveal dt { font-weight: bold; }
 .reveal dd { margin-left: 40px; }
 
