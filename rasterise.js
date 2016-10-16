@@ -23,7 +23,7 @@ console.log('Saving', URL, 'to', output,
 
 page.viewportSize = { width: pageW, height: pageH };
 
-if (output.endsWith('.pdf')) {
+if (output.substr(-4) === '.pdf') {
     page.paperSize = { width: pageW, height: pageH, margin: 0 }
 }
 
