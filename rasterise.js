@@ -23,6 +23,10 @@ console.log('Saving', URL, 'to', output,
 
 page.viewportSize = { width: pageW, height: pageH };
 
+if (output.endsWith('.pdf')) {
+    page.paperSize = { width: pageW, height: pageH, margin: 0 }
+}
+
 console.log('Wait 5 sec for render ...');
 
 page.open(URL, function (status) {
