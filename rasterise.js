@@ -16,7 +16,10 @@ var address = system.args[1];
 var output = system.args[2];
 var pageW = system.args[3] ? system.args[3] : 1024;
 var pageH = system.args[4] ? system.args[4] :  768;
-page.zoomFactor = system.args[5] ? system.args[5] : 1;
+page.zoomFactor = system.args[5] ? system.args[5] : 1.0;
+
+console.log('Saving', URL, 'to', output,
+    'at', pageW, 'x', pageH, 'zoom', page.zoomFactor);
 
 page.viewportSize = { width: pageW, height: pageH };
 page.clipRect = { top: 0, left: 0, width: pageW, height: pageH };
@@ -25,7 +28,6 @@ if (output.substr(-4) === ".pdf") {
     page.paperSize = { width: pageW, height: pageH, margin: 0 };
 }
 
-console.log('Saving', address, 'to', output, 'at', pageW, 'x', pageH, 'zoom', page.zoomFactor);
 console.log('Wait 5 sec for render...');
 
 page.open(address, function (status) {
