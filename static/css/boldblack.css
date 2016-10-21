@@ -142,7 +142,7 @@ section.empty[data-background-image] {
 .reveal ul ol,
 .reveal ol ul,
 .reveal ol ol {
-  font-size: 0.8em
+  font-size: 0.85em
 }
 
 .reveal dt { font-weight: bold; }
@@ -260,7 +260,7 @@ section.empty[data-background-image] {
  * IMAGES/MEDIA
  *********************************************/
 .reveal section img {
-  margin: 1rem 0;
+  margin: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 .reveal section img.plain { box-shadow: none; }
