@@ -15,7 +15,14 @@
     "git": {
       "name": "Sean Ho",
       "email": "travis@seanho.com"
-    }
+    },
+    "history": [
+      {
+        "venue": "Venue of talk",
+        "city": "Location",
+        "date": "2000-01-01"
+      }
+    ]
   },
   "license": "CC-BY-SA-4.0",
   "private": true,
