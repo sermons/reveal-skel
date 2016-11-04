@@ -17,7 +17,7 @@ Speaker notes go here.
 
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
-## Outline
+## Outline 大綱
 1. Point **One** <span class="ref">(v1)</span>
 2. Point **Two** <span class="ref">(v2)</span>
 3. Point **Three** <span class="ref">(v3)</span>
