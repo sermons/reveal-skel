@@ -2,6 +2,11 @@
  * Local styles specific to my presentations
  *********************************************/
 
+/* Larger text */
+/*
+.reveal section { font-size: 3em }
+*/
+
 /* Override slide centering (interferes with print-pdf?) */
 @media screen {
   section.top { top: 0 !important; }
