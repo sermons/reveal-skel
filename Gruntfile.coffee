@@ -20,8 +20,6 @@ module.exports = (grunt) ->
             index:
                 files: [
                     'templates/_index.html'
-                    'templates/_section.html'
-                    'slides/list.json'
                 ]
                 tasks: ['buildIndex']
 
@@ -71,7 +69,6 @@ module.exports = (grunt) ->
                     expand: true
                     src: [
                         'slides/**'
-                        'lib/**'
                         'static/**'
                     ]
                     dest: 'dist/'
