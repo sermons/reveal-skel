@@ -24,6 +24,25 @@ Speaker notes go here.
 
 ---
 ## Point One
+```
+class BSTNode:
+  def __init__( self, key=None, par=None, left=None, right=None ):
+    ( self.key, self.par, self.left, self.right ) = ( key, par, left, right )
+
+class BST:
+  def __init__( self ):
+    self.root = None
+
+  def search( self, key ):      # iterative search
+    cur = self.root
+    while (cur != None):
+      if key < cur.key:         # go left
+        cur = cur.left
+      else if key > cur.key:    # go right
+        cur = cur.right
+      else:                     # found it!
+        return cur
+```
 
 ---
 <!-- .slide: data-background="white" -->

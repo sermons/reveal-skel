@@ -60,23 +60,6 @@ module.exports = (grunt) ->
                 jshintrc: '.jshintrc'
             all: ['js/*.js']
 
-        bower:
-            dev:
-                dest: 'lib/'
-                options:
-                    packageSpecific:
-                        'headjs':
-                            files: [ 'dist/1.0.0/head.min.js' ]
-                            keepExpandedHierarchy: false
-                            js_dest: 'lib/js/'
-                        'highlightjs':
-                            files: [ 'highlight.pack.js', 'styles/*.css' ]
-                            keepExpandedHierarchy: false
-                            js_dest: 'lib/js/'
-                            css_dest: 'lib/css/hljs/'
-                        'reveal.js':
-                            files: [ 'js/*.js', 'css/{,*/}*.css', 'plugin/**' ]
-
         exec:
             print: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>.pdf'
             printHD: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>-HD.pdf 1920 1080'
@@ -117,8 +100,6 @@ module.exports = (grunt) ->
     # Load all grunt tasks.
     require('load-grunt-tasks')(grunt)
 
-    grunt.loadNpmTasks 'grunt-bower'
-
     grunt.registerTask 'buildIndex',
         'Build index.html from templates/_index.html and slides/list.json.',
         ->
@@ -150,7 +131,6 @@ module.exports = (grunt) ->
     grunt.registerTask 'serve',
         'Run presentation locally and start watch process (living document).', [
             'buildIndex'
-            'bower'
             'connect:livereload'
             'watch'
         ]
@@ -158,7 +138,6 @@ module.exports = (grunt) ->
     grunt.registerTask 'pdf',
         'Render a PDF copy of the presentation (using PhantomJS)', [
             'buildIndex'
-            'bower'
             'connect:serve'
             'exec:print'
             'exec:printHD'
