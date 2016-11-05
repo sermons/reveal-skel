@@ -6,39 +6,19 @@ module.exports = (grunt) ->
             shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
 
         watch:
-
-            livereload:
-                options:
-                    livereload: true
-                files: [
-                    'index.html'
-                    'slides/{,*/}*.{md,html}'
-                    'static/**'
-                ]
-
             index:
                 files: [
                     'templates/_index.html'
                 ]
                 tasks: ['buildIndex']
-
             coffeelint:
                 files: ['Gruntfile.coffee']
                 tasks: ['coffeelint']
-
             jshint:
                 files: ['js/*.js']
                 tasks: ['jshint']
 
         connect:
-
-            livereload:
-                options:
-                    port: 9000
-                    hostname: 'localhost'
-                    livereload: true
-                    open: true
-
             serve:
                 options:
                     port: 9000
@@ -117,10 +97,9 @@ module.exports = (grunt) ->
         ]
 
     grunt.registerTask 'serve',
-        'Run presentation locally and start watch process (living document).', [
+        'Run presentation locally', [
             'buildIndex'
-            'connect:livereload'
-            'watch'
+            'connect'
         ]
 
     grunt.registerTask 'pdf',
