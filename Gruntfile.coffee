@@ -1,4 +1,3 @@
-# Generated on 2016-07-11 using generator-reveal 0.5.9
 module.exports = (grunt) ->
 
     grunt.initConfig
