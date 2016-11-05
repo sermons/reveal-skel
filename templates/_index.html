@@ -35,17 +35,12 @@
       </div></noscript>
       <div class="slides">
 
-        <% _.forEach(slides, function(slide) { %>
-          <% if (!_.isArray(slide)) { %>
-            <%= section(slide) %>
-          <% } else { %>
-            <section>
-              <% _.forEach(slide, function(verticalslide) { %>
-                <%= section(verticalslide) %>
-              <% }); %>
-            </section>
-          <% } %>
-        <% }); %>
+        <section data-charset="utf8"
+          data-separator="^\s{0,3}-\s*-\s*-[-\s]*$"
+          data-separator-vertical="^\s{0,3}\*\s*\*\s*\*[\*\s]*$"
+          data-separator-notes="^\s{0,3}>\s*>\s*>[>\s]*$"
+          data-markdown="slides/sample.md">
+        </section>
 
         <div id="footer"><%= pkg.config.pretty_url %>
           <a href="https://github.com/<%= pkg.repository %>">
