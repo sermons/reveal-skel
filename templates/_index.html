@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <link rel=icon href="static/img/cross.svg" sizes="any" type="image/svg+xml" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css" integrity="sha256-VluKG8TlOP87+KRcWIcAJ0F9r4nvqvJLCVGT8pEcmko=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="lib/css/hljs/zenburn.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.min.css" integrity="sha256-xQbuiMQSQySqhEhPK5DcB34BNZEh+zxY90b9tjXozE8=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/css/zenburn.min.css" integrity="sha256-RG50KM9jAN3mc0u2xgR6UrcI20cttg4DxfMHZ05zr7I=" crossorigin="anonymous" />
     <link rel="stylesheet" href="static/css/boldblack.css" id="theme" />
 	<link rel="stylesheet" href="static/css/slides.css" />
 
@@ -18,7 +18,7 @@
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'lib/css/print/pdf.css' : 'lib/css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.min.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/paper.min.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
@@ -82,13 +82,13 @@
         },
 
         dependencies: [
-          { src: 'lib/plugin/markdown/marked.js' },
-          { src: 'lib/plugin/markdown/markdown.js' },
-          { src: 'lib/plugin/notes/notes.js', async: true },
-          { src: 'lib/plugin/math/math.js', async: true },
-          { src: 'lib/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'https://cdn.socket.io/socket.io-1.4.5.js', async: true },
-          Reveal.getQueryHash().s ? { src: 'lib/plugin/multiplex/master.js', async: true } : { src: 'lib/plugin/multiplex/client.js', async: true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.min.js', async:true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/math/math.min.js', async:true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/highlight/highlight.min.js', async:true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'https://cdn.socket.io/socket.io-1.4.5.js', async:true },
+          Reveal.getQueryHash().s ?  { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/multiplex/master.min.js', async:true } : { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/multiplex/client.min.js', async:true },
           { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js', condition: function() { return !document.body.classList; } }
         ]
