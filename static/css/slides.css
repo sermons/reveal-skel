@@ -27,6 +27,9 @@ html { font-size: 3em }
 /* Except on special reverse-color slides */
 .reveal section.has-light-background h2:after { display: none; }
 
+/* Larger font for Chinese */
+.reveal section .zh { font-size: larger }
+
 /* Flexbox layout for images */
 .imgbox {
   width: 100%;
