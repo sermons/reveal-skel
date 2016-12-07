@@ -107,7 +107,6 @@ module.exports = (grunt) ->
             'buildIndex'
             'connect:serve'
             'exec:print'
-            'exec:printHD'
             'exec:thumbnail'
         ]
 
