@@ -44,15 +44,16 @@ module.exports = (grunt) ->
                     ]
                     dest: 'dist/'
                 },{
-                    expand: true
                     src: [
                         'index.html'
                         'CNAME'
-                        'favicon.ico'
                         '.nojekyll'
                     ]
                     dest: 'dist/'
                     filter: 'isFile'
+                },{
+                    src: 'static/img/favicon.ico'
+                    dest: 'dist/'
                 }]
 
 
