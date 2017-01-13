@@ -30,7 +30,9 @@ module.exports = (grunt) ->
             all: ['Gruntfile.coffee']
 
         curl:
-            'static/img/<%= config.shortname %>-qr.png': 'https://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=<%= config.pretty_url %>'
+            qr:
+                src: 'https://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=<%= pkg.config.pretty_url %>'
+                dest: 'static/img/<%= config.shortname %>-qr.png'
 
         exec:
             print: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>.pdf'
@@ -117,7 +119,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'dist',
         'Save presentation files to *dist* directory.', [
             'pdf'
-            'curl'
+            'curl:qr'
             'cname'
             'nojekyll'
             'copy'
