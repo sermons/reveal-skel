@@ -8,7 +8,7 @@ module.exports = (grunt) ->
         watch:
             index:
                 files: [
-                    'templates/_index.html'
+                    '_index.html'
                 ]
                 tasks: ['buildIndex']
             coffeelint:
@@ -74,9 +74,9 @@ module.exports = (grunt) ->
     require('load-grunt-tasks')(grunt)
 
     grunt.registerTask 'buildIndex',
-        'Build index.html from templates/_index.html.',
+        'Build index.html from template.',
         ->
-            indexTemplate = grunt.file.read 'templates/_index.html'
+            indexTemplate = grunt.file.read '_index.html'
             html = grunt.template.process indexTemplate, data:
                 pkg: grunt.config 'pkg'
                 config: grunt.config 'config'
