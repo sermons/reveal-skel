@@ -45,7 +45,12 @@ module.exports = (grunt) ->
                     dest: 'dist/'
                 },{
                     expand: true
-                    src: ['index.html', 'CNAME', 'favicon.ico', '.nojekyll']
+                    src: [
+                        'index.html'
+                        'CNAME'
+                        'favicon.ico'
+                        '.nojekyll'
+                    ]
                     dest: 'dist/'
                     filter: 'isFile'
                 }]
@@ -82,6 +87,10 @@ module.exports = (grunt) ->
             if grunt.config 'pkg.config.cname'
                 grunt.file.write 'CNAME', grunt.config 'pkg.config.cname'
 
+    grunt.registerTask 'nojekyll',
+        'Create .nojekyll file for Github Pages', ->
+            grunt.file.write '.nojekyll', ''
+
     grunt.registerTask 'test',
         '*Test* rendering: lint Coffeescripts.', [
             'coffeelint'
@@ -105,6 +114,7 @@ module.exports = (grunt) ->
         'Save presentation files to *dist* directory.', [
             'pdf'
             'cname'
+            'nojekyll'
             'copy'
         ]
 
