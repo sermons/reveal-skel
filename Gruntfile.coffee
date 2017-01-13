@@ -14,9 +14,6 @@ module.exports = (grunt) ->
             coffeelint:
                 files: ['Gruntfile.coffee']
                 tasks: ['coffeelint']
-            jshint:
-                files: ['js/*.js']
-                tasks: ['jshint']
 
         connect:
             serve:
@@ -31,11 +28,6 @@ module.exports = (grunt) ->
                 max_line_length:
                     level: 'ignore'
             all: ['Gruntfile.coffee']
-
-        jshint:
-            options:
-                jshintrc: '.jshintrc'
-            all: ['js/*.js']
 
         exec:
             print: 'phantomjs rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>.pdf'
@@ -91,9 +83,8 @@ module.exports = (grunt) ->
                 grunt.file.write 'CNAME', grunt.config 'pkg.config.cname'
 
     grunt.registerTask 'test',
-        '*Lint* javascript and coffee files.', [
+        '*Test* rendering: lint Coffeescripts.', [
             'coffeelint'
-            'jshint'
         ]
 
     grunt.registerTask 'serve',
