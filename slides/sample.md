@@ -59,6 +59,15 @@ class BST:
 ---
 ## Point Two
 
+<div class="imgbox">
+<div style="flex:2">
+Yay for multi-column layouts!
+</div>
+<div style="flex:1">
+But Markdown not allowed within the HTML div
+</div>
+</div>
+
 ---
 <!-- .slide: data-background="white" -->
 # Review question for Point **Two**
@@ -72,6 +81,14 @@ class BST:
 
 ---
 ## Point Three
+
+| ID |     Date    | Intensity | Diffusion |
+|---:|:-----------:|----------:|----------:|
+| 23 | 2017 Jan  3 |    17.3   |   0.238   |
+| 83 | 2017 Feb  5 |    87.2   |   0.022   |
+| 39 | 2017 Mar  1 |   219.0   |   0.912   |
+| 12 | 2017 Apr  2 |     5.2   |   0.465   |
+| 65 | 2017 May  2 |  1022.6   |   0.663   |
 
 ---
 <!-- .slide: data-background="white" -->
