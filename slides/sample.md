@@ -65,10 +65,12 @@ class BST:
 ## Point Two
 
 <div class="imgbox">
-<div style="flex:1">
+<div>
 Yay for multi-column layouts!
 
-But **Markdown** is not parsed within the HTML div.
+One-third width for text.
+
+Within the HTML div, Markdown **bold** is ok, but not lists.
 </div>
 <div style="flex:2">
 ![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
