@@ -68,7 +68,7 @@ class BST:
 <div style="flex:1">
 Yay for multi-column layouts!
 
-But Markdown is not allowed within the HTML div.
+But **Markdown** is not parsed within the HTML div.
 </div>
 <div style="flex:2">
 ![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
