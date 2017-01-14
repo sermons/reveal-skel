@@ -72,7 +72,7 @@ One-third width for text.
 
 Within the HTML div, Markdown **bold** is ok, but not lists.
 </div>
-<div style="flex:2; -webkit-box-flex:2">
+<div style="flex:2; -webkit-box-flex:0.5">
 ![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
 </div>
 </div>
