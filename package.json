@@ -1,6 +1,6 @@
 {
   "name": "@sermons/reveal-skel",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": "sermons/reveal-skel",
   "description": "A template for Reveal.js-based presentations",
   "keywords": ["slides", "lectures", "talks", "ppt"],
