@@ -41,6 +41,7 @@
   },
   "scripts": {
     "test": "grunt test",
+    "pdf": "grunt pdf",
     "deploy": "grunt deploy"
   }
 }
