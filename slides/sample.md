@@ -9,7 +9,12 @@
 </div></div>
 
 >>>
-Speaker notes go here.
++ Speaker notes go here.
++ Markdown is supported.
+
+______
+
+Six underscores create a horizontal rule in the notes
 
 ---
 <!-- .slide: data-background="white" -->
