@@ -60,11 +60,13 @@ class BST:
 ## Point Two
 
 <div class="imgbox">
-<div style="flex:2">
-Yay for multi-column layouts!
-</div>
 <div style="flex:1">
-But Markdown not allowed within the HTML div
+Yay for multi-column layouts!
+
+But Markdown is not allowed within the HTML div.
+</div>
+<div style="flex:2">
+![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
 </div>
 </div>
 
