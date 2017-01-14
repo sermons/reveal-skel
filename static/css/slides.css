@@ -37,13 +37,19 @@ html { font-size: 3em }
   flex-flow: row wrap;
   align-items: flex-start;
   align-content: flex-start;
-  display: -webkit-box;
-  -webkit-flex-flow: row;
-  -webkit-box-pack: center;
 }
-.imgbox > div {
-  flex: 1;
-  -webkit-box-flex: 1;
+.imgbox > div { flex: 1 }
+
+/* Old-style CSS flex box for Phantom, #52 */
+@media print {
+  .imgbox {
+    display: -webkit-box;
+    -webkit-flex-flow: row;
+    -webkit-box-pack: center;
+  }
+  .imgbox > div {
+    -webkit-box-flex: 1;
+  }
 }
 
 /* Image captions */
