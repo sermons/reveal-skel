@@ -68,7 +68,9 @@ html { font-size: 3em }
 #header { top: 0.25rem; }
 #footer { bottom: 0.25rem; }
 
-.commit {
+#footer .links { margin: 0 1em }
+
+#footer .commit {
   color: rgba(255, 255, 255, 0.1);
   font-size: 0.75em;
 }

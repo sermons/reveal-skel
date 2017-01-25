@@ -46,11 +46,13 @@
         </section>
       </div>
 
-      <div id="footer"><%= pkg.config.pretty_url %> &emsp;
-        <a href="https://github.com/<%= pkg.repository %>">
-          <i class="fa fa-github fa-inverse"></i></a>
-        <a href="static/<%= pkg.shortname %>.pdf">
-          <i class="fa fa-file-pdf-o fa-inverse"></i></a>
+      <div id="footer"><%= pkg.config.pretty_url %>
+        <span class="links">
+          <a href="https://github.com/<%= pkg.repository %>">
+            <i class="fa fa-github fa-inverse"></i></a>
+          <a href="static/<%= pkg.shortname %>.pdf">
+            <i class="fa fa-file-pdf-o fa-inverse"></i></a>
+	</span>
         <span class="commit"><%= pkg.commit %></span>
       </div>
 
