@@ -31,24 +31,13 @@ body { background: #222; }
 }
 
 /* Shading background images */
-/* background blend doesn't work on PhantomJS */
+/* background blend needs PhantomJS >= 2.1.1 */
 section[data-background-image] {
   background-color: rgba(0,0,0,0.85);
   text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black;
 }
 section.empty[data-background-image] {
   background-color: rgba(0,0,0,0);
-}
-/* Needed to override pdf.css */
-@media print {
-  section[data-background-image] h1,
-  section[data-background-image] h2,
-  section[data-background-image] h3,
-  section[data-background-image] h4,
-  section[data-background-image] h5,
-  section[data-background-image] h6 {
-    text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black !important;
-  }
 }
 
 /*********************************************
