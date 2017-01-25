@@ -62,6 +62,7 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
+  # Generated grut vars
   grunt.config.merge
     pkg:
       shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
