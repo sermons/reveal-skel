@@ -26,6 +26,12 @@ module.exports = (grunt) ->
       thumbnail: 'convert -resize 50% static/<%= pkg.shortname %>.pdf[0] static/img/thumbnail.jpg'
 
     copy:
+      index:
+        src: '_index.html'
+        dest: 'index.html'
+        options:
+          process: (content, path) ->
+            return grunt.template.process content
       dist:
         files: [{
           expand: true
@@ -89,13 +95,13 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'serve',
     'Run presentation locally', [
-      'buildIndex'
+      'copy:index'
       'connect'
     ]
 
   grunt.registerTask 'pdf',
     'Render a PDF copy of the presentation (using PhantomJS)', [
-      'buildIndex'
+      'copy:index'
       'connect:serve'
       'exec:print'
       'exec:thumbnail'
