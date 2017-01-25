@@ -2,6 +2,12 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
+  grunt.config
+    pkg:
+      shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
+      commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
+
+  grunt.config
     watch:
       index:
         files: ['_index.html']
@@ -69,12 +75,6 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
-  # Processed config vars
-  grunt.config
-    pkg:
-      shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
-      commit: (process.env.TRAVIS_COMMIT || '').substr(0,7)
-
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
 
@@ -83,7 +83,6 @@ module.exports = (grunt) ->
       indexTemplate = grunt.file.read '_index.html'
       html = grunt.template.process indexTemplate, data:
         pkg: grunt.config 'pkg'
-        config: grunt.config 'config'
       grunt.file.write 'index.html', html
 
   grunt.registerTask 'cname',
