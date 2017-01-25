@@ -32,16 +32,11 @@ module.exports = (grunt) ->
           src: [
             'slides/**'
             'static/**'
-          ]
-          dest: 'dist/'
-        },{
-          src: [
             'index.html'
             'CNAME'
             '.nojekyll'
           ]
           dest: 'dist/'
-          filter: 'isFile'
         },{
           src: 'static/img/favicon.ico'
           dest: 'dist/'
