@@ -62,8 +62,10 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
-  grunt.config.set 'pkg.shortname', '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
-  grunt.config.set 'pkg.commit', (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
+  grunt.config.merge
+    pkg:
+      shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
+      commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
 
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
