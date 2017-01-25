@@ -70,13 +70,6 @@ module.exports = (grunt) ->
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
 
-  grunt.registerTask 'buildIndex',
-    'Build index.html from template.', ->
-      indexTemplate = grunt.file.read '_index.html'
-      html = grunt.template.process indexTemplate, data:
-        pkg: grunt.config 'pkg'
-      grunt.file.write 'index.html', html
-
   grunt.registerTask 'cname',
     'Create CNAME from NPM config if needed.', ->
       if grunt.config 'pkg.config.cname'
