@@ -2,14 +2,6 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
 
-    watch:
-      index:
-        files: ['_index.html']
-        tasks: ['buildIndex']
-      coffeelint:
-        files: ['Gruntfile.coffee']
-        tasks: ['coffeelint']
-
     connect:
       serve:
         options:
