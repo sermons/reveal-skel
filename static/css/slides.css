@@ -62,7 +62,7 @@ html { font-size: 3em }
 #header, #footer {
   position: absolute;
   left: 0;
-  font-size: 60%;
+  font-size: 0.60rem;
 }
 #header { top: 0; }
 #footer { bottom: 0; }

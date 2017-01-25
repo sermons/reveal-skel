@@ -31,26 +31,28 @@
   </head>
   <body>
     <div class="reveal">
+
       <noscript><div class="noscript">
         <h1><%= pkg.description %></h1>
         <p>(Please see PDF link below)</p>
       </div></noscript>
-      <div class="slides">
 
+      <div class="slides">
         <section data-charset="utf8"
           data-separator="^\s{0,3}-\s*-\s*-[-\s]*$"
           data-separator-vertical="^\s{0,3}\*\s*\*\s*\*[\*\s]*$"
           data-separator-notes="^\s{0,3}>\s*>\s*>[>\s]*$"
           data-markdown="slides/sample.md">
         </section>
-
-        <div id="footer"><%= pkg.config.pretty_url %> &emsp;
-          <a href="https://github.com/<%= pkg.repository %>">
-            <i class="fa fa-github fa-inverse"></i></a>
-          <a href="static/<%= config.shortname %>.pdf">
-            <i class="fa fa-file-pdf-o fa-inverse"></i></a>
-        </div>
       </div>
+
+      <div id="footer"><%= pkg.config.pretty_url %> &emsp;
+        <a href="https://github.com/<%= pkg.repository %>">
+          <i class="fa fa-github fa-inverse"></i></a>
+        <a href="static/<%= config.shortname %>.pdf">
+          <i class="fa fa-file-pdf-o fa-inverse"></i></a>
+      </div>
+
     </div>
 
     <% pkg.config.js.forEach( function(js) { %>
