@@ -27,7 +27,7 @@ if (output.substr(-4) === '.pdf') {
     page.paperSize = { width: pageW, height: pageH, margin: 0 }
 }
 
-console.log('Wait 5 sec for render ...');
+console.log('Wait 10 sec for render ...');
 
 page.open(URL, function (status) {
     if (status !== 'success') {
@@ -38,7 +38,7 @@ page.open(URL, function (status) {
             console.log('... render done.');
             page.render(output);
             phantom.exit(0);
-        }, 5000);
+        }, 10000);
     }
 });
 
