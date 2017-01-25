@@ -4,8 +4,8 @@
 var page = require('webpage').create();
 var system = require('system');
 var Usage =
-    'Usage:' + system.args[0] + 'URL [filename] [width] [height] [zoom]\n' +
-    '  defaults: output.pdf 1024 768 1.0';
+    'Usage:' + system.args[0] + 'URL [filename] [width] [height]\n' +
+    '  defaults: output.pdf 1024 768';
 
 if (system.args.length < 2 || system.args.length > 6) {
     console.log(Usage);
@@ -16,10 +16,10 @@ var URL = system.args[1];
 var output = system.args[2] ? system.args[2] : 'output.pdf';
 var pageW = system.args[3] ? parseInt(system.args[3],10) : 1024;
 var pageH = system.args[4] ? parseInt(system.args[4],10) :  768;
-page.zoomFactor = system.args[5] ? parseFloat(system.args[5]) : 1.0;
+page.zoomFactor = 1.0
 
 console.log('Saving', URL, 'to', output,
-    'at', pageW, 'x', pageH, 'zoom', page.zoomFactor);
+    'at', pageW, 'x', pageH);
 
 page.viewportSize = { width: pageW, height: pageH };
 
