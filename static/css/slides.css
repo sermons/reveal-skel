@@ -61,11 +61,12 @@ html { font-size: 3em }
 /* Common slide header/footer */
 #header, #footer {
   position: absolute;
-  left: 0;
+  z-index: 20;
+  left: 0.25rem;
   font-size: 0.60rem;
 }
-#header { top: 0; }
-#footer { bottom: 0; }
+#header { top: 0.25rem; }
+#footer { bottom: 0.25rem; }
 
 /* Placeholder if Javascript is disabled */
 noscript .noscript {
