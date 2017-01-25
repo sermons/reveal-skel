@@ -1,8 +1,6 @@
 module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
-    config:
-      shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
 
     watch:
       index:
@@ -29,11 +27,11 @@ module.exports = (grunt) ->
     curl:
       qr:
         src: 'https://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=<%= pkg.config.pretty_url %>'
-        dest: 'static/img/<%= config.shortname %>-qr.png'
+        dest: 'static/img/<%= pkg.shortname %>-qr.png'
 
     exec:
-      print: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= config.shortname %>.pdf 999 728'
-      thumbnail: 'convert -resize 50% static/<%= config.shortname %>.pdf[0] static/img/thumbnail.jpg'
+      print: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.shortname %>.pdf 999 728'
+      thumbnail: 'convert -resize 50% static/<%= pkg.shortname %>.pdf[0] static/img/thumbnail.jpg'
 
     copy:
       dist:
@@ -70,6 +68,12 @@ module.exports = (grunt) ->
         options:
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
+
+  # Processed config vars
+  grunt.config
+    pkg:
+      shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
+      commit: (process.env.TRAVIS_COMMIT || '').substr(0,7)
 
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)

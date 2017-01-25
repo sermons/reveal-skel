@@ -49,9 +49,9 @@
       <div id="footer"><%= pkg.config.pretty_url %> &emsp;
         <a href="https://github.com/<%= pkg.repository %>">
           <i class="fa fa-github fa-inverse"></i></a>
-        <a href="static/<%= config.shortname %>.pdf">
+        <a href="static/<%= pkg.shortname %>.pdf">
           <i class="fa fa-file-pdf-o fa-inverse"></i></a>
-        <span class="commit"><%= process.env.TRAVIS_COMMIT.substr(0,7) %></span>
+        <span class="commit"><%= pkg.commit %></span>
       </div>
 
     </div>
