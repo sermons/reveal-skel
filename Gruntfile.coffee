@@ -7,15 +7,6 @@ module.exports = (grunt) ->
       shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
       commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
 
-  grunt.config
-    watch:
-      index:
-        files: ['_index.html']
-        tasks: ['buildIndex']
-      coffeelint:
-        files: ['Gruntfile.coffee']
-        tasks: ['coffeelint']
-
     connect:
       serve:
         options:
@@ -46,16 +37,11 @@ module.exports = (grunt) ->
           src: [
             'slides/**'
             'static/**'
-          ]
-          dest: 'dist/'
-        },{
-          src: [
             'index.html'
             'CNAME'
             '.nojekyll'
           ]
           dest: 'dist/'
-          filter: 'isFile'
         },{
           src: 'static/img/favicon.ico'
           dest: 'dist/'
