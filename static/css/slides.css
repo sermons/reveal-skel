@@ -68,6 +68,8 @@ html { font-size: 3em }
 #header { top: 0.25rem; }
 #footer { bottom: 0.25rem; }
 
+.commit { color: rgba(255, 255, 255, 0.1) }
+
 /* Placeholder if Javascript is disabled */
 noscript .noscript {
   padding: 20% 5%;
