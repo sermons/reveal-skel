@@ -62,11 +62,11 @@ html { font-size: 3em }
 #header, #footer {
   position: absolute;
   z-index: 20;
-  left: 0.25rem;
-  font-size: 0.60rem;
+  left: 0.25em;
+  font-size: 0.50em;
 }
-#header { top: 0.25rem; }
-#footer { bottom: 0.25rem; }
+#header { top: 0.25em; }
+#footer { bottom: 0.25em; }
 
 #footer .links { margin: 0 1em }
 
