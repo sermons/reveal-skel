@@ -36,7 +36,6 @@ module.exports = (grunt) ->
         files: [{
           expand: true
           src: [
-            'slides/**'
             'static/**'
             'index.html'
             'CNAME'
