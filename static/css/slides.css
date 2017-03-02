@@ -63,7 +63,7 @@ html { font-size: 3em }
   position: absolute;
   z-index: 20;
   left: 0.5em;
-  font-size: 0.40rem;
+  font-size: 16px;
 }
 #header { top: 0.5em; }
 #footer { bottom: 0.5em; }
