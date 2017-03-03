@@ -53,7 +53,7 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "load-grunt-tasks": "^3.5.2",
-    "grunt-exec": "^1.0.1",
+    "grunt-exec": "^2.0.0",
     "grunt-curl": "^2.2.0",
     "grunt-build-control": "^0.7.1",
     "grunt-coffeelint": "^0.0.16",
