@@ -20,8 +20,11 @@ Six underscores create a horizontal rule in the notes
 <!-- .slide: data-background="white" -->
 # Opening **Question**
 
+[###](#/outline)
+<!-- .element: style="color:rgba(0,0,0,0.2)" -->
+
 ---
-<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" id="outline" -->
 ## Outline <span class="zh">大綱</span>
 1. Point **One** <span class="ref">(v1)</span>
 2. Point **Two** <span class="ref">(v2)</span>
