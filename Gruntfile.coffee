@@ -104,7 +104,7 @@ module.exports = (grunt) ->
       'curl:qr'
       'cname'
       'nojekyll'
-      'copy'
+      'copy:dist'
     ]
 
   grunt.registerTask 'deploy',
