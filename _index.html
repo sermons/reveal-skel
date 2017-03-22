@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <link rel=icon href="static/img/cross.svg" sizes="any" type="image/svg+xml" />
 
-    <% revealjs = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.0' %>
+    <% revealjs = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1' %>
 
     <% pkg.config.css.forEach( function(css) { %>
     <link rel="stylesheet" href="<%= css.href %>" integrity="<%= css.integrity %>" crossorigin="anonymous" />
@@ -93,7 +93,7 @@
         dependencies: [
           { src: '<%= revealjs %>/plugin/markdown/marked.js' },
           { src: '<%= revealjs %>/plugin/markdown/markdown.min.js' },
-          { src: 'https://sermons.seanho.com/lib/reveal.js-3.4.0/plugin/notes/notes.js', async:true },
+          { src: '<%= revealjs %>/plugin/notes/notes.min.js' },
           { src: '<%= revealjs %>/plugin/math/math.min.js', async:true },
           { src: '<%= revealjs %>/plugin/highlight/highlight.min.js', async:true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js', async:true },
