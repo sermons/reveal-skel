@@ -33,7 +33,7 @@ body { background: #222; }
 /* Shading background images */
 /* background blend needs PhantomJS >= 2.1.1 */
 section[data-background-image] {
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(0,0,0,0.6);
   text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black;
 }
 section.empty[data-background-image] {
