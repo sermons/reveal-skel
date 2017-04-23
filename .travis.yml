@@ -10,5 +10,6 @@ deploy:
   provider: script
   script: npm run deploy
   skip_cleanup: true
+  all_branches: true
   on:
     condition: $TRAVIS_BRANCH =~ ^(master|release-.*)$
