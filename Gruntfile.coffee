@@ -20,9 +20,13 @@ module.exports = (grunt) ->
       qr:
         src: 'https://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=<%= pkg.config.pretty_url %>'
         dest: 'static/img/<%= pkg.shortname %>-qr.png'
+      phantom:
+        src: 'https://github.com/astefanutti/decktape/releases/download/v1.0.0/phantomjs-linux-x86-64'
+        dest: 'phantomjs'
 
     exec:
       print: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.shortname %>.pdf 999 728'
+      decktape: 'chmod +x phantomjs; ./phantomjs decktape/decktape.js reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
       thumbnail: 'convert -resize 50% static/<%= pkg.shortname %>.pdf[0] static/img/thumbnail.jpg'
 
     copy:
@@ -61,6 +65,12 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
+    gitclone:
+      decktape:
+        options:
+          repository: 'https://github.com/astefanutti/decktape'
+          depth: 1
+
   # Generated grut vars
   grunt.config.merge
     pkg:
@@ -69,6 +79,7 @@ module.exports = (grunt) ->
 
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
+  grunt.loadNpmTasks('grunt-git')
 
   grunt.registerTask 'cname',
     'Create CNAME from NPM config if needed.', ->
@@ -94,7 +105,9 @@ module.exports = (grunt) ->
     'Render a PDF copy of the presentation (using PhantomJS)', [
       'copy:index'
       'connect:serve'
-      'exec:print'
+      'gitclone:decktape'
+      'curl:phantom'
+      'exec:decktape'
       'exec:thumbnail'
     ]
 
