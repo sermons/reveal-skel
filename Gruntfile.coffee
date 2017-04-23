@@ -25,8 +25,8 @@ module.exports = (grunt) ->
         dest: 'phantomjs'
 
     exec:
-      print: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.shortname %>.pdf 999 728'
-      decktape: 'chmod +x phantomjs; ./phantomjs decktape/decktape.js reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
+      print: 'chmod +x phantomjs; ./phantomjs decktape/decktape.js -s 1024x768 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
+      print_hd: 'chmod +x phantomjs; ./phantomjs decktape/decktape.js -s 1920x1080 reveal "http://localhost:9000/" static/<%= pkg.shortname %>_hd.pdf'
       thumbnail: 'convert -resize 50% static/<%= pkg.shortname %>.pdf[0] static/img/thumbnail.jpg'
 
     copy:
@@ -101,7 +101,8 @@ module.exports = (grunt) ->
       'serve'
       'gitclone:decktape'
       'curl:phantom'
-      'exec:decktape'
+      'exec:print'
+      'exec:print_hd'
       'exec:thumbnail'
     ]
 
