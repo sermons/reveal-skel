@@ -20,9 +20,13 @@ module.exports = (grunt) ->
       qr:
         src: 'https://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=<%= pkg.config.pretty_url %>'
         dest: 'static/img/<%= pkg.shortname %>-qr.png'
+      phantom:
+        src: 'https://github.com/astefanutti/decktape/releases/download/v1.0.0/phantomjs-linux-x86-64'
+        dest: 'phantomjs'
 
     exec:
-      print: 'phantomjs --debug=true rasterise.js "http://localhost:9000/?print-pdf" static/<%= pkg.shortname %>.pdf 999 728'
+      print: 'chmod +x phantomjs; ./phantomjs decktape/decktape.js -s 1024x768 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
+      print_hd: 'chmod +x phantomjs; ./phantomjs decktape/decktape.js -s 1920x1080 reveal "http://localhost:9000/" static/<%= pkg.shortname %>_hd.pdf'
       thumbnail: 'convert -resize 50% static/<%= pkg.shortname %>.pdf[0] static/img/thumbnail.jpg'
 
     copy:
@@ -61,6 +65,12 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
+    gitclone:
+      decktape:
+        options:
+          repository: 'https://github.com/astefanutti/decktape'
+          depth: 1
+
   # Generated grut vars
   grunt.config.merge
     pkg:
@@ -69,6 +79,13 @@ module.exports = (grunt) ->
 
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
+  grunt.loadNpmTasks('grunt-git')
+
+  grunt.registerTask 'serve',
+    'Run presentation locally', [
+      'copy:index'
+      'connect:serve'
+    ]
 
   grunt.registerTask 'cname',
     'Create CNAME from NPM config if needed.', ->
@@ -79,28 +96,24 @@ module.exports = (grunt) ->
     'Create .nojekyll file for Github Pages', ->
       grunt.file.write '.nojekyll', ''
 
-  grunt.registerTask 'test',
-    '*Test* rendering: lint Coffeescripts.', [
-      'coffeelint'
-    ]
-
-  grunt.registerTask 'serve',
-    'Run presentation locally', [
-      'copy:index'
-      'connect'
-    ]
-
   grunt.registerTask 'pdf',
     'Render a PDF copy of the presentation (using PhantomJS)', [
-      'copy:index'
-      'connect:serve'
+      'serve'
+      'gitclone:decktape'
+      'curl:phantom'
       'exec:print'
+      'exec:print_hd'
       'exec:thumbnail'
+    ]
+
+  grunt.registerTask 'test',
+    '*Test* rendering to PDF', [
+      'coffeelint'
+      'pdf'
     ]
 
   grunt.registerTask 'dist',
     'Save presentation files to *dist* directory.', [
-      'pdf'
       'curl:qr'
       'cname'
       'nojekyll'
@@ -116,6 +129,5 @@ module.exports = (grunt) ->
   # Define default task.
   grunt.registerTask 'default', [
     'test'
-    'serve'
   ]
 

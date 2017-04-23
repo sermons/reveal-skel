@@ -58,7 +58,7 @@
     "grunt-build-control": "^0.7.1",
     "grunt-coffeelint": "^0.0.16",
     "coffeelint": "^1.16.0",
-    "phantom": "^4.0.1"
+    "grunt-git": "^1.0.3"
   },
   "scripts": {
     "test": "grunt test",
