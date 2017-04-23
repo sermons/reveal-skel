@@ -81,6 +81,12 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks('grunt-git')
 
+  grunt.registerTask 'serve',
+    'Run presentation locally', [
+      'copy:index'
+      'connect:serve'
+    ]
+
   grunt.registerTask 'cname',
     'Create CNAME from NPM config if needed.', ->
       if grunt.config 'pkg.config.cname'
@@ -90,30 +96,23 @@ module.exports = (grunt) ->
     'Create .nojekyll file for Github Pages', ->
       grunt.file.write '.nojekyll', ''
 
-  grunt.registerTask 'test',
-    '*Test* rendering: lint Coffeescripts.', [
-      'coffeelint'
-    ]
-
-  grunt.registerTask 'serve',
-    'Run presentation locally', [
-      'copy:index'
-      'connect'
-    ]
-
   grunt.registerTask 'pdf',
     'Render a PDF copy of the presentation (using PhantomJS)', [
-      'copy:index'
-      'connect:serve'
+      'serve'
       'gitclone:decktape'
       'curl:phantom'
       'exec:decktape'
       'exec:thumbnail'
     ]
 
+  grunt.registerTask 'test',
+    '*Test* rendering to PDF', [
+      'coffeelint'
+      'pdf'
+    ]
+
   grunt.registerTask 'dist',
     'Save presentation files to *dist* directory.', [
-      'pdf'
       'curl:qr'
       'cname'
       'nojekyll'
@@ -129,6 +128,5 @@ module.exports = (grunt) ->
   # Define default task.
   grunt.registerTask 'default', [
     'test'
-    'serve'
   ]
 
