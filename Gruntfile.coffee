@@ -102,7 +102,6 @@ module.exports = (grunt) ->
       'gitclone:decktape'
       'curl:phantom'
       'exec:print'
-      'exec:print_hd'
       'exec:thumbnail'
     ]
 
