@@ -20,7 +20,8 @@
       {
         "venue": "Venue of talk",
         "city": "Location",
-        "date": "2000-01-01"
+        "date": "2000-01-01",
+        "duration": 0
       }
     ],
     "slides": [ "slides/sample.md" ],
