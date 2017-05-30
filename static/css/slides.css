@@ -31,25 +31,20 @@ html { font-size: 3em }
 .reveal section .zh { font-size: larger }
 
 /* Flexbox layout for images */
+/* Prefixed old-style box for decktape, #52 */
 .imgbox {
   width: 100%;
+  display: -webkit-box;
   display: flex;
+  -webkit-flex-flow: row;
   flex-flow: row wrap;
   align-items: flex-start;
   align-content: flex-start;
+  -webkit-box-pack: center;
 }
-.imgbox > div { flex: 1 }
-
-/* Old-style CSS flex box for Phantom, #52 */
-@media print {
-  .imgbox {
-    display: -webkit-box;
-    -webkit-flex-flow: row;
-    -webkit-box-pack: center;
-  }
-  .imgbox > div {
-    -webkit-box-flex: 1;
-  }
+.imgbox > div {
+  flex: 1;
+  -webkit-box-flex: 1;
 }
 
 /* Image captions */
