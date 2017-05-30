@@ -57,7 +57,6 @@ module.exports = (grunt) ->
         commit: true
         push: true
         fetchProgress: false
-        shallowFetch: true
         config:
           'user.name': '<%= pkg.config.git.name %>'
           'user.email': '<%= pkg.config.git.email %>'
