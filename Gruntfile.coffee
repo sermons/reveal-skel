@@ -63,7 +63,6 @@ module.exports = (grunt) ->
           'user.email': '<%= pkg.config.git.email %>'
       github:
         options:
-          dir: 'dist'
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
