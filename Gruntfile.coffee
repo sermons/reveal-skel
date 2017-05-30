@@ -63,6 +63,7 @@ module.exports = (grunt) ->
           'user.email': '<%= pkg.config.git.email %>'
       github:
         options:
+          dir: 'dist'
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
@@ -72,7 +73,7 @@ module.exports = (grunt) ->
           repository: 'https://github.com/astefanutti/decktape'
           depth: 1
 
-  # Generated grut vars
+  # Generated grunt vars
   grunt.config.merge
     pkg:
       shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
