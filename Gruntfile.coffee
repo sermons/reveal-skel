@@ -57,6 +57,7 @@ module.exports = (grunt) ->
         commit: true
         push: true
         fetchProgress: false
+        shallowFetch: true
         config:
           'user.name': '<%= pkg.config.git.name %>'
           'user.email': '<%= pkg.config.git.email %>'
@@ -122,7 +123,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'deploy',
     'Deploy to Github Pages', [
       'dist'
-      'buildcontrol'
+      'buildcontrol:github'
     ]
 
   # Define default task.
