@@ -8,6 +8,10 @@
 [![Node dev status](https://david-dm.org/sermons/reveal-skel/dev-status.svg)](https://david-dm.org/sermons/reveal-skel#info=devDependencies)
 </div></div>
 
+<div class="ref">
+[(open master view)](http://reveal-skel.seanho.com/?s=45ba034647cea150)
+</div>
+
 >>>
 + Speaker notes go here.
 + Markdown is supported.
