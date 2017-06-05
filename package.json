@@ -38,8 +38,8 @@
         "integrity": "sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/css/reveal.min.css",
-        "integrity": "sha256-5z1tvl5q2pgp1SJIkfLhpdE5JfcAAN1FDBQe3YzlUdg="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css",
+        "integrity": "sha256-vPN+adnQKmyGqQAeBNs9+GBYVx8uQETV+DAdAXG0XBg="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css",
@@ -52,8 +52,8 @@
         "integrity": "sha256-+09kLhwACKXFPDvqo4xMMvi4+uXFsRZ2uYGbeN1U8sI="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/js/reveal.min.js",
-        "integrity": "sha256-iSS1lZpXv81SOmVH9u7LxPptbmNmVc40zG/1R2cKUbk="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js",
+        "integrity": "sha256-Kq2PSVZ3iKoRCW+zD98fwPs26/aw43ATQP9mBQgnVZc="
       }
     ]
   },
