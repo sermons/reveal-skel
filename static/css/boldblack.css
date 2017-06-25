@@ -102,6 +102,7 @@ section.empty[data-background-image] {
 
 /* Colors for reverse-color slides */
 .reveal .has-light-background strong { color: #e20606; }
+.reveal .has-light-background em { color: #0ca042; }
 
 /*********************************************
  * LISTS
