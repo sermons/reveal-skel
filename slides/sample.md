@@ -1,4 +1,4 @@
-<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" data-state="title" -->
 # Reveal-Skel
 ## A template for Reveal.js-based presentations
 
