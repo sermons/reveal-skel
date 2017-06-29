@@ -14,7 +14,7 @@
     "pretty_url": "reveal-skel.seanho.com",
     "cname": "reveal-skel.seanho.com",
     "multiplex": {
-      "url": "https://mp-seanho00.rhcloud.com:8443/",
+      "url": "https://mp.seanho.com:8443/",
       "id": "22bc761ffc97809b"
     },
     "git": {
