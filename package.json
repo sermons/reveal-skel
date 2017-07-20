@@ -72,6 +72,7 @@
     "grunt-git": "^1.0.3"
   },
   "scripts": {
+    "postinstall": "grunt install",
     "test": "grunt test",
     "pdf": "grunt pdf",
     "deploy": "grunt deploy"
