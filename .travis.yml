@@ -13,5 +13,3 @@ deploy:
   on:
     all_branches: true
     condition: $TRAVIS_BRANCH =~ ^(master|release-.*)$
-after_deploy:
-  - travis_terminate 0
