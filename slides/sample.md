@@ -28,7 +28,7 @@ Six underscores create a horizontal rule in the notes
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" id="outline" -->
 ## Outline [(ref)](# "ref")
-1. Point **One** <%= bible('Rom1.1', 'v1' %>
+1. Point **One** <%= bible('Rom1.1', '(v1)') %>
 2. Point **Two** <%= bible('Rom2.1') %>
 3. Point **Three** [(v3)](# "ref")
 
