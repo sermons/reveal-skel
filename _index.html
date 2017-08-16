@@ -93,7 +93,7 @@
           { src: 'https://sermons.seanho.com/lib/reveal.js-3.5.0/plugin/notes/notes.js', async:true },
           { src: '<%= revealjs %>/math/math.min.js', async:true },
           { src: '<%= revealjs %>/highlight/highlight.min.js', async:true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.2/socket.io.slim.js', async:true },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js', async:true },
           { src: Reveal.getQueryHash().s ?  '<%= revealjs %>/multiplex/master.min.js' :
             '<%= revealjs %>/multiplex/client.min.js', async:true },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js', condition: function() { return !document.body.classList; } }
