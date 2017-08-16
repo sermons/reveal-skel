@@ -78,7 +78,8 @@ module.exports = (grunt) ->
       commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
     bible: (ref, text=ref, ver='NIV') ->
       '[' + text + '](' +
-      'https://mobile.biblegateway.com/passage/?search=' + ref +
+      'https://mobile.biblegateway.com/passage/?search=' +
+      ref.replace(/ |:/, '') +
       '&version=' + ver + ' "ref")'
 
   # Load all grunt tasks.
