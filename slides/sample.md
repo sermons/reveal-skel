@@ -73,11 +73,9 @@ class BST:
 
 <div class="imgbox">
 <div>
-Yay for **multi-col** layout!
-
-1/3 width for text
-
-No markdown lists
+Yay for **multi-col** layout! <br/>
+1/3 width for text <br/>
+No block-level markdown
 </div>
 <div style="flex:2; -webkit-box-flex:0.5">
 ![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
