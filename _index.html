@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
     <link rel=icon href="static/img/cross.svg" sizes="any" type="image/svg+xml" />
 
-    <% revealjs = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0' %>
+    <% revealjs = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin' %>
 
     <% pkg.config.css.forEach( function(css) { %>
     <link rel="stylesheet" href="<%= css.href %>" integrity="<%= css.integrity %>" crossorigin="anonymous" />
@@ -88,13 +88,14 @@
         },
 
         dependencies: [
-          { src: '<%= revealjs %>/plugin/markdown/marked.js' },
-          { src: '<%= revealjs %>/plugin/markdown/markdown.min.js' },
+          { src: '<%= revealjs %>/markdown/marked.js' },
+          { src: '<%= revealjs %>/markdown/markdown.min.js' },
           { src: 'https://sermons.seanho.com/lib/reveal.js-3.5.0/plugin/notes/notes.js', async:true },
-          { src: '<%= revealjs %>/plugin/math/math.min.js', async:true },
-          { src: '<%= revealjs %>/plugin/highlight/highlight.min.js', async:true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '<%= revealjs %>/math/math.min.js', async:true },
+          { src: '<%= revealjs %>/highlight/highlight.min.js', async:true, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.2/socket.io.slim.js', async:true },
-          Reveal.getQueryHash().s ?  { src: '<%= revealjs %>/plugin/multiplex/master.min.js', async:true } : { src: '<%= revealjs %>/plugin/multiplex/client.min.js', async:true },
+          { src: Reveal.getQueryHash().s ?  '<%= revealjs %>/multiplex/master.min.js' :
+            '<%= revealjs %>/multiplex/client.min.js', async:true },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js', condition: function() { return !document.body.classList; } }
         ]
       });
