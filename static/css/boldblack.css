@@ -260,7 +260,6 @@ section.empty[data-background-image] {
 
 .reveal a img { transition: all .15s linear; }
 .reveal a:hover img {
-  border: 2px solid #42affa;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
