@@ -83,7 +83,7 @@ module.exports = (grunt) ->
     bible: (ref, text=ref, ver='NIV') ->
       '[' + text + '](' +
       'https://mobile.biblegateway.com/passage/?search=' +
-      ref.replace(/\s/, '') + '&version=' + ver + ' "ref")'
+      ref.replace(/[^\w.:]/, '') + '&version=' + ver + ' "ref")'
 
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
