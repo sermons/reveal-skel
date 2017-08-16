@@ -77,7 +77,7 @@ module.exports = (grunt) ->
       shortname: grunt.config('pkg.name').replace(/.*\//, '')
       commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
     img: (id) ->
-      'https://sermons.seanho.com/img/' + img
+      'https://sermons.seanho.com/img/' + id
     bg: (id) ->
       'data-background-image="' + img("bg/" + id) + '"'
     bible: (ref, text=ref, ver='NIV') ->
