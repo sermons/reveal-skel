@@ -74,12 +74,12 @@ module.exports = (grunt) ->
   # Generated grunt vars
   grunt.config.merge
     pkg:
-      shortname: '<%= pkg.name.replace(/.*\//, "") %>'
+      shortname: '<%= pkg.name.replace(new RegExp(".*\/"), "") %>'
       commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
     bible: (ref, text=ref, ver='NIV') ->
       '[' + text + '](' +
       'https://mobile.biblegateway.com/passage/?search=' +
-      ref.replace(/[ :]/, '') +
+      ref.replace(/\s|:/, '') +
       '&version=' + ver + ' "ref")'
 
   # Load all grunt tasks.
