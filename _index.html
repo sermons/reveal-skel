@@ -17,15 +17,6 @@
     <link rel="stylesheet" href="static/css/boldblack.css" id="theme" />
     <link rel="stylesheet" href="static/css/slides.css" />
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? '<%= revealjs %>/css/print/pdf.min.css' : '<%= revealjs%>/css/print/paper.min.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -80,7 +71,6 @@
         maxScale: 4.0,
         slideNumber: 'c/t',
         defaultTiming: 60,
-        pdfMaxPagesPerSlide: 1,
 
         markdown: {
           smartypants: true
