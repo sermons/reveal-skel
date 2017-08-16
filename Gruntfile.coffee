@@ -79,7 +79,7 @@ module.exports = (grunt) ->
     img: (id) ->
       'https://sermons.seanho.com/img/' + id
     bg: (id) ->
-      'data-background-image="' + img("bg/" + id) + '"'
+      'data-background-image="' + grunt.config('img')("bg/" + id) + '"'
     bible: (ref, text=ref, ver='NIV') ->
       '[' + text + '](' +
       'https://mobile.biblegateway.com/passage/?search=' +
