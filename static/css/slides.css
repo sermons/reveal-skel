@@ -28,6 +28,12 @@ html { font-size: 3em }
 /* Larger font for Chinese */
 .reveal section .zh { font-size: larger }
 
+/* Flexbox slide layout (Reveal.js display: flex) */
+.reveal section {
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
 /* Flexbox layout for images */
 /* Prefixed old-style box for decktape, #52 */
 .imgbox {
