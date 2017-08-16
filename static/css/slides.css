@@ -57,6 +57,11 @@ html { font-size: 3em }
   color: #aaa;
 }
 
+/* Hidden link for private use */
+.reveal a[title="secret"] {
+  color: rgba(0,0,0,0.2)
+}
+
 /* Common slide header/footer */
 #header, #footer {
   position: absolute;

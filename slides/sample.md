@@ -22,8 +22,7 @@ Six underscores create a horizontal rule in the notes
 <!-- .slide: data-background="white" -->
 # Opening **Question**
 
-[###](#/outline)
-<!-- .element: style="color:rgba(0,0,0,0.2)" -->
+[###](#/outline "secret")
 
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="outline" -->
