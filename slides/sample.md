@@ -1,4 +1,4 @@
-<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" data-state="title" -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> data-state="title" -->
 # Reveal-Skel
 ## A template for Reveal.js-based presentations
 
@@ -28,9 +28,9 @@ Six underscores create a horizontal rule in the notes
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="outline" -->
 ## Outline [(ref)](# "ref")
-1. Point **One** <%= bible('Rom1.1', '(v1)') %>
-2. Point **Two** <%= bible('Rom 2:1') %>
-3. Point **Three** [(v3)](# "ref")
+1. Point **One** <%= bible('Rom 1:1', '(v1)') %>
+2. Point **Two** <%= bible('(Rom 1:2)') %>
+3. Point **Three** <%= bible('rom1.3', '(v3)') %>
 
 ---
 ## Point One
@@ -59,7 +59,7 @@ class BST:
 # Review question for Point **One**
 
 ---
-<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> -->
 ## Outline <span class="zh">大綱</span>
 1. Point *One* <span class="ref">(v1)</span>
 2. **Point Two** <span class="ref">(v2)</span>
@@ -85,7 +85,7 @@ No block-level markdown
 # Review question for Point **Two**
 
 ---
-<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> -->
 ## Outline
 1. Point *One* <span class="ref">(v1)</span>
 2. Point *Two* <span class="ref">(v2)</span>
@@ -107,11 +107,11 @@ No block-level markdown
 # Review question for Point **Three**
 
 ---
-<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> -->
 ## Outline
 1. Point **One** <span class="ref">(v1)</span>
 2. Point **Two** <span class="ref">(v2)</span>
 3. Point **Three** <span class="ref">(v3)</span>
 
 ---
-<!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" class="empty" -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="empty" -->
