@@ -74,7 +74,7 @@ module.exports = (grunt) ->
   # Generated grunt vars
   grunt.config.merge
     pkg:
-      shortname: pkg.name.replace(/.*\//, '')
+      shortname: grunt.config('pkg.name').replace(/.*\//, '')
       commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
     bible: (ref, text=ref, ver='NIV') ->
       '[' + text + '](' +
