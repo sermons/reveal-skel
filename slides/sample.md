@@ -73,11 +73,11 @@ class BST:
 
 <div class="imgbox">
 <div>
-Yay for multi-column layouts!
+Yay for **multi-col** layout!
 
-One-third width for text.
+1/3 width for text
 
-Within the HTML div, Markdown **bold** is ok, but not lists.
+No markdown lists
 </div>
 <div style="flex:2; -webkit-box-flex:0.5">
 ![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
