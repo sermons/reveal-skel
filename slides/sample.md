@@ -4,7 +4,7 @@
 
 <div>
 [![Travis builds](https://travis-ci.org/sermons/reveal-skel.svg)](https://travis-ci.org/sermons/reveal-skel)
-[![Node dependencies](https://david-dm.org/sermons/reveal-skel.svg)](https://david-dm.org/sermons/reveal-skel)
+[![Node deps](https://david-dm.org/sermons/reveal-skel.svg)](https://david-dm.org/sermons/reveal-skel)
 [![Node devDeps](https://david-dm.org/sermons/reveal-skel/dev-status.svg)](https://david-dm.org/sermons/reveal-skel?type=dev)
 </div>
 
@@ -27,11 +27,10 @@ Six underscores create a horizontal rule in the notes
 
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" id="outline" -->
-## Outline <span class="zh">大綱</span>
+## Outline [(ref)](# "ref")
 1. Point **One** [(v1)](# "ref")
 2. Point **Two** [(v2)](# "ref")
 3. Point **Three** [(v3)](# "ref")
-  + A bit of math: \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
 
 ---
 ## Point One
@@ -61,10 +60,11 @@ class BST:
 
 ---
 <!-- .slide: data-background-image="static/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
-## Outline
+## Outline <span class="zh">大綱</span>
 1. Point *One* <span class="ref">(v1)</span>
 2. **Point Two** <span class="ref">(v2)</span>
 3. Point *Three* <span class="ref">(v3)</span>
+  + A bit of math: \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
 
 ---
 ## Point Two
