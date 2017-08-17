@@ -29,7 +29,7 @@ Six underscores create a horizontal rule in the notes
 ## Outline [(ref)](# "ref")
 1. Point **One** <%= bible('Rom 1:1', '(v1)') %>
 2. Point **Two** <%= bible('(Rom 1:2)') %>
-3. Point **Three** <%= bible('rom1.3', '(v3)') %>
+3. Point **Three** <%= bible('rom1.3-4', '(v3-4)') %>
 
 ---
 ## Point One
