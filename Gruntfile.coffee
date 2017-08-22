@@ -26,7 +26,7 @@ module.exports = (grunt) ->
 
     exec:
       phantom: 'chmod +x phantomjs'
-      print: './phantomjs --debug=true decktape/decktape.js -s 1024x768 --load-pause=10000 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
+      print: './phantomjs --debug=true decktape/decktape.js -s 1024x768 -p 5000 --load-pause=10000 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
       thumbnail: './phantomjs decktape/decktape.js -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg'
 
     copy:
