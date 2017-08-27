@@ -22,8 +22,8 @@ module.exports = (grunt) ->
         dest: 'static/img/<%= pkg.shortname %>-qr.png'
 
     exec:
-      print: 'decktape -s 1024x768 --load-pause=10000 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
-      thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg'
+      print: 'decktape -s 1024x768 --load-pause=10000 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf; true'
+      thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg; true'
 
     copy:
       index:
