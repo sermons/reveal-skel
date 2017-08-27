@@ -22,7 +22,6 @@ module.exports = (grunt) ->
         dest: 'static/img/<%= pkg.shortname %>-qr.png'
 
     exec:
-      phantom: 'chmod +x phantomjs'
       print: 'decktape -s 1024x768 --load-pause=10000 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf'
       thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg'
 
@@ -97,8 +96,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'install',
     '*Install* dependencies', [
-      'curl:phantom'
-      'exec:phantom'
     ]
 
   grunt.registerTask 'pdf',
