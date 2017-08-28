@@ -33,9 +33,9 @@
       <div class="slides">
         <% pkg.config.slides.forEach( function(md) { %>
         <section data-markdown data-charset="utf8"
-          data-separator="^\s{0,3}-\s*-\s*-[-\s]*$"
-          data-separator-vertical="^\s{0,3}\*\s*\*\s*\*[\*\s]*$"
-          data-separator-notes="^\s{0,3}>\s*>\s*>[>\s]*$">
+          data-separator="^---[-\s]*$"
+          data-separator-vertical="^\*\*\*[\*\s]*$"
+          data-separator-notes="^>>>[>\s]*$">
           <textarea type="text/template">
         <%= grunt.template.process(grunt.file.read(md)) %>
           </textarea>
