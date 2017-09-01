@@ -107,7 +107,7 @@ module.exports = (grunt) ->
     ]
 
   grunt.registerTask 'pdf',
-    'Render a **PDF** copy of the presentation (using PhantomJS)', [
+    'Render a **PDF** copy of the presentation (using decktape)', [
       'serve'
       'exec:print'
       'exec:thumbnail'
