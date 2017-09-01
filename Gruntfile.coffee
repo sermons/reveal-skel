@@ -86,7 +86,7 @@ module.exports = (grunt) ->
       il = new Inliner 'http://localhost:9000/'
       il.on('progress', (event) -> console.error event
       ).on('end', (html) ->
-        grunt.file.write grunt.config('shortname') + '.html', html
+        grunt.file.write grunt.config('pkg.shortname') + '.html', html
       )
 
   grunt.registerTask 'serve',
