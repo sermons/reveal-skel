@@ -82,10 +82,12 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'inline',
     'Inline all assets into HTML', ->
+      console.log 'running inliner ...'
       Inliner = require 'inliner'
       new Inliner 'http://localhost:9000/', (err, html) ->
         console.error err
         grunt.file.write grunt.config('pkg.shortname') + '.html', html
+      console.log '... done'
 
   grunt.registerTask 'serve',
     'Run presentation locally', [
