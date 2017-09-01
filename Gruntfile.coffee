@@ -83,11 +83,9 @@ module.exports = (grunt) ->
   grunt.registerTask 'inline',
     'Inline all assets into HTML', ->
       Inliner = require 'inliner'
-      il = new Inliner 'http://localhost:9000/'
-      il.on('progress', (event) -> console.error event
-      ).on('end', (html) ->
+      new Inliner 'http://localhost:9000/', (err, html) ->
+        console.error err
         grunt.file.write grunt.config('pkg.shortname') + '.html', html
-      )
 
   grunt.registerTask 'serve',
     'Run presentation locally', [
