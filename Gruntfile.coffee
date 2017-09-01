@@ -80,6 +80,7 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks('grunt-git')
 
+  require 'inliner'
   grunt.registerTask 'inline',
     'Inline all assets into HTML', ->
       il = new Inliner 'http://localhost:9000/'
