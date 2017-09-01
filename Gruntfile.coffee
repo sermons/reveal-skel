@@ -38,7 +38,7 @@ module.exports = (grunt) ->
           src: [
             'static/**'
             'index.html'
-            '<%= pkg.shortname %>.html'
+            'inline.html'
             'CNAME'
             '.nojekyll'
           ]
@@ -86,7 +86,7 @@ module.exports = (grunt) ->
       Inliner = require 'inliner'
       new Inliner 'http://localhost:9000/', (err, html) ->
         console.error err
-        grunt.file.write grunt.config('pkg.shortname') + '.html', html
+        grunt.file.write 'inline.html', html
       console.log '... done'
 
   grunt.registerTask 'serve',
