@@ -24,6 +24,7 @@ module.exports = (grunt) ->
     exec:
       print: 'decktape -s 1024x768 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf; true'
       thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg; true'
+      inline: 'inliner http://localhost:9000/ > inline.html'
 
     copy:
       index:
@@ -80,15 +81,6 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks('grunt-git')
 
-  grunt.registerTask 'inline',
-    'Inline all assets into HTML', ->
-      console.log 'running inliner ...'
-      Inliner = require 'inliner'
-      new Inliner 'http://localhost:9000/', (err, html) ->
-        console.error err
-        grunt.file.write 'inline.html', html
-      console.log '... done'
-
   grunt.registerTask 'serve',
     'Run presentation locally', [
       'copy:index'
@@ -119,7 +111,7 @@ module.exports = (grunt) ->
     '*Test* rendering to PDF', [
       'coffeelint'
       'pdf'
-      'inline'
+      'exec:inline'
     ]
 
   grunt.registerTask 'dist',
