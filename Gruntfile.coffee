@@ -38,6 +38,7 @@ module.exports = (grunt) ->
           src: [
             'static/**'
             'index.html'
+            '<%= pkg.shortname %>.html'
             'CNAME'
             '.nojekyll'
           ]
@@ -79,6 +80,14 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks('grunt-git')
 
+  grunt.registerTask 'inline',
+    'Inline all assets into HTML', ->
+      il = new Inliner 'http://localhost:9000/'
+      il.on('progress', (event) -> console.error event
+      ).on('end', (html) ->
+        grunt.file.write grunt.config('shortname') + '.html', html
+      )
+
   grunt.registerTask 'serve',
     'Run presentation locally', [
       'copy:index'
@@ -109,6 +118,7 @@ module.exports = (grunt) ->
     '*Test* rendering to PDF', [
       'coffeelint'
       'pdf'
+      'inline'
     ]
 
   grunt.registerTask 'dist',
