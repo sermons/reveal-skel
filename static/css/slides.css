@@ -51,16 +51,22 @@ html { font-size: 3em }
   -webkit-box-flex: 1;
 }
 
+/* References/links, e.g., Bible verses */
+.reveal section .ref,
+.reveal section a[title="ref"] {
+  font-size: 0.75em;
+  color: #19b1ff;
+}
+
 /* Image captions */
-.reveal section .caption {
+.reveal section .caption,
+.reveal section a[title="caption"] {
   font-size: 0.45rem;
   color: #aaa;
 }
 
 /* Hidden link for private use */
-.reveal a[title="secret"] {
-  opacity: 0.2
-}
+.reveal a[title="secret"] { opacity: 0.2 }
 
 /* Common slide header/footer */
 #header, #footer {
@@ -75,8 +81,8 @@ html { font-size: 3em }
 #footer .links { margin: 0 1em }
 
 #footer .commit {
-  color: rgba(255, 255, 255, 0.1);
   font-size: 0.75em;
+  opacity: 0.2;
 }
 
 /* Placeholder if Javascript is disabled */

@@ -88,13 +88,6 @@ section.empty[data-background-image] {
   font-size: 0.5em;
 }
 
-/* References/links, e.g., Bible verses */
-.reveal .ref,
-.reveal a[title="ref"] {
-  font-size: 0.75em;
-  color: #19b1ff;
-}
-
 /* Text highlight colors */
 .reveal strong { color: yellow; }
 .reveal em { color: #17ff2e; }
