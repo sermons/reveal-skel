@@ -45,6 +45,10 @@ module.exports = (grunt) ->
           ]
           dest: 'dist/'
         },{
+          expand: true
+          src: 'node_modules/reveal.js/**'
+          dest: 'dist/lib/'
+        },{
           src: 'static/img/favicon.ico'
           dest: 'dist/'
         }]

@@ -64,6 +64,7 @@
   "license": "CC-BY-SA-4.0",
   "private": true,
   "devDependencies": {
+    "reveal.js": "^3.5.0",
     "grunt": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
