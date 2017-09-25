@@ -31,7 +31,7 @@ Six underscores create a horizontal rule in the notes
 2. Point **Two** <%= bible('rom1.2', '(v2)') %>
 3. Point **Three** <%= bible('rom1.3-4', '(v3-4)', 'ESV') %>
 
----
+******
 ## Point One
 ```
 class BSTNode:
@@ -53,7 +53,7 @@ class BST:
         return cur
 ```
 
----
+******
 <!-- .slide: data-background="white" -->
 # Review question for Point **One**
 
@@ -65,7 +65,7 @@ class BST:
 3. Point *Three* <span class="ref">(v3)</span>
   + A bit of math: \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
 
----
+******
 ## Point Two
 
 <div class="imgbox">
@@ -79,7 +79,7 @@ No block-level markdown
 </div>
 </div>
 
----
+******
 <!-- .slide: data-background="white" -->
 # Review question for Point **Two**
 
@@ -90,7 +90,7 @@ No block-level markdown
 2. Point *Two* <span class="ref">(v2)</span>
 3. **Point Three** <span class="ref">(v3)</span>
 
----
+******
 ## Point Three
 
 | ID |     Date    | Intensity | Diffusion |
@@ -101,7 +101,7 @@ No block-level markdown
 | 12 | 2017 Apr  2 |     5.2   |   0.465   |
 | 65 | 2017 May  2 |  1022.6   |   0.663   |
 
----
+******
 <!-- .slide: data-background="white" -->
 # Review question for Point **Three**
 
