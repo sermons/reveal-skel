@@ -74,9 +74,9 @@
     "grunt-build-control": "^0.7.1",
     "grunt-coffeelint": "^0.0.16",
     "coffeelint": "^1.16.0",
-    "grunt-git": "^1.0.6",
-    "inliner": "^1.12.4",
-    "decktape": "^2.0.3"
+    "grunt-git": "^1.0.7",
+    "inliner": "^1.12.5",
+    "decktape": "^2.4.0"
   },
   "scripts": {
     "postinstall": "grunt install",
