@@ -16,6 +16,14 @@ module.exports = (grunt) ->
           level: 'ignore'
       all: ['Gruntfile.coffee']
 
+    sass:
+      theme:
+        files:
+          cwd: 'css'
+          src: ['*.scss', '*.sass']
+          dest: 'css'
+          ext: '.css'
+
     curl:
       qr:
         src: 'https://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=https%3A%2F%2F<%= pkg.config.pretty_url %>'
@@ -38,6 +46,7 @@ module.exports = (grunt) ->
           expand: true
           src: [
             'static/**'
+            'css/*.css'
             'index.html'
             'inline.html'
             'CNAME'
@@ -89,6 +98,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'serve',
     'Run presentation locally', [
       'copy:index'
+      'sass:theme'
       'connect:serve'
     ]
 
