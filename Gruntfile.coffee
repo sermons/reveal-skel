@@ -22,10 +22,7 @@ module.exports = (grunt) ->
         outputStyle: 'compressed'
       theme:
         files:
-          cwd: 'css'
-          src: ['*.scss', '*.sass']
-          dest: 'css'
-          ext: '.css'
+          'css/boldblack.css': 'css/boldblack.scss'
 
     curl:
       qr:
