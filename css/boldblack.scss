@@ -22,7 +22,12 @@ $headingFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
 $backgroundColor: #222;
 $mainColor: #fff;
 $headingColor: #fff;
-.reveal .has-light-background { color: #222 }
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #222;
+  }
+}
 
 // Sizes
 html { font-size: 48px }
