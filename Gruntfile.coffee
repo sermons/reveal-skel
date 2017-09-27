@@ -39,6 +39,7 @@ module.exports = (grunt) ->
             return grunt.template.process content
       plugin:
         expand: true
+        flatten: true
         src: 'node_modules/reveal.js/plugin/notes/*'
         dest: 'static/js/'
       dist:
@@ -46,7 +47,6 @@ module.exports = (grunt) ->
           expand: true
           src: [
             'static/**'
-            'css/*.css'
             'index.html'
           ]
           dest: 'dist/'
