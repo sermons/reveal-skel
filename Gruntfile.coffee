@@ -32,7 +32,7 @@ module.exports = (grunt) ->
     exec:
       print: 'decktape -s 1024x768 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf; true'
       thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg; true'
-      inline: 'echo inliner http://localhost:9000/ > inline.html'
+      inline: 'script -qec "inliner http://localhost:9000/" /dev/null > inline.html'
 
     copy:
       index:
