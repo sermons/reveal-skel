@@ -38,6 +38,7 @@ module.exports = (grunt) ->
           process: (content, path) ->
             return grunt.template.process content
       plugin:
+        expand: true
         src: 'node_modules/reveal.js/plugin/notes/*'
         dest: 'static/js/'
       dist:
