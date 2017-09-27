@@ -32,6 +32,7 @@
     "slides": [
       "slides/sample.md"
     ],
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0",
     "css": [
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
@@ -56,9 +57,19 @@
         "integrity": "sha256-+09kLhwACKXFPDvqo4xMMvi4+uXFsRZ2uYGbeN1U8sI="
       },
       {
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js",
+        "integrity": "sha256-KaSi3am04I2b10TZZ7JqEYrnNk94r0QOeIY3PtwGR/M="
+      },
+      {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js",
         "integrity": "sha256-Kq2PSVZ3iKoRCW+zD98fwPs26/aw43ATQP9mBQgnVZc="
       }
+    ],
+    "plugins": [
+      "marked/marked.js",
+      "markdown/markdown.min.js",
+      "math/math.min.js",
+      "highlight/highlight.min.js"
     ]
   },
   "license": "CC-BY-SA-4.0",
