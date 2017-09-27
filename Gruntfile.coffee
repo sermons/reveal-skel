@@ -24,11 +24,6 @@ module.exports = (grunt) ->
         files:
           'css/boldblack.css': 'css/boldblack.scss'
 
-    curl:
-      qr:
-        src: 'https://zxing.org/w/chart?cht=qr&chs=350x350&chld=M&choe=UTF-8&chl=https%3A%2F%2F<%= pkg.config.pretty_url %>'
-        dest: 'static/img/<%= pkg.shortname %>-qr.png'
-
     exec:
       print: 'decktape -s 1024x768 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf; true'
       thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg; true'
@@ -103,6 +98,13 @@ module.exports = (grunt) ->
       'connect:serve'
     ]
 
+  grunt.registerTask 'qr',
+    'Create QR code PNG for URL', ->
+      var QR = require('qrcode')
+      QR.toFile 'static/img/' + grunt.config 'pkg.shortname' + '-qr.png',
+        'https://' + grunt.config 'pkg.config.pretty_url',
+        (err) -> throw err if err
+
   grunt.registerTask 'cname',
     'Create CNAME from NPM config if needed.', ->
       if grunt.config 'pkg.config.cname'
@@ -132,7 +134,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'dist',
     'Save presentation files to *dist* directory.', [
-      'curl:qr'
+      'qr'
       'cname'
       'nojekyll'
       'copy:dist'

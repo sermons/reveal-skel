@@ -82,11 +82,11 @@
     "load-grunt-tasks": "^3.5.2",
     "grunt-sass": "^2.0.0",
     "grunt-exec": "^3.0.0",
-    "grunt-curl": "^2.2.1",
     "grunt-build-control": "^0.7.1",
     "grunt-coffeelint": "^0.0.16",
     "coffeelint": "^1.16.0",
     "grunt-git": "^1.0.7",
+    "qrcode": "^0.9.0",
     "inliner": "^1.12.5",
     "decktape": "^2.4.0"
   },
