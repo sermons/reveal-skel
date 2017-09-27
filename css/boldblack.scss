@@ -10,7 +10,6 @@
 @import "../node_modules/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
 
-
 // Include theme-specific fonts
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
 @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css');
@@ -19,30 +18,29 @@
 $mainFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
 
+// Colors
 $backgroundColor: #222;
-
 $mainColor: #fff;
 $headingColor: #fff;
+.reveal .has-light-background { color: #222 }
 
-$mainFontSize: 48px;
+// Sizes
+html { font-size: 48px }
+$mainFontSize: 1.0rem;
 
 $heading1Size: 2.4rem;
 $heading2Size: 1.6rem;
 $heading3Size: 1.2rem;
 $heading4Size: 1.0rem;
 
+// Headings
+$headingFontWeight: bold;
 $headingTextTransform: none;
-$headingFontWeight: 600;
+
+// Links
 $linkColor: #42affa;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
-
-section.has-light-background {
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #222;
-	}
-}
-
 
 // Theme template ------------------------------
 @import "../node_modules/reveal.js/css/theme/template/theme";
