@@ -66,7 +66,7 @@
       }
     ],
     "plugins": [
-      "marked/marked.js",
+      "markdown/marked.js",
       "markdown/markdown.min.js",
       "math/math.min.js",
       "highlight/highlight.min.js"
