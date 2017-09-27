@@ -63,11 +63,17 @@
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js",
         "integrity": "sha256-Kq2PSVZ3iKoRCW+zD98fwPs26/aw43ATQP9mBQgnVZc="
+      },
+      {
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js",
+        "integrity": "sha256-c6mIBJmjwIEMzRFz4hJTWcWDvcGnqJUicbkA6bsQoYE="
+      },
+      {
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.min.js",
+        "integrity": "sha256-qBewJIUtcHklIYjfHuHX94KMSguxbhNayl3fXcjVuFs="
       }
     ],
     "plugins": [
-      "markdown/marked.js",
-      "markdown/markdown.min.js",
       "math/math.min.js",
       "highlight/highlight.min.js"
     ]
