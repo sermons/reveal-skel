@@ -28,6 +28,7 @@ module.exports = (grunt) ->
       print: 'decktape -s 1024x768 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf; true'
       thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg; true'
       inline: 'script -qec "inliner http://localhost:9000/" /dev/null > inline.html'
+      qr: 'qrcode https://<%= pkg.config.pretty_url %> static/img/<%= pkg.shortname %>-qr.png'
 
     copy:
       index:
@@ -98,13 +99,6 @@ module.exports = (grunt) ->
       'connect:serve'
     ]
 
-  grunt.registerTask 'qr',
-    'Create QR code PNG for URL', ->
-      QR = require 'qrcode'
-      QR.toFile 'static/img/' + grunt.config('pkg.shortname') + '-qr.png',
-        'https://' + grunt.config('pkg.config.pretty_url'),
-        (err) -> throw err if err
-
   grunt.registerTask 'cname',
     'Create CNAME from NPM config if needed.', ->
       if grunt.config 'pkg.config.cname'
@@ -134,7 +128,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'dist',
     'Save presentation files to *dist* directory.', [
-      'qr'
+      'exec:qr'
       'cname'
       'nojekyll'
       'copy:dist'
