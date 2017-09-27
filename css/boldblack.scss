@@ -16,26 +16,26 @@
 @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css');
 
 // Override theme settings (see ../template/settings.scss)
+$mainFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
+
 $backgroundColor: #222;
 
 $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 48px;
-$mainFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
-$headingTextShadow: none;
-$headingLetterSpacing: normal;
-$headingTextTransform: none;
-$headingFontWeight: 600;
-$linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
 
 $heading1Size: 2.4rem;
 $heading2Size: 1.6rem;
 $heading3Size: 1.2rem;
 $heading4Size: 1.0rem;
+
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
 
 section.has-light-background {
 	&, h1, h2, h3, h4, h5, h6 {
