@@ -100,7 +100,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'qr',
     'Create QR code PNG for URL', ->
-      var QR = require('qrcode')
+      QR = require('qrcode')
       QR.toFile 'static/img/' + grunt.config 'pkg.shortname' + '-qr.png',
         'https://' + grunt.config 'pkg.config.pretty_url',
         (err) -> throw err if err
