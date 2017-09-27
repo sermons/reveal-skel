@@ -1,6 +1,6 @@
 module.exports = (grunt) ->
   grunt.initConfig
-    pkg: grunt.file.readJSON('package.json')
+    pkg: grunt.file.readJSON 'package.json'
 
     connect:
       serve:
@@ -88,7 +88,7 @@ module.exports = (grunt) ->
 
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
-  grunt.loadNpmTasks('grunt-git')
+  grunt.loadNpmTasks 'grunt-git'
   grunt.loadNpmTasks 'grunt-sass'
 
   grunt.registerTask 'serve',
@@ -100,7 +100,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'qr',
     'Create QR code PNG for URL', ->
-      QR = require('qrcode')
+      QR = require 'qrcode'
       QR.toFile 'static/img/' + grunt.config 'pkg.shortname' + '-qr.png',
         'https://' + grunt.config 'pkg.config.pretty_url',
         {},
