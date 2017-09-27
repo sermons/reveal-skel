@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<%= css.href %>" integrity="<%= css.integrity %>" crossorigin="anonymous" />
     <% } ) %>
 
-    <link rel="stylesheet" href="css/boldblack.css" id="theme" />
+    <link rel="stylesheet" href="static/css/boldblack.css" id="theme" />
     <link rel="stylesheet" href="static/css/slides.css" />
 
   </head>
@@ -91,7 +91,7 @@
     <% pkg.config.plugins.forEach( function(js) { %>
     <script src="<%= pkg.config.reveal + "/plugin/" + js %>" crossorigin="anonymous"></script>
     <% } ) %>
-    <script src="lib/reveal.js/plugin/notes/notes.js"></script>
+    <script src="static/js/notes.js"></script>
 
     <script>
       hljs.initHighlightingOnLoad();

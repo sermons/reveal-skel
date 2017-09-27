@@ -93,7 +93,6 @@
   "scripts": {
     "postinstall": "grunt install",
     "test": "grunt test",
-    "pdf": "grunt pdf",
     "deploy": "grunt deploy"
   }
 }

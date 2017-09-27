@@ -18,16 +18,16 @@ module.exports = (grunt) ->
 
     sass:
       options:
-        includePaths: ['node_modules/reveal.js/css/theme/template/']
+        includePaths: ['node_modules/reveal.js/css/theme/']
         outputStyle: 'compressed'
       theme:
         files:
-          'css/boldblack.css': 'css/boldblack.scss'
+          'static/css/boldblack.css': 'css/boldblack.scss'
 
     exec:
       print: 'decktape -s 1024x768 reveal "http://localhost:9000/" static/<%= pkg.shortname %>.pdf; true'
       thumbnail: 'decktape -s 1024x768 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/" static/img/thumbnail.jpg; true'
-      inline: 'script -qec "inliner index.html" /dev/null > inline.html'
+      inline: 'script -qec "inliner index.html" /dev/null > static/<%= pkg.shortname %>.html'
       qr: 'qrcode https://<%= pkg.config.pretty_url %> static/img/<%= pkg.shortname %>-qr.png'
 
     copy:
@@ -37,6 +37,9 @@ module.exports = (grunt) ->
         options:
           process: (content, path) ->
             return grunt.template.process content
+      plugin:
+        src: 'node_modules/reveal.js/plugin/notes/*'
+        dest: 'static/js/'
       dist:
         files: [{
           expand: true
@@ -44,16 +47,8 @@ module.exports = (grunt) ->
             'static/**'
             'css/*.css'
             'index.html'
-            'inline.html'
-            'CNAME'
-            '.nojekyll'
           ]
           dest: 'dist/'
-        },{
-          expand: true
-          cwd: 'node_modules'
-          src: 'reveal.js/**'
-          dest: 'dist/lib/'
         },{
           src: 'static/img/favicon.ico'
           dest: 'dist/'
@@ -92,51 +87,42 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-git'
   grunt.loadNpmTasks 'grunt-sass'
 
-  grunt.registerTask 'serve',
-    'Run presentation locally', [
-      'copy:index'
-      'sass:theme'
-      'connect:serve'
-    ]
-
   grunt.registerTask 'cname',
-    'Create CNAME from NPM config if needed.', ->
+    'Create CNAME for Github Pages', ->
       if grunt.config 'pkg.config.cname'
-        grunt.file.write 'CNAME', grunt.config 'pkg.config.cname'
+        grunt.file.write 'dist/CNAME', grunt.config 'pkg.config.cname'
 
   grunt.registerTask 'nojekyll',
-    'Create .nojekyll file for Github Pages', ->
-      grunt.file.write '.nojekyll', ''
+    'Disable Jekyll processing on Github Pages', ->
+      grunt.file.write 'dist/.nojekyll', ''
 
   grunt.registerTask 'install',
-    '*Install* dependencies', [
-    ]
-
-  grunt.registerTask 'pdf',
-    'Render a **PDF** copy of the presentation (using decktape)', [
-      'serve'
-#      'exec:print'
-      'exec:thumbnail'
+    '*Compile* templates', [
+      'copy:index'
+      'copy:plugin'
+      'sass:theme'
     ]
 
   grunt.registerTask 'test',
-    '*Test* rendering to PDF', [
+    '*Render* to PDF and inlined HTML', [
       'coffeelint'
-      'pdf'
+      'connect:serve'
+      'exec:print'
+      'exec:thumbnail'
       'exec:inline'
     ]
 
   grunt.registerTask 'dist',
     'Save presentation files to *dist* directory.', [
       'exec:qr'
-      'cname'
-      'nojekyll'
       'copy:dist'
     ]
 
   grunt.registerTask 'deploy',
     'Deploy to Github Pages', [
       'dist'
+      'cname'
+      'nojekyll'
       'buildcontrol:github'
     ]
 

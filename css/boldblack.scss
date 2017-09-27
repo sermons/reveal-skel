@@ -6,15 +6,15 @@
  */
 
 // Default mixins and settings -----------------
-@import "../node_modules/reveal.js/css/theme/template/mixins";
-@import "../node_modules/reveal.js/css/theme/template/settings";
+@import "template/mixins";
+@import "template/settings";
 // ---------------------------------------------
 
 // Include theme-specific fonts
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i');
 @import url('https://fonts.googleapis.com/earlyaccess/cwtexkai.css');
 
-// Override theme settings (see ../template/settings.scss)
+// Override theme settings (see template/settings.scss)
 $mainFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
 
@@ -48,5 +48,5 @@ $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
 // Theme template ------------------------------
-@import "../node_modules/reveal.js/css/theme/template/theme";
+@import "template/theme";
 // ---------------------------------------------
