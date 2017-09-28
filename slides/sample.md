@@ -78,6 +78,9 @@ No block-level markdown
 </div>
 <div style="flex:2; -webkit-box-flex:0.5">
 ![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
+<div class="caption">
+(img credit: Ryan Hutton)
+</div>
 </div>
 </div>
 
