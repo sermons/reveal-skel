@@ -50,3 +50,8 @@ $selectionBackgroundColor: lighten( $linkColor, 25% );
 // Theme template ------------------------------
 @import "template/theme";
 // ---------------------------------------------
+
+// Overrides
+.reveal section img {
+  border: 1px solid rgba( $mainColor, 25% );
+}
