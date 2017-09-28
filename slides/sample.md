@@ -45,9 +45,9 @@ class BST:
   def search( self, key ):      # iterative search
     cur = self.root
     while (cur != None):
-      if key < cur.key:         # go left
+      if key &lt; cur.key:         # go left
         cur = cur.left
-      else if key > cur.key:    # go right
+      else if key &gt; cur.key:    # go right
         cur = cur.right
       else:                     # found it!
         return cur
