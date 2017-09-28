@@ -76,7 +76,7 @@ Yay for **multi-col** layout! <br/>
 1/3 width for text <br/>
 No block-level markdown
 </div>
-<div style="flex:2; -webkit-box-flex:0.5">
+<div style="flex:2">
 ![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
 <div class="caption">
 (img credit: Ryan Hutton)
