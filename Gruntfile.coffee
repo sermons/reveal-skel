@@ -112,7 +112,6 @@ module.exports = (grunt) ->
       'connect:serve'
       'exec:print'
       'exec:thumbnail'
-      'exec:inline'
     ]
 
   grunt.registerTask 'dist',
