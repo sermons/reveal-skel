@@ -61,13 +61,11 @@ section.empty[data-background-image] {
 /* Image captions */
 .reveal section .caption,
 .reveal section a[title="caption"] {
-  font-size: 0.45rem;
-  color: #aaa;
+  font-size: 16px;
+  color: #aaaa;
   position: absolute;
-  z-index: 20;
-  left: 0.5em;
-  top: 0.5em;
-  opacity: 0.7;
+  right: 0.5em;
+  bottom: 0.5em;
 }
 
 /* Hidden link for private use */
