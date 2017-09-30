@@ -10,6 +10,8 @@
 
 [(open master view)](http://reveal-skel.seanho.com/?s=45ba034647cea150 "ref")
 
+[(img: Ryan Hutton, CC0)](https://unsplash.com/photos/Jztmx9yqjBw "caption")
+
 >>>
 + Speaker notes go here.
 + Markdown is supported.
