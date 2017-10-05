@@ -36,10 +36,10 @@ into a subdir and push to the gh-pages branch.
 + [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**, if you haven't before:
   + `apt-get install ruby-dev`, or similar
   + `gem install travis`
-+ **Encrypt** the SSH private key:
++ **Encrypt** the SSH private key [using Travis](https://docs.travis-ci.com/user/encrypting-files/):
   + Within your repo: `travis encrypt-file deploy_key .travis/deploy_key.enc`
     + You might need to **authenticate** Travis to Github
-  + Travis will insert **decryption** commands into `.travis.yml`; double-check them
+  + Update the decryption **environment variables** (`$encrypted_*_key` and `$encrypted_*_iv`) in `.travis.yml`
   + **Move** the unencrypted private key outside your repo:
     + `mv deploy_key* ~/.ssh/`
 + **Push**, and check the [build log](https://travis-ci.org/) for errors:
