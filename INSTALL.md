@@ -10,31 +10,28 @@ into a subdir and push to the gh-pages branch.
 ## Usage
 * **Fork** the [reveal-skel](https://github.com/sermons/reveal-skel) project
   + Or `git remote add upstream https://github.com/sermons/reveal-skel`
-* Setup a **deploy key** for Travis (see below)
+* Setup a **deploy key** for Travis [(see below)](#deploy-key-for-travis)
 * **Edit** [package.json](package.json):
   + Package name, git repo, cname/URL
   + Change `sample.md` to `slides.md`
-  + Generate a new **multiplex ID** (see below)
-* Put your slide **content** in [slides/slides.md](slides/slides.md)
-* You may also want to customize:
+  + Generate a new **multiplex ID** [(see below)](#multiplex-remote-control)
+* Your slide **content** goes in [slides/slides.md](slides/slides.md)
+* You may also want to **customize**:
   + user name, email in [package.json](package.json)
-  + [README](README.md) 
-  + [favicon](static/img/favicon.ico)
+  + [README](README.md), [favicon](static/img/favicon.ico)
 * Static **assets** (CSS, JS, images, etc) go in [`static`](static)
   + Grunt will copy this dir as-is to the deployed site
 
 ## Deploy key for Travis
 + **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
 + Create an SSH **keypair**: `ssh-keygen -f ~/.ssh/deploy_key`
-+ On Github, in your repo: Settings &rarr; Deploy Keys &rArr; **Add deploy key**
-  + **Title**: e.g., "Travis push to gh-pages"
-  + **Key**: Paste the contents of the SSH **public** key (`deploy_key.pub`)
++ On Github, in your repo: *Settings* &rarr; *Deploy Keys* &rarr; **Add deploy key**
+  + *Title*: e.g., "Travis push to gh-pages"
+  + *Key*: Paste the contents of the SSH **public** key (`deploy_key.pub`)
   + Check the box for "*Allow write access*"
 + [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**
   + See note in the [travis-key script](.travis/travis-key) for details
-+ Run `.travis/travis-key` to **encrypt** the SSH private key 
-  [using Travis](https://docs.travis-ci.com/user/encrypting-files/):
-  + You might need to **authenticate** Travis to Github
++ Run `.travis/travis-key` to [encrypt the SSH private key](https://docs.travis-ci.com/user/encrypting-files/):
   + Update the decryption **environment variables** (`$encrypted_*_key` and `$encrypted_*_iv`) in `.travis.yml`
 + **Push**, and check the [build log](https://travis-ci.org/) for errors
 
@@ -44,18 +41,18 @@ deploy key on multiple repos, you may want to create a **special user**
 just for pushing to gh-pages.  This is what I do:
 
 + Create a new Github **user** (a 'bot')
-+ Create a SSH **keypair** and add the public key to the bot's account:
-  "*Settings*" (Personal Settings) &rarr; "*SSH and GPG keys*"
-+ Add the bot as a **collaborator** on your repo:
-  "*Settings*" &rarr; "*Collaborators &amp; teams*" &rarr; "*Collaborators*"
++ In the bot account, add the **public deploy key** (`deploy_key.pub`):
+  + "*Settings*" (Personal Settings) &rarr; "*SSH and GPG keys*"
++ In your main account, add the bot as a **collaborator** on your repo:
+  + "*Settings*" &rarr; "*Collaborators &amp; teams*" &rarr; "*Collaborators*"
   + Give the bot **Write** access so it can push
-  + Or: add the bot to an [organization](https://developer.github.com/guides/managing-deploy-keys/#machine-users)
+  + Or: [add the bot to an organization](https://developer.github.com/guides/managing-deploy-keys/#machine-users)
 + **Prevent** the bot from pushing to master:
   + "*Settings*" &rarr; "*Branches*" &rarr; "*Protected branches*" &rarr; "*master*"
   + Check "*Protect this branch*" and "*Restrict who can push to this branch*"
   + Now the bot can **only** push to gh-pages
 + You don't need any **repo-specific** deploy keys now
-+ You **still** need to `travis encrypt` the private key for each new repo
++ You **still** need to run `.travis/travis-key` in each new repo
   + The symmetric decryption keys are stored in Travis **environment vars**, which are repo-specific
   + If you tell Travis to use the same **Key** and **IV**, you can reuse the encrypted deploy key file
 
@@ -73,7 +70,8 @@ put the socket ID in your `package.json`.
 Run the master presentation by appending `/?s=00SECRET00` to your URL
 (replacing `00SECRET00` with your secret key).
 
-## Thanks
+## References
++ [reveal-multiplex](https://github.com/seanho00/reveal-multiplex) Socket.io server
 + [generator-reveal](https://github.com/slara/generator-reveal) Yeoman script
 + [gist-reveal](https://github.com/ryanj/gist-reveal)
 + [Reveal.js](http://lab.hakim.se/reveal-js/)
