@@ -1,0 +1,29 @@
+#! /bin/sh
+# <repo>/.travis/travis-key
+# Install Travis gem:
+#   apt-get install gcc libffi-dev ruby ruby-dev
+#   gem install travis --no-rdoc --no-ri
+#   travis login --org
+
+[ $# -gt 0 ] || {
+  echo "Usage: $0 <repo>"
+  return 1
+}
+
+repo=$1
+
+# defaults
+plain="$HOME/.ssh/deploy_key"
+crypted="$(dirname $0)/deploy_key.enc"
+key=""
+iv=""
+
+# config can override defaults
+CONF=$HOME/.travis-key.conf
+[ -r "$CONF" ] && . "$CONF"
+
+[ -z "$key" -o -z "$iv" ] || keyiv='--key "$key" --iv "$iv"'
+
+travis sync --org
+travis enable --org -r "$repo"
+travis encrypt-file "$plain" "$crypted" -r "$repo" $keyiv

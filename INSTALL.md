@@ -8,7 +8,7 @@ is a forkable template for a presentation based on the [Reveal.js](http://lab.ha
 into a subdir and push to the gh-pages branch.
 
 ## Usage
-* **Fork** this project
+* **Fork** the [reveal-skel](https://github.com/sermons/reveal-skel) project
   + Or `git remote add upstream https://github.com/sermons/reveal-skel`
 * Setup a **deploy key** for Travis (see below)
 * **Edit** [package.json](package.json):
@@ -24,27 +24,19 @@ into a subdir and push to the gh-pages branch.
   + Grunt will copy this dir as-is to the deployed site
 
 ## Deploy key for Travis
-+ Make sure Travis is **aware** of your repo:
-  + **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
-  + "**Sync Account**" if necessary
-  + **Enable builds** on your repo
-+ Create a new SSH **keypair**: `ssh-keygen -f deploy_key`
-+ On Github, in your repo: Settings &rarr; Deploy Keys &rArr; **Add**
-  + Title: "Travis push to gh-pages", or whatever you like
-  + Paste the contents of the SSH **public** key: `deploy_key.pub`
++ **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
++ Create an SSH **keypair**: `ssh-keygen -f ~/.ssh/deploy_key`
++ On Github, in your repo: Settings &rarr; Deploy Keys &rArr; **Add deploy key**
+  + **Title**: e.g., "Travis push to gh-pages"
+  + **Key**: Paste the contents of the SSH **public** key (`deploy_key.pub`)
   + Check the box for "*Allow write access*"
-+ [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**, if you haven't before:
-  + `apt-get install ruby-dev`, or similar
-  + `gem install travis`
-+ **Encrypt** the SSH private key [using Travis](https://docs.travis-ci.com/user/encrypting-files/):
-  + Within your repo: `travis encrypt-file deploy_key .travis/deploy_key.enc`
-    + You might need to **authenticate** Travis to Github
++ [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**
+  + See note in the [travis-key script](.travis/travis-key) for details
++ Run `.travis/travis-key` to **encrypt** the SSH private key 
+  [using Travis](https://docs.travis-ci.com/user/encrypting-files/):
+  + You might need to **authenticate** Travis to Github
   + Update the decryption **environment variables** (`$encrypted_*_key` and `$encrypted_*_iv`) in `.travis.yml`
-  + **Move** the unencrypted private key outside your repo:
-    + `mv deploy_key* ~/.ssh/`
-+ **Push**, and check the [build log](https://travis-ci.org/) for errors:
-    + You should see Travis [decrypt the deploy key](.travis.yml), then
-    + it will run `npm run deploy`, which uses a [Grunt task](Gruntfile.coffee) to push to the gh-pages branch
++ **Push**, and check the [build log](https://travis-ci.org/) for errors
 
 ## Bot user for Travis deploy
 If you want finer-grained access control, or want to reuse the same
