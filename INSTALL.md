@@ -24,7 +24,7 @@ into a subdir and push to the gh-pages branch.
 
 ## Deploy key for Travis
 + **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
-+ Create an SSH **keypair**: `ssh-keygen -f ~/.ssh/deploy_key`
++ Create an SSH **keypair**: `ssh-keygen -N "" -f ~/.ssh/deploy_key`
 + On Github, in your repo: *Settings* &rarr; *Deploy Keys* &rarr; **Add deploy key**
   + *Title*: e.g., "Travis push to gh-pages"
   + *Key*: Paste the contents of the SSH **public** key (`~/.ssh/deploy_key.pub`)
