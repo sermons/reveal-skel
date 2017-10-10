@@ -27,13 +27,17 @@ into a subdir and push to the gh-pages branch.
 + Create an SSH **keypair**: `ssh-keygen -f ~/.ssh/deploy_key`
 + On Github, in your repo: *Settings* &rarr; *Deploy Keys* &rarr; **Add deploy key**
   + *Title*: e.g., "Travis push to gh-pages"
-  + *Key*: Paste the contents of the SSH **public** key (`deploy_key.pub`)
+  + *Key*: Paste the contents of the SSH **public** key (`~/.ssh/deploy_key.pub`)
   + Check the box for "*Allow write access*"
++ **Encrypt** the private key using GPG:
+  + Create a **passphrase**: `date | md5sum`
+  + Encrypt with **GPG**, specifying the passphrase: `gpg -c ~/.ssh/deploy_key`
+  + **Copy** encrypted key to repo: `cd <repo>; cp ~/.ssh/deploy_key.gpg .travis/`
+  + **Save** the passphrase outside the repo: `echo "key=...MY_PASSPHRASE..." > ~/.travis-key.conf`
 + [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**
   + See note in the [travis-key script](.travis/travis-key) for details
-+ Run `.travis/travis-key` to [encrypt the SSH private key](https://docs.travis-ci.com/user/encrypting-files/):
-  + Update the decryption **environment variables** (`$encrypted_*_key` and `$encrypted_*_iv`) in `.travis.yml`
-+ **Push**, and check the [build log](https://travis-ci.org/) for errors
++ Run `.travis/travis-key` to [securely store the passphrase in Travis](https://docs.travis-ci.com/user/encrypting-files/):
++ Commit, **push**, and check the [build log](https://travis-ci.org/) for errors
 
 ## Bot user for Travis deploy
 If you want finer-grained access control, or want to reuse the same

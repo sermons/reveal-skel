@@ -5,12 +5,7 @@
 #   gem install travis --no-rdoc --no-ri
 #   travis login --org
 
-[ $# -gt 0 ] || {
-  echo "Usage: $0 <repo>"
-  return 1
-}
-
-repo=$1
+# Usage: $0 -r user/repo [<travis opts>]
 
 # defaults
 key=""
@@ -20,5 +15,5 @@ CONF=$HOME/.travis-key.conf
 [ -r "$CONF" ] && . "$CONF"
 
 travis sync --org
-travis enable --org -r "$repo"
-travis env set gpg_key "$key" -p
+travis enable --org $@
+travis env set gpg_key "$key" -p $@

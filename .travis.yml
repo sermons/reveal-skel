@@ -8,7 +8,7 @@ addons:
     packages:
       - ghostscript
 before_deploy:
-  - echo "$gpg_key" | gpg --batch -d --passphrase-fd 0 .travis/deploy_key.gpg
+  - echo "$gpg_key" | gpg --batch --passphrase-fd 0 .travis/deploy_key.gpg
   - eval "$(ssh-agent -s)"
   - chmod 600 .travis/deploy_key
   - ssh-add .travis/deploy_key
