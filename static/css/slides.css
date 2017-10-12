@@ -71,6 +71,9 @@ section.empty[data-background-image] {
 /* Hidden link for private use */
 .reveal a[title="secret"] { opacity: 0.2 }
 
+/* Presentation outline */
+.reveal section .outline { font-size: 1.2em }
+
 /* Flexbox slide layout (Reveal.js display: flex) */
 .reveal section {
   flex-flow: column nowrap;

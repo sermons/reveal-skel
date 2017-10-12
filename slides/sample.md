@@ -33,6 +33,8 @@ Six underscores create a horizontal rule in the notes
 2. Point **Two** <%= bible('rom1.2', '(v2)') %>
 3. Point **Three** <%= bible('rom1.3-4', '(v3-4)', 'ESV') %>
 
+<!-- .element: class="outline" comment="need previous blank line!" -->
+
 ******
 ## Point One
 ```
@@ -69,6 +71,8 @@ class BST:
 3. Point *Three* <span class="ref">(v3)</span>
   + A bit of math: \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
 
+<!-- .element: class="outline" -->
+
 ******
 ## Point Two
 
@@ -97,6 +101,8 @@ No block-level markdown
 2. Point *Two* <span class="ref">(v2)</span>
 3. **Point Three** <span class="ref">(v3)</span>
 
+<!-- .element: class="outline" -->
+
 ******
 ## Point Three
 
@@ -118,6 +124,8 @@ No block-level markdown
 1. Point **One** <span class="ref">(v1)</span>
 2. Point **Two** <span class="ref">(v2)</span>
 3. Point **Three** <span class="ref">(v3)</span>
+
+<!-- .element: class="outline" -->
 
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="empty" -->
