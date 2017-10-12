@@ -1,4 +1,4 @@
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> data-state="title" -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="title" -->
 # Reveal-Skel
 ## A template for Reveal.js-based presentations
 
