@@ -3,8 +3,6 @@
 ~*
 *~
 node_modules
-bower_components
-lib
 dist
 *.log
 .sass-cache
