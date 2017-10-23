@@ -93,6 +93,7 @@
     "coffeelint": "^2.0.6",
     "grunt-git": "^1.0.7",
     "qrcode": "^0.9.0",
+    "grunt-sw-precache": "^1.0.3",
     "inliner": "^1.12.5",
     "decktape": "^2.4.3"
   },
