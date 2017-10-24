@@ -77,10 +77,11 @@ module.exports = (grunt) ->
         cacheId: '<%= pkg.shortname %>'
         verbose: true
         maximumFileSizeToCacheInBytes: 10485760
-      staticFileGlobs: [
-        '*.html'
-        'static/**'
-      ]
+      main:
+        staticFileGlobs: [
+          '*.html'
+          'static/**'
+        ]
 
   # Generated grunt vars
   grunt.config.merge
@@ -126,7 +127,7 @@ module.exports = (grunt) ->
       'exec:print'
       'exec:reducePDF'
       'exec:thumbnail'
-      'sw-precache'
+      'sw-precache:main'
     ]
 
   grunt.registerTask 'dist',
