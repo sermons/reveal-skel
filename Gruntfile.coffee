@@ -72,7 +72,7 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
-    sw-precache:
+    'sw-precache':
       options:
         cacheId: '<%= pkg.shortname %>'
         verbose: true
