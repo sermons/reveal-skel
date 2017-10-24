@@ -72,6 +72,16 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
+    sw-precache:
+      options:
+        cacheId: '<%= pkg.shortname %>'
+        verbose: true
+        maximumFileSizeToCacheInBytes: 10485760
+      staticFileGlobs: [
+        '*.html'
+        'static/**'
+      ]
+
   # Generated grunt vars
   grunt.config.merge
     pkg:
@@ -91,6 +101,7 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks 'grunt-git'
   grunt.loadNpmTasks 'grunt-sass'
+  grunt.loadNpmTasks 'grunt-sw-precache'
 
   grunt.registerTask 'cname',
     'Create CNAME for Github Pages', ->
