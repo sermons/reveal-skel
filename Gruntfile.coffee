@@ -81,9 +81,12 @@ module.exports = (grunt) ->
       main:
         baseDir: ''
         staticFileGlobs: [
-          '*.html'
           'static/**'
         ]
+        runtimeCaching: [{
+          urlPattern: /./
+          handler: cacheFirst
+        }]
 
   # Generated grunt vars
   grunt.config.merge
