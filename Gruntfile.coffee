@@ -82,7 +82,7 @@ module.exports = (grunt) ->
       main:
         baseDir: ''
         staticFileGlobs: [
-          'static/**'
+          '/static/**'
         ]
         runtimeCaching: [{
           urlPattern: /./
@@ -124,12 +124,12 @@ module.exports = (grunt) ->
       'copy:index'
       'copy:plugin'
       'sass:theme'
+      'sw-precache:main'
     ]
 
   grunt.registerTask 'test',
     '*Render* to PDF and inlined HTML', [
       'coffeelint'
-      'sw-precache:main'
       'connect:serve'
       'exec:print'
       'exec:reducePDF'
