@@ -77,8 +77,9 @@ module.exports = (grunt) ->
       options:
         cacheId: '<%= pkg.name %>'
         maximumFileSizeToCacheInBytes: 10485760
-      main:
+        logger: grunt.log.write
         verbose: true
+      main:
         baseDir: ''
         staticFileGlobs: [
           'static/**'
