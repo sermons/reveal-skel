@@ -50,6 +50,7 @@ module.exports = (grunt) ->
             'static/**'
             'index.html'
             '<%= pkg.shortname %>.html'
+            'service-worker.js'
           ]
           dest: 'dist/'
         },{
@@ -74,10 +75,11 @@ module.exports = (grunt) ->
 
     'sw-precache':
       options:
-        cacheId: '<%= pkg.shortname %>'
+        cacheId: '<%= pkg.name %>'
         verbose: true
         maximumFileSizeToCacheInBytes: 10485760
       main:
+        baseDir: ''
         staticFileGlobs: [
           '*.html'
           'static/**'
@@ -123,11 +125,11 @@ module.exports = (grunt) ->
   grunt.registerTask 'test',
     '*Render* to PDF and inlined HTML', [
       'coffeelint'
+      'sw-precache:main'
       'connect:serve'
       'exec:print'
       'exec:reducePDF'
       'exec:thumbnail'
-      'sw-precache:main'
     ]
 
   grunt.registerTask 'dist',
