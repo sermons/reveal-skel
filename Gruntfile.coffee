@@ -126,6 +126,7 @@ module.exports = (grunt) ->
       'exec:print'
       'exec:reducePDF'
       'exec:thumbnail'
+      'sw-precache'
     ]
 
   grunt.registerTask 'dist',
