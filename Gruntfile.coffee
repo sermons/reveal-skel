@@ -85,7 +85,7 @@ module.exports = (grunt) ->
         ]
         runtimeCaching: [{
           urlPattern: /./
-          handler: cacheFirst
+          handler: 'cacheFirst'
         }]
 
   # Generated grunt vars
