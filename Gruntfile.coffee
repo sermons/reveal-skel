@@ -76,9 +76,9 @@ module.exports = (grunt) ->
     'sw-precache':
       options:
         cacheId: '<%= pkg.name %>'
-        verbose: true
         maximumFileSizeToCacheInBytes: 10485760
       main:
+        verbose: true
         baseDir: ''
         staticFileGlobs: [
           'static/**'
