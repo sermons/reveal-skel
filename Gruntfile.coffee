@@ -47,7 +47,7 @@ module.exports = (grunt) ->
         files: [{
           expand: true
           src: [
-            'static'
+            'static/**'
             'index.html'
             '<%= pkg.shortname %>.html'
             'service-worker.js'
@@ -82,7 +82,7 @@ module.exports = (grunt) ->
       main:
         baseDir: ''
         staticFileGlobs: [
-          'static/**/*'
+          'static/**'
         ]
         runtimeCaching: [{
           urlPattern: /./
