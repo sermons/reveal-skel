@@ -47,7 +47,7 @@ module.exports = (grunt) ->
         files: [{
           expand: true
           src: [
-            'static/**'
+            'static'
             'index.html'
             '<%= pkg.shortname %>.html'
             'service-worker.js'
@@ -82,14 +82,14 @@ module.exports = (grunt) ->
       main:
         baseDir: ''
         staticFileGlobs: [
-          '/static/**'
+          'static/**/*'
         ]
         runtimeCaching: [{
           urlPattern: /./
           handler: 'cacheFirst'
         }]
 
-  # Generated grunt vars
+  # Additional grunt vars and macros
   grunt.config.merge
     pkg:
       shortname: grunt.config('pkg.name').replace(/.*\//, '')
