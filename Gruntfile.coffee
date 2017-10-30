@@ -97,6 +97,7 @@ module.exports = (grunt) ->
     'Generate precaching service worker', ->
       grunt.log.write 'Generating service worker: '
       require('workbox-build').generateSW
+        cacheId: '<%= pkg.name %>'
         maximumFileSizeToCacheInBytes: 10485760
         globDirectory: './'
         globPatterns: [
