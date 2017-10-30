@@ -99,6 +99,7 @@ module.exports = (grunt) ->
       require('workbox-build').generateSW
         cacheId: '<%= pkg.name %>'
         maximumFileSizeToCacheInBytes: 10485760
+        swDest: 'sw.js'
         globDirectory: './'
         globPatterns: [
           'static\/**'
