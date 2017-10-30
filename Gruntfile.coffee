@@ -105,7 +105,8 @@ module.exports = (grunt) ->
         globPatterns: [
           'static\/**'
         ]
-      .then () -> grunt.log.ok()
+      .then (value) -> grunt.log.ok(),
+        (reason) -> grunt.log.write reason
       grunt.log.write grunt.file.expand '*'
 
   grunt.registerTask 'cname',
