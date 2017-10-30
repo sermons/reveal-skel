@@ -106,7 +106,7 @@ module.exports = (grunt) ->
           'static\/**'
         ]
       .then (value) -> grunt.log.ok(),
-        (reason) -> grunt.log.write reason
+      (reason) -> grunt.log.write reason
       grunt.log.write grunt.file.expand '*'
 
   grunt.registerTask 'cname',
