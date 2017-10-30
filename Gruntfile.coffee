@@ -95,13 +95,13 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'serviceWorker',
     'Generate precaching service worker', ->
+      grunt.log.write 'Generating service worker: '
       require('workbox-build').generateSW
         globDirectory: './'
         globPatterns: [
           'static/**'
         ]
-      .then () ->
-        grunt.log 'Service worker generated.'
+      .then () -> grunt.log.ok()
 
   grunt.registerTask 'cname',
     'Create CNAME for Github Pages', ->
