@@ -92,11 +92,12 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks 'grunt-git'
   grunt.loadNpmTasks 'grunt-sass'
+  wbb = require 'workbox-build'
 
   grunt.registerTask 'serviceWorker',
     'Generate precaching service worker', ->
       grunt.log.write 'Generating service worker: '
-      require('workbox-build').generateSW
+      wbb.generateSW
         cacheId: '<%= pkg.name %>'
         maximumFileSizeToCacheInBytes: 10485760
         swDest: 'sw.js'
