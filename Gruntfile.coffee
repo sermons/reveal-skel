@@ -104,6 +104,7 @@ module.exports = (grunt) ->
           'static\/**'
         ]
       .then () -> grunt.log.ok()
+      grunt.log.write grunt.file.expand '*'
 
   grunt.registerTask 'cname',
     'Create CNAME for Github Pages', ->
