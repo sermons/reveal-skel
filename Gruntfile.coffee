@@ -73,22 +73,6 @@ module.exports = (grunt) ->
           remote: 'git@github.com:<%= pkg.repository %>'
           branch: 'gh-pages'
 
-    'sw-precache':
-      options:
-        cacheId: '<%= pkg.name %>'
-        maximumFileSizeToCacheInBytes: 10485760
-        logger: grunt.log.write
-        verbose: true
-      main:
-        baseDir: ''
-        staticFileGlobs: [
-          'static/**'
-        ]
-        runtimeCaching: [{
-          urlPattern: /./
-          handler: 'cacheFirst'
-        }]
-
   # Additional grunt vars and macros
   grunt.config.merge
     pkg:
@@ -108,7 +92,14 @@ module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
   grunt.loadNpmTasks 'grunt-git'
   grunt.loadNpmTasks 'grunt-sass'
-  grunt.loadNpmTasks 'grunt-sw-precache'
+
+  require('workbox-build').generateSW
+    globDirectory: './'
+    globPatterns: [
+      'static/**'
+    ]
+  .then () ->
+    grunt.log 'Service worker generated.'
 
   grunt.registerTask 'cname',
     'Create CNAME for Github Pages', ->
