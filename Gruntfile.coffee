@@ -99,7 +99,7 @@ module.exports = (grunt) ->
       require('workbox-build').generateSW
         globDirectory: './'
         globPatterns: [
-          'static/**'
+          'static\/**'
         ]
       .then () -> grunt.log.ok()
 
