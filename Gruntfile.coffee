@@ -93,13 +93,15 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-git'
   grunt.loadNpmTasks 'grunt-sass'
 
-  require('workbox-build').generateSW
-    globDirectory: './'
-    globPatterns: [
-      'static/**'
-    ]
-  .then () ->
-    grunt.log 'Service worker generated.'
+  grunt.registerTask 'serviceWorker',
+    'Generate precaching service worker', ->
+      require('workbox-build').generateSW
+        globDirectory: './'
+        globPatterns: [
+          'static/**'
+        ]
+      .then () ->
+        grunt.log 'Service worker generated.'
 
   grunt.registerTask 'cname',
     'Create CNAME for Github Pages', ->
@@ -115,7 +117,7 @@ module.exports = (grunt) ->
       'copy:index'
       'copy:plugin'
       'sass:theme'
-      'sw-precache:main'
+      'serviceWorker'
     ]
 
   grunt.registerTask 'test',
