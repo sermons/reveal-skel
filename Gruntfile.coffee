@@ -61,6 +61,8 @@ module.exports = (grunt) ->
     buildcontrol:
       options:
         dir: 'dist'
+        tag: '<%= pkg.version %>'
+        force: true
         commit: true
         push: true
         fetchProgress: false
