@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A template for Reveal.js-based presentations</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <link rel=icon href="static/img/favicon.svg" sizes="any" type="image/svg+xml" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.min.css" integrity="sha256-vPN+adnQKmyGqQAeBNs9+GBYVx8uQETV+DAdAXG0XBg=" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css" integrity="sha256-akwTLZec/XAFvgYgVH1T5/369lhA2Efr22xzCNl1nHs=" crossorigin="anonymous" />
+    
+
+    <link rel="stylesheet" href="static/css/boldblack.css" id="theme" />
+    <link rel="stylesheet" href="static/css/slides.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+
+      <noscript><div class="noscript">
+        <h1>A template for Reveal.js-based presentations</h1>
+        <p>(Please see PDF link below)</p>
+      </div></noscript>
+
+      <div class="slides">
+        
+        <section data-markdown data-charset="utf8"
+          data-separator="^---[-\s]*$"
+          data-separator-vertical="^\*\*\*[\*\s]*$"
+          data-separator-notes="^>>>[>\s]*$">
+          <textarea data-template>
+        <!-- .slide: data-background-image="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg" id="title" -->
+# Reveal-Skel
+## A template for Reveal.js-based presentations
+
+<div>
+[![Travis builds](https://travis-ci.org/sermons/reveal-skel.svg)](https://travis-ci.org/sermons/reveal-skel)
+[![Node deps](https://david-dm.org/sermons/reveal-skel.svg)](https://david-dm.org/sermons/reveal-skel)
+[![Node devDeps](https://david-dm.org/sermons/reveal-skel/dev-status.svg)](https://david-dm.org/sermons/reveal-skel?type=dev)
+</div>
+
+[(open master view)](http://reveal-skel.seanho.com/?s=45ba034647cea150 "ref")
+
+[(img: Ryan Hutton, CC0)](https://unsplash.com/photos/Jztmx9yqjBw "caption")
+
+>>>
++ Speaker notes go here.
++ Markdown is supported.
+
+______
+
+Six underscores create a horizontal rule in the notes
+
+---
+<!-- .slide: data-background="white" -->
+# Opening **Question**
+
+[###](#/outline "secret")
+
+---
+<!-- .slide: data-background-image="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg" id="outline" -->
+## Outline [(ref)](# "ref")
+1. Point **One** [(Rom 1:1,5)](https://mobile.biblegateway.com/passage/?search=Rom1:1,5&version=NIV "ref")
+2. Point **Two** [(v2)](https://mobile.biblegateway.com/passage/?search=rom1.2&version=NIV "ref")
+3. Point **Three** [(v3-4)](https://mobile.biblegateway.com/passage/?search=rom1.3-4&version=ESV "ref")
+
+<!-- .element: class="outline" comment="need previous blank line!" -->
+
+******
+## Point One
+```
+class BSTNode:
+  def __init__(self, key=None,
+      par=None, left=None, right=None):
+    (self.key, self.par) = (key, par)
+    (self.left, self.right) = (left, right)
+
+class BST:
+  def __init__(self):
+    self.root = None
+
+  def search(self, key):      # iterative search
+    cur = self.root
+    while (cur != None):
+      if key &lt; cur.key:        # go left
+        cur = cur.left
+      else if key &gt; cur.key:   # go right
+        cur = cur.right
+      else:               # found it!
+        return cur
+```
+
+******
+<!-- .slide: data-background="white" -->
+# Review question for Point **One**
+
+---
+<!-- .slide: data-background-image="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+## Outline <span class="zh">大綱</span>
+1. Point *One* <span class="ref">(v1)</span>
+2. **Point Two** <span class="ref">(v2)</span>
+3. Point *Three* <span class="ref">(v3)</span>
+  + A bit of math: \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
+
+<!-- .element: class="outline" -->
+
+******
+## Point Two
+
+<div class="imgbox">
+<div>
+Yay for **multi-col** layout! <br/>
+1/3 width for text <br/>
+No block-level markdown
+</div>
+<div style="flex:2">
+![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
+<div class="caption">
+(img credit: Ryan Hutton)
+</div>
+</div>
+</div>
+
+******
+<!-- .slide: data-background="white" -->
+# Review question for Point **Two**
+
+---
+<!-- .slide: data-background-image="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+## Outline
+1. Point *One* <span class="ref">(v1)</span>
+2. Point *Two* <span class="ref">(v2)</span>
+3. **Point Three** <span class="ref">(v3)</span>
+
+<!-- .element: class="outline" -->
+
+******
+## Point Three
+
+| ID |     Date    | Intensity | Diffusion |
+|---:|:-----------:|----------:|----------:|
+| 23 | 2017 Jan  3 |    17.3   |   0.238   |
+| 83 | 2017 Feb  5 |    87.2   |   0.022   |
+| 39 | 2017 Mar  1 |   219.0   |   0.912   |
+| 12 | 2017 Apr  2 |     5.2   |   0.465   |
+| 65 | 2017 May  2 |  1022.6   |   0.663   |
+
+******
+<!-- .slide: data-background="white" -->
+# Review question for Point **Three**
+
+---
+<!-- .slide: data-background-image="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg" -->
+## Outline
+1. Point **One** <span class="ref">(v1)</span>
+2. Point **Two** <span class="ref">(v2)</span>
+3. Point **Three** <span class="ref">(v3)</span>
+
+<!-- .element: class="outline" -->
+
+---
+<!-- .slide: data-background-image="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg" class="empty" -->
+
+          </textarea>
+        </section>
+        
+      </div>
+
+      <div id="footer">reveal-skel.seanho.com
+        <span class="links">
+          <a href="https://github.com/sermons/reveal-skel">
+            <i class="fa fa-github fa-inverse"></i></a>
+          <a href="static/reveal-skel.pdf">
+            <i class="fa fa-file-pdf-o fa-inverse"></i></a>
+        </span>
+        <span class="commit">3ec08e0</span>
+      </div>
+
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" integrity="sha256-+09kLhwACKXFPDvqo4xMMvi4+uXFsRZ2uYGbeN1U8sI=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js" integrity="sha256-KaSi3am04I2b10TZZ7JqEYrnNk94r0QOeIY3PtwGR/M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.min.js" integrity="sha256-Kq2PSVZ3iKoRCW+zD98fwPs26/aw43ATQP9mBQgnVZc=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/marked.js" integrity="sha256-c6mIBJmjwIEMzRFz4hJTWcWDvcGnqJUicbkA6bsQoYE=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/markdown/markdown.min.js" integrity="sha256-qBewJIUtcHklIYjfHuHX94KMSguxbhNayl3fXcjVuFs=" crossorigin="anonymous"></script>
+    
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        SVG: { scale: 77 }
+      });
+    </script>
+
+    <script>
+      Reveal.initialize({
+        display: 'flex',
+        maxScale: 4.0,
+        slideNumber: 'c/t',
+
+        markdown: {
+          smartypants: true
+        },
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js',
+          config: 'AM_SVG'
+        },
+
+        multiplex: {
+          url: 'https://mp.seanho.com/',
+          id : '22bc761ffc97809b',
+          secret: Reveal.getQueryHash().s || null
+        },
+
+        
+
+        dependencies: [
+          { src: Reveal.getQueryHash().s ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/multiplex/master.min.js' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/multiplex/client.min.js', async:true }
+        ]
+      });
+    </script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/math/math.min.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.min.js" crossorigin="anonymous"></script>
+    
+    <script src="static/js/notes.js"></script>
+
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+  </body>
+</html>
