@@ -101,6 +101,7 @@ module.exports = (grunt) ->
         cacheId: '<%= pkg.name %>'
         maximumFileSizeToCacheInBytes: 10485760
         swDest: 'sw.js'
+        baseDir: process.env.TRAVIS_BUILD_DIR
         globDirectory: './'
         globPatterns: [
           'static\/**'
