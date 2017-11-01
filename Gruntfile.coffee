@@ -62,6 +62,7 @@ module.exports = (grunt) ->
     buildcontrol:
       options:
         dir: 'dist'
+        force: true
         commit: true
         push: true
         fetchProgress: false
@@ -134,17 +135,12 @@ module.exports = (grunt) ->
       'exec:print'
       'exec:reducePDF'
       'exec:thumbnail'
-    ]
-
-  grunt.registerTask 'dist',
-    'Save presentation files to *dist* directory.', [
       'exec:qr'
-      'copy:dist'
     ]
 
   grunt.registerTask 'deploy',
     'Deploy to Github Pages', [
-      'dist'
+      'copy:dist'
       'cname'
       'nojekyll'
       'buildcontrol:github'
