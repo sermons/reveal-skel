@@ -1,11 +1,11 @@
 #! /bin/sh
-# <repo>/.travis/travis-key
+# cd <repo>; ./travis-key
 # Install Travis gem:
 #   apt-get install gcc libffi-dev ruby ruby-dev
 #   gem install travis --no-rdoc --no-ri
 #   travis login --org
 
-# Usage: $0 -r user/repo [<travis opts>]
+# Usage: $0 [-r user/repo] [<other travis opts>]
 
 # defaults
 github_key=""
