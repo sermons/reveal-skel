@@ -1,8 +1,7 @@
-# Installing reveal-skel
+# Installing [reveal-skel](https://github.com/sermons/reveal-skel)
 
 ## Intro
-[reveal-skel](https://github.com/sermons/reveal-skel)
-is a forkable template for a presentation based on the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML framework.
+Reveal-skel is a forkable template for a presentation based on the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML framework.
 
 [Travis integration](.travis.yml) deploys to Github Pages via an [NPM script](package.json), calling a [Grunt task](Gruntfile.coffee) to copy the rendered site
 into a subdir and push to the gh-pages branch.
@@ -36,9 +35,10 @@ into a subdir and push to the gh-pages branch.
 + Commit, **push**, and check the [build log](https://travis-ci.org/) for errors
 
 ## Bot user for Travis deploy
-If you want finer-grained access control,
-you may want to create a **special user**
-just for pushing to gh-pages.  This is what I do:
+If you don't want Travis to have full write-access 
+to all your repos, you may want to create a 
+**special user** just for pushing to the `gh-pages`
+branch.  This is what I do:
 
 + Create a new Github **user** (a 'bot')
 + In the bot account, create an **access token** as above
