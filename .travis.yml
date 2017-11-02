@@ -8,7 +8,7 @@ addons:
     packages:
       - ghostscript
 deploy:
-  provider: github
+  provider: pages
   skip_cleanup: true
   github_token: $github_key
   local_dir: dist
