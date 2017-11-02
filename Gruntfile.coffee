@@ -92,7 +92,7 @@ module.exports = (grunt) ->
     ]
 
   grunt.registerTask 'test',
-    '*Render* to PDF and copy to dist/', [
+    '*Render* to PDF', [
       'coffeelint'
       'connect:serve'
       'exec:print'
@@ -101,7 +101,7 @@ module.exports = (grunt) ->
       'exec:qr'
     ]
 
-grunt.registerTask 'dist',
+  grunt.registerTask 'dist',
     '*Copy* site to dist/ for deployment', [
       'copy:dist'
       'cname'
