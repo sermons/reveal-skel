@@ -10,7 +10,7 @@ into a subdir and push to the gh-pages branch.
 ## Usage
 * **Fork** the [reveal-skel](https://github.com/sermons/reveal-skel) project
   + Or `git remote add upstream https://github.com/sermons/reveal-skel`
-* Setup a **deploy key** for Travis [(see below)](#deploy-key-for-travis)
+* Setup a **Github token** for Travis [(see below)](#github-token-for-travis)
 * **Edit** [package.json](package.json):
   + Package name, git repo, cname/URL
   + Change `sample.md` to `slides.md`
@@ -22,31 +22,27 @@ into a subdir and push to the gh-pages branch.
 * Static **assets** (CSS, JS, images, etc) go in [`static`](static)
   + Grunt will copy this dir as-is to the deployed site
 
-## Deploy key for Travis
+## Github token for Travis
 + **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
-+ Create an SSH **keypair**: `ssh-keygen -N "" -f ~/.ssh/deploy_key`
-+ On Github, in your repo: *Settings* &rarr; *Deploy Keys* &rarr; **Add deploy key**
-  + *Title*: e.g., "Travis push to gh-pages"
-  + *Key*: Paste the contents of the SSH **public** key (`~/.ssh/deploy_key.pub`)
-  + Check the box for "*Allow write access*"
-+ **Encrypt** the private key using GPG:
-  + Create a **passphrase**: `date | md5sum`
-  + Encrypt with **GPG**, specifying the passphrase: `gpg -c ~/.ssh/deploy_key`
-  + **Copy** encrypted key to repo: `cd <repo>; cp ~/.ssh/deploy_key.gpg .travis/`
-  + **Save** the passphrase outside the repo: `echo "key=...MY_PASSPHRASE..." > ~/.travis-key.conf`
++ On Github, create an access token: *Settings* &rarr; *Developer Settings* &rarr; *Personal access tokens* &rarr; **Generate new token**
+  + *Token description*: e.g., "Travis push to gh-pages"
+  + *Select scopes*: check "**repo**"
+  + Press the **Generate token** button at the bottom
++ Copy and **save** the token outside the repo:
+  + `echo "github_key=...MY_GITHUB_TOKEN..." > ~/.travis-key.conf`
 + [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**
   + See note in the [travis-key script](.travis/travis-key) for details
-+ Run `.travis/travis-key` to [securely store the passphrase in Travis](https://docs.travis-ci.com/user/encrypting-files/):
++ Run `.travis/travis-key` to [securely store the token in Travis](https://docs.travis-ci.com/user/encrypting-files/):
 + Commit, **push**, and check the [build log](https://travis-ci.org/) for errors
 
 ## Bot user for Travis deploy
-If you want finer-grained access control, or want to reuse the same
-deploy key on multiple repos, you may want to create a **special user**
+If you want finer-grained access control,
+you may want to create a **special user**
 just for pushing to gh-pages.  This is what I do:
 
 + Create a new Github **user** (a 'bot')
-+ In the bot account, add the **public deploy key** (`deploy_key.pub`):
-  + "*Settings*" (Personal Settings) &rarr; "*SSH and GPG keys*"
++ In the bot account, create an **access token** as above
+  + **Save** the token out-of-repo in `~/.travis-key.conf`
 + In your main account, add the bot as a **collaborator** on your repo:
   + "*Settings*" &rarr; "*Collaborators &amp; teams*" &rarr; "*Collaborators*"
   + Give the bot **Write** access so it can push
@@ -55,10 +51,7 @@ just for pushing to gh-pages.  This is what I do:
   + "*Settings*" &rarr; "*Branches*" &rarr; "*Protected branches*" &rarr; "*master*"
   + Check "*Protect this branch*" and "*Restrict who can push to this branch*"
   + Now the bot can **only** push to gh-pages
-+ You don't need any **repo-specific** deploy keys now
-+ You **still** need to run `.travis/travis-key` in each new repo
-  + The symmetric decryption keys are stored in Travis **environment vars**, which are repo-specific
-  + If you tell Travis to use the same **Key** and **IV**, you can reuse the encrypted deploy key file
++ Run the **script** `.travis/travis-key` in each repo
 
 ## Multiplex (remote-control)
 Don't use the default multiplex socket ID in the template, or your presentation
