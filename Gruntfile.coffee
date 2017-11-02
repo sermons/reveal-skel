@@ -75,7 +75,6 @@ module.exports = (grunt) ->
 
   # Load all grunt tasks.
   require('load-grunt-tasks')(grunt)
-  grunt.loadNpmTasks 'grunt-git'
   grunt.loadNpmTasks 'grunt-sass'
 
   grunt.registerTask 'cname',
