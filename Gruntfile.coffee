@@ -117,13 +117,13 @@ module.exports = (grunt) ->
       'exec:reducePDF'
       'exec:thumbnail'
       'exec:qr'
+      'copy:dist'
+      'cname'
+      'nojekyll'
     ]
 
   grunt.registerTask 'deploy',
     'Deploy to Github Pages', [
-      'copy:dist'
-      'cname'
-      'nojekyll'
       'buildcontrol:github'
     ]
 
