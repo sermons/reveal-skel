@@ -95,6 +95,7 @@
   },
   "scripts": {
     "postinstall": "grunt install",
-    "test": "grunt test"
+    "test": "grunt test",
+    "dist": "grunt dist"
   }
 }

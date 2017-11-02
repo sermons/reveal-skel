@@ -92,13 +92,17 @@ module.exports = (grunt) ->
     ]
 
   grunt.registerTask 'test',
-    '*Render* to PDF and inlined HTML', [
+    '*Render* to PDF and copy to dist/', [
       'coffeelint'
       'connect:serve'
       'exec:print'
       'exec:reducePDF'
       'exec:thumbnail'
       'exec:qr'
+    ]
+
+grunt.registerTask 'dist',
+    '*Copy* site to dist/ for deployment', [
       'copy:dist'
       'cname'
       'nojekyll'
