@@ -89,7 +89,7 @@
     "grunt-sass": "^2.0.0",
     "grunt-exec": "^3.0.0",
     "grunt-coffeelint": "^0.0.16",
-    "coffeelint": "^2.0.6",
+    "coffeelint": "^2.0.7",
     "qrcode": "^0.9.0",
     "decktape": "^2.4.3"
   },
