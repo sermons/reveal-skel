@@ -88,7 +88,6 @@
     "load-grunt-tasks": "^3.5.2",
     "grunt-sass": "^2.0.0",
     "grunt-exec": "^3.0.0",
-    "grunt-build-control": "^0.7.1",
     "grunt-coffeelint": "^0.0.16",
     "coffeelint": "^2.0.6",
     "grunt-git": "^1.0.7",
@@ -98,7 +97,6 @@
   },
   "scripts": {
     "postinstall": "grunt install",
-    "test": "grunt test",
-    "deploy": "grunt deploy"
+    "test": "grunt test"
   }
 }

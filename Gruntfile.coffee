@@ -58,21 +58,6 @@ module.exports = (grunt) ->
           dest: 'dist/'
         }]
 
-    buildcontrol:
-      options:
-        dir: 'dist'
-        force: true
-        commit: true
-        push: true
-        fetchProgress: false
-        config:
-          'user.name': '<%= pkg.config.git.name %>'
-          'user.email': '<%= pkg.config.git.email %>'
-      github:
-        options:
-          remote: 'git@github.com:<%= pkg.repository %>'
-          branch: 'gh-pages'
-
   # Generated grunt vars
   grunt.config.merge
     pkg:
@@ -120,11 +105,6 @@ module.exports = (grunt) ->
       'copy:dist'
       'cname'
       'nojekyll'
-    ]
-
-  grunt.registerTask 'deploy',
-    'Deploy to Github Pages', [
-      'buildcontrol:github'
     ]
 
   # Define default task.
