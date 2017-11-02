@@ -28,7 +28,6 @@ module.exports = (grunt) ->
       print: 'decktape -s 1024x768 reveal "http://localhost:9000/" <%= pkg.pdf %>; true'
       thumbnail: 'decktape -s 800x600 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/#/title" static/img/thumbnail.jpg; true'
       reducePDF: 'mv <%= pkg.pdf %> print.pdf; gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFA=2 -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=<%= pkg.pdf %> print.pdf'
-      inline: 'script -qec "inliner -m index.html" /dev/null > <%= pkg.shortname %>.html'
       qr: 'qrcode https://<%= pkg.config.pretty_url %> static/img/<%= pkg.shortname %>-qr.png'
 
     copy:
@@ -58,21 +57,6 @@ module.exports = (grunt) ->
           dest: 'dist/'
         }]
 
-    buildcontrol:
-      options:
-        dir: 'dist'
-        force: true
-        commit: true
-        push: true
-        fetchProgress: false
-        config:
-          'user.name': '<%= pkg.config.git.name %>'
-          'user.email': '<%= pkg.config.git.email %>'
-      github:
-        options:
-          remote: 'git@github.com:<%= pkg.repository %>'
-          branch: 'gh-pages'
-
   # Generated grunt vars
   grunt.config.merge
     pkg:
@@ -88,10 +72,8 @@ module.exports = (grunt) ->
       'https://mobile.biblegateway.com/passage/?search=' +
       ref.replace(/[^\w.:,-]+/g, '') + '&version=' + ver + ' "ref")'
 
-  # Load all grunt tasks.
+  # Autoload tasks from grunt plugins
   require('load-grunt-tasks')(grunt)
-  grunt.loadNpmTasks 'grunt-git'
-  grunt.loadNpmTasks 'grunt-sass'
 
   grunt.registerTask 'cname',
     'Create CNAME for Github Pages', ->
@@ -120,11 +102,6 @@ module.exports = (grunt) ->
       'copy:dist'
       'cname'
       'nojekyll'
-    ]
-
-  grunt.registerTask 'deploy',
-    'Deploy to Github Pages', [
-      'buildcontrol:github'
     ]
 
   # Define default task.
