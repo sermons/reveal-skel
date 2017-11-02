@@ -31,8 +31,8 @@ into a subdir and push to the gh-pages branch.
 + Copy and **save** the token outside the repo:
   + `echo "github_key=...MY_GITHUB_TOKEN..." > ~/.travis-key.conf`
 + [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**
-  + See note in the [travis-key script](.travis/travis-key) for details
-+ Run `.travis/travis-key` to [securely store the token in Travis](https://docs.travis-ci.com/user/encrypting-files/):
+  + See note in the [travis-key script](travis-key) for details
++ Run `./travis-key` to [securely store the token in Travis](https://docs.travis-ci.com/user/encrypting-files/):
 + Commit, **push**, and check the [build log](https://travis-ci.org/) for errors
 
 ## Bot user for Travis deploy
@@ -51,7 +51,7 @@ just for pushing to gh-pages.  This is what I do:
   + "*Settings*" &rarr; "*Branches*" &rarr; "*Protected branches*" &rarr; "*master*"
   + Check "*Protect this branch*" and "*Restrict who can push to this branch*"
   + Now the bot can **only** push to gh-pages
-+ Run the **script** `.travis/travis-key` in each repo
++ Run the **script** `./travis-key` in each repo
 
 ## Multiplex (remote-control)
 Don't use the default multiplex socket ID in the template, or your presentation
