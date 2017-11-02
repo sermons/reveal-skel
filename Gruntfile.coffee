@@ -72,9 +72,8 @@ module.exports = (grunt) ->
       'https://mobile.biblegateway.com/passage/?search=' +
       ref.replace(/[^\w.:,-]+/g, '') + '&version=' + ver + ' "ref")'
 
-  # Load all grunt tasks.
+  # Autoload tasks from grunt plugins
   require('load-grunt-tasks')(grunt)
-  grunt.loadNpmTasks 'grunt-sass'
 
   grunt.registerTask 'cname',
     'Create CNAME for Github Pages', ->
