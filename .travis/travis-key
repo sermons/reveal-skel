@@ -8,7 +8,7 @@
 # Usage: $0 -r user/repo [<travis opts>]
 
 # defaults
-gpg_key=""
+github_key=""
 
 # config can override defaults
 CONF=$HOME/.travis-key.conf
@@ -16,4 +16,4 @@ CONF=$HOME/.travis-key.conf
 
 travis sync --org
 travis enable --org $@
-travis env set gpg_key "$gpg_key" -p $@
+travis env set github_key "$github_key" -p $@
