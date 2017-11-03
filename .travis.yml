@@ -8,14 +8,12 @@ addons:
     packages:
       - ghostscript
 before_deploy:
-  - echo "$gpg_key" | gpg --batch --passphrase-fd 0 .travis/deploy_key.gpg
-  - eval "$(ssh-agent -s)"
-  - chmod 600 .travis/deploy_key
-  - ssh-add .travis/deploy_key
+  - npm run dist
 deploy:
-  provider: script
-  script: npm run deploy
+  provider: pages
   skip_cleanup: true
+  github_token: $github_key
+  local_dir: dist
   on:
     all_branches: true
     condition: $TRAVIS_BRANCH =~ ^(master|release-.*)$

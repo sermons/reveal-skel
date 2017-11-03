@@ -8,7 +8,7 @@
     "talks",
     "ppt"
   ],
-  "version": "1.6.7",
+  "version": "1.6.8",
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
     "pretty_url": "reveal-skel.seanho.com",
@@ -83,23 +83,20 @@
   "devDependencies": {
     "reveal.js": "^3.5.0",
     "grunt": "^1.0.1",
+    "load-grunt-tasks": "^3.5.2",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
-    "load-grunt-tasks": "^3.5.2",
     "grunt-sass": "^2.0.0",
     "grunt-exec": "^3.0.0",
-    "grunt-build-control": "^0.7.1",
     "grunt-coffeelint": "^0.0.16",
-    "coffeelint": "^2.0.6",
-    "grunt-git": "^1.0.7",
+    "coffeelint": "^2.0.7",
     "qrcode": "^0.9.0",
     "workbox-build": "^2.1.0",
-    "inliner": "^1.12.5",
     "decktape": "^2.4.3"
   },
   "scripts": {
     "postinstall": "grunt install",
     "test": "grunt test",
-    "deploy": "grunt deploy"
+    "dist": "grunt dist"
   }
 }
