@@ -90,8 +90,8 @@
     "grunt-exec": "^3.0.0",
     "grunt-coffeelint": "^0.0.16",
     "coffeelint": "^2.0.7",
-    "qrcode": "^0.9.0",
-    "decktape": "^2.4.3"
+    "qrcode": "^1.0.0",
+    "decktape": "^2.5.0"
   },
   "scripts": {
     "postinstall": "grunt install",
