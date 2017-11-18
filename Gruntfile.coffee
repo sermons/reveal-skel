@@ -28,7 +28,7 @@ module.exports = (grunt) ->
       print: 'decktape -s 1024x768 reveal "http://localhost:9000/" <%= pkg.pdf %>; true'
       thumbnail: 'decktape -s 800x600 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/#/title" static/img/thumbnail.jpg; true'
       reducePDF: 'mv <%= pkg.pdf %> print.pdf; gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFA=2 -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=<%= pkg.pdf %> print.pdf'
-      qr: 'qrcode https://<%= pkg.config.pretty_url %> static/img/<%= pkg.shortname %>-qr.png'
+      qr: 'qrcode -o static/img/<%= pkg.shortname %>-qr.png https://<%= pkg.config.pretty_url %>'
 
     copy:
       index:
