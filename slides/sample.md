@@ -69,7 +69,8 @@ class BST:
 1. Point *One* <span class="ref">(v1)</span>
 2. **Point Two** <span class="ref">(v2)</span>
 3. Point *Three* <span class="ref">(v3)</span>
-  + A bit of math: \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
+  + A bit of math: <br>
+    \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
 
 <!-- .element: class="outline" -->
 
