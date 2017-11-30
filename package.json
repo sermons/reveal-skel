@@ -57,8 +57,8 @@
         "integrity": "sha256-+09kLhwACKXFPDvqo4xMMvi4+uXFsRZ2uYGbeN1U8sI="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js",
-        "integrity": "sha256-KaSi3am04I2b10TZZ7JqEYrnNk94r0QOeIY3PtwGR/M="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js",
+        "integrity": "sha256-jniDwC1PC9OmGoyPxA9VpGvgwDYyxsMqu5Q4OrF5wNY="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js",
