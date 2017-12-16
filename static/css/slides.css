@@ -5,14 +5,9 @@
 /* Shade background images */
 section[data-background-image] {
   background-color: rgba(0,0,0,0.6);
+/*  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black; */
 }
 section.empty[data-background-image] { background: none }
-
-@media screen {
-  section[data-background-image] {
-    text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black;
-  }
-}
 
 /* Override slide centering (interferes with print-pdf?) */
 @media screen {
