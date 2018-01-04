@@ -8,14 +8,6 @@ module.exports = (grunt) ->
           port: 9000
           hostname: 'localhost'
 
-    coffeelint:
-      options:
-        indentation:
-          value: 2
-        max_line_length:
-          level: 'ignore'
-      all: ['Gruntfile.coffee']
-
     sass:
       options:
         includePaths: ['node_modules/reveal.js/css/theme/']
@@ -93,7 +85,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'test',
     '*Render* to PDF', [
-      'coffeelint'
       'connect:serve'
       'exec:print'
       'exec:reducePDF'
