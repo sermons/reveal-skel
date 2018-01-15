@@ -27,13 +27,11 @@ Six underscores create a horizontal rule in the notes
 [###](#/outline "secret")
 
 ---
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="outline" -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="outline" class="outline" -->
 ## Outline [(ref)](# "ref")
 1. Point **One** <%= bible('(Rom 1:1,5)') %>
 2. Point **Two** <%= bible('rom1.2', '(v2)') %>
 3. Point **Three** <%= bible('rom1.3-4', '(v3-4)', 'ESV') %>
-
-<!-- .element: class="outline" comment="need previous blank line!" -->
 
 ******
 <!-- six stars create a vertical slide -->
@@ -65,15 +63,13 @@ class BST:
 # Review question for Point **One**
 
 ---
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="outline" -->
 ## Outline <span class="zh">大綱</span>
 1. Point *One* [(v1)](# "ref")
 2. **Point Two** [(v2)](# "ref")
 3. Point *Three* [(v3)](# "ref")
   + A bit of math: <br>
     \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
-
-<!-- .element: class="outline" -->
 
 ******
 ## Point Two
@@ -97,13 +93,11 @@ No block-level markdown
 # Review question for Point **Two**
 
 ---
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="outline" -->
 ## Outline
 1. Point *One* [(v1)](# "ref")
 2. Point *Two* [(v2)](# "ref")
 3. **Point Three** [(v3)](# "ref")
-
-<!-- .element: class="outline" -->
 
 ******
 ## Point Three
@@ -121,13 +115,11 @@ No block-level markdown
 # Review question for Point **Three**
 
 ---
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> -->
+<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="outline" -->
 ## Outline
 1. Point **One** [(v1)](# "ref")
 2. Point **Two** [(v2)](# "ref")
 3. Point **Three** [(v3)](# "ref")
-
-<!-- .element: class="outline" -->
 
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="empty" -->

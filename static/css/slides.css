@@ -70,7 +70,9 @@ section.empty[data-background-image] { background: none }
 .reveal a[title="secret"] { opacity: 0.2 }
 
 /* Presentation outline */
-.reveal section .outline { font-size: 1.2em }
+.reveal section .outline,
+.reveal section.outline > ol,
+.reveal section.outline > ul { font-size: 1.2em }
 
 /* Flexbox slide layout (Reveal.js display: flex) */
 .reveal section {
