@@ -43,8 +43,8 @@ module.exports = (grunt) ->
           ]
           dest: 'dist/'
         },{
-          flatten: true
-          src: ['static/img/favicon.ico']
+          cwd: 'static/img'
+          src: 'favicon.ico'
           dest: 'dist/'
         }]
 
