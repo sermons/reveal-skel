@@ -5,11 +5,9 @@
 /* Shade background images */
 section[data-background-image] {
   background-color: rgba(0,0,0,0.6);
-  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black;
+/*  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black; */
 }
-section.empty[data-background-image] {
-  background-color: rgba(0,0,0,0);
-}
+section.empty[data-background-image] { background: none }
 
 /* Override slide centering (interferes with print-pdf?) */
 @media screen {
@@ -72,7 +70,9 @@ section.empty[data-background-image] {
 .reveal a[title="secret"] { opacity: 0.2 }
 
 /* Presentation outline */
-.reveal section .outline { font-size: 1.2em }
+.reveal section .outline,
+.reveal section.outline > ol,
+.reveal section.outline > ul { font-size: 1.2em }
 
 /* Flexbox slide layout (Reveal.js display: flex) */
 .reveal section {
