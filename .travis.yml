@@ -14,6 +14,7 @@ deploy:
   skip_cleanup: true
   github_token: $github_key
   local_dir: dist
+  committer_from_gh: true
   on:
     all_branches: true
     condition: $TRAVIS_BRANCH =~ ^(master|release-.*)$
