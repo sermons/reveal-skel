@@ -16,8 +16,9 @@ deploy:
   github_token: $github_key
   local_dir: dist
   committer_from_gh: true
-  email: travis@seanho.com
   verbose: true
+  edge:
+    branch: v1.8.47
   on:
     all_branches: true
     condition: $TRAVIS_BRANCH =~ ^(master|release-.*)$
