@@ -60,7 +60,7 @@ section.empty[data-background-image] { background: none }
 .reveal section .caption,
 .reveal section a[title="caption"] {
   font-size: 14px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.7);
   text-align: right;
   position: absolute;
   right: 0.5em;
