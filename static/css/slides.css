@@ -97,7 +97,7 @@ section.empty[data-background-image] { background: none }
   position: absolute;
   z-index: 20;
   left: 0.5em;
-  font-size: 16px;
+  font-size: 18px;
 }
 #header { top: 0.5em }
 #footer { bottom: 0.5em }
