@@ -81,10 +81,8 @@
           secret: Reveal.getQueryHash().s || null
         },
 
-        <% mpx = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/multiplex' %>
-
         dependencies: [
-          { src: Reveal.getQueryHash().s ? '<%= mpx %>/master.min.js' : '<%= mpx %>/client.min.js', async:true }
+          { src: Reveal.getQueryHash().s ? '<%= pkg.config.reveal %>/plugin/multiplex/master.min.js' : '<%= pkg.config.reveal %>/plugin/multiplex/client.min.js', async:true }
         ]
       });
     </script>
