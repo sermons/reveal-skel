@@ -81,12 +81,11 @@ Yay for **multi-col** layout! <br/>
 No block-level markdown
 </div>
 <div style="flex:2">
-![Stars](static/bg/unsplash-Jztmx9yqjBw-stars.jpg)
-<div class="caption">
-(img credit: Ryan Hutton)
+![Stars](https://img.seanho.com/bg/unsplash-Jztmx9yqjBw-stars.jpg)
 </div>
 </div>
-</div>
+
+[img: Ryan Hutton](https://unsplash.com/photos/Jztmx9yqjBw "caption")
 
 ******
 <!-- .slide: data-background="white" -->
