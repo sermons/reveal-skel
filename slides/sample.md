@@ -81,7 +81,7 @@ Yay for **multi-col** layout! <br/>
 No block-level markdown
 </div>
 <div style="flex:2">
-![Stars](https://img.seanho.com/bg/unsplash-Jztmx9yqjBw-stars.jpg)
+![Stars](https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg)
 </div>
 </div>
 
