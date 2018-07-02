@@ -10,6 +10,7 @@ module.exports = (grunt) ->
 
     sass:
       options:
+        implementation: require('node-sass')
         includePaths: ['node_modules/reveal.js/css/theme/']
         outputStyle: 'compressed'
       theme:
