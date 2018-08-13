@@ -32,7 +32,7 @@
     "slides": [
       "slides/sample.md"
     ],
-    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0",
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0",
     "mathjax": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js",
     "css": [
       {
@@ -40,8 +40,8 @@
         "integrity": "sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css",
-        "integrity": "sha256-ol2N5Xr80jdDqxK0lte3orKGb9Ja3sOnpAUV7TTADmg="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.min.css",
+        "integrity": "sha256-9+Wg2bcNeiOMGXOUNqBdceY2lAH/eCiTDcdzHhHIl48="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css",
@@ -62,16 +62,16 @@
         "integrity": "sha256-0YA7ixx4+I4GrLichcjWSQHIUSQiI8ojTDqsK7AZ5zU="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js",
-        "integrity": "sha256-ixSKHrWAL2k0mqVSRju9+to2/uZSEK9+kJRfdNBolG8="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.min.js",
+        "integrity": "sha256-Xr6ZH+/kc7hDVReZLO5khBknteLqu5oen/xnSraXrVk="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js",
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/marked.js",
         "integrity": "sha256-c6mIBJmjwIEMzRFz4hJTWcWDvcGnqJUicbkA6bsQoYE="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.min.js",
-        "integrity": "sha256-k07Q1HjAu3jUhg23V+WcK14cqHXbgRpIdYHjfLOkS+c="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/markdown/markdown.min.js",
+        "integrity": "sha256-RlGq6+Sa4YZAxAdFFm5uSZ6E5iTqZUkvCHeuEf8R6DQ="
       }
     ],
     "plugins": [
@@ -82,7 +82,7 @@
   "license": "CC-BY-SA-4.0",
   "private": true,
   "devDependencies": {
-    "reveal.js": "^3.6.0",
+    "reveal.js": "^3.7.0",
     "grunt": "^1.0.3",
     "load-grunt-tasks": "^4.0.0",
     "grunt-contrib-connect": "^1.0.2",
