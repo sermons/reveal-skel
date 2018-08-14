@@ -10,7 +10,7 @@
 
 [(open master view)](http://reveal-skel.seanho.com/?s=45ba034647cea150 "ref")
 
-[(img: Ryan Hutton, CC0)](https://unsplash.com/photos/Jztmx9yqjBw "caption")
+[Ryan Hutton](https://unsplash.com/photos/Jztmx9yqjBw "caption")
 
 >>>
 + Speaker notes go here.
@@ -84,8 +84,6 @@ No block-level markdown
 ![Stars](https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg)
 </div>
 </div>
-
-[img: Ryan Hutton](https://unsplash.com/photos/Jztmx9yqjBw "caption")
 
 ******
 <!-- .slide: data-background="white" -->
