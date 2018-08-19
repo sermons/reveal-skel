@@ -3,6 +3,11 @@
  *********************************************/
 
 /* Shade background images */
+.reveal .slide-background.present {
+  opacity: 0.6;
+}
+/* but not wth white-bg */
+
 section[data-background-image] {
   background-color: rgba(0,0,0,0.7);
 /*  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black; */
