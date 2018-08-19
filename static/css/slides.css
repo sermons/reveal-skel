@@ -9,7 +9,7 @@
 /* but not wth white-bg */
 
 section[data-background-image] {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.4);
 /*  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black; */
 }
 section.empty[data-background-image] { background: none }
