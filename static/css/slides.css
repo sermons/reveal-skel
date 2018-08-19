@@ -23,6 +23,11 @@ section.empty[data-background-image] { background: none }
   }
 }
 
+/* Text-shadow on title H1 */
+.reveal section#title h1 {
+  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black;
+}
+
 /* Line separator below H2 */
 .reveal section h2:after {
   content: "";
