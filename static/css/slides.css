@@ -6,7 +6,7 @@
 .reveal .slide-background.present {
   opacity: 0.6;
 }
-/* but not wth white-bg */
+/* but not with white-bg */
 
 section[data-background-image] {
   background-color: rgba(0,0,0,0.4);
