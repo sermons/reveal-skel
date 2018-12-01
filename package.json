@@ -85,7 +85,7 @@
     "reveal.js": "^3.7.0",
     "highlight.js": "^9.13.1",
     "headjs": "^1.0.3",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "grunt": "^1.0.3",
