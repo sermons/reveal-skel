@@ -83,7 +83,7 @@
   "private": true,
   "dependencies": {
     "reveal.js": "^3.7.0",
-    "highlight.js": "^9.13.1",
+    "highlight.js": "^9.14.2",
     "headjs": "^1.0.3",
     "socket.io": "^2.2.0"
   },
