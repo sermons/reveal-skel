@@ -72,14 +72,19 @@ class BST:
 ******
 ## Point Two
 
-<!-- ensure div is not recognized as HTML -->
-[]() <div class="imgbox"><div>
+<!-- HTML in separate paragraph -->
+<div class="imgbox"><div>
+
 + Yay for **multi-col** layout!
 + 1/3 width for text
 + HTML must be quoted
-</div> <div style="flex:2">
+
+</div>
+<div style="flex:2">
+
 ![Stars](https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg)
-</div> </div>
+
+</div></div>
 
 ******
 <!-- .slide: data-background="white" -->
