@@ -54,10 +54,6 @@
         "integrity": "sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js",
-        "integrity": "sha256-+09kLhwACKXFPDvqo4xMMvi4+uXFsRZ2uYGbeN1U8sI="
-      },
-      {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js",
         "integrity": "sha256-RtMTraB5gGlLER0FkKBcaXCmZCQCxkKS/dXm7MSEoEY="
       },
@@ -84,7 +80,6 @@
   "dependencies": {
     "reveal.js": "^3.8.0",
     "highlight.js": "^9.15.6",
-    "headjs": "^1.0.3",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
