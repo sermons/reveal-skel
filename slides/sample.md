@@ -72,16 +72,14 @@ class BST:
 ******
 ## Point Two
 
-<div class="imgbox">
-<div>
-Yay for multi-col layout! <br/>
-1/3 width for text <br/>
-No markdown in HTML
-</div>
-<div style="flex:2">
-<img alt="Stars" src="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg"/>
-</div>
-</div>
+<!-- ensure div is not recognized as HTML -->
+[]() <div class="imgbox"><div>
++ Yay for **multi-col** layout!
++ 1/3 width for text
++ HTML must be quoted
+</div> <div style="flex:2">
+![Stars](https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg)
+</div> </div>
 
 ******
 <!-- .slide: data-background="white" -->
