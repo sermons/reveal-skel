@@ -79,7 +79,7 @@ Yay for multi-col layout! <br/>
 No markdown in HTML
 </div>
 <div style="flex:2">
-<img alt="Stars" href="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg"/>
+<img alt="Stars" src="https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg"/>
 </div>
 </div>
 
