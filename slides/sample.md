@@ -77,7 +77,7 @@ class BST:
 
 + Yay for **multi-col** layout!
 + 1/3 width for text
-+ HTML must be quoted
++ use `imgbox` div
 
 </div>
 <div style="flex:2">
