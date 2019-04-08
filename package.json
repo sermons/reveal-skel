@@ -8,7 +8,7 @@
     "talks",
     "ppt"
   ],
-  "version": "1.7.0",
+  "version": "1.7.1",
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
     "pretty_url": "reveal-skel.seanho.com",
