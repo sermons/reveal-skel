@@ -84,7 +84,7 @@
     "marked": "^0.6.2"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "load-grunt-tasks": "^4.0.0",
     "grunt-contrib-connect": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
