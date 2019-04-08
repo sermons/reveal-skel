@@ -75,9 +75,9 @@ class BST:
 <!-- HTML in separate paragraph -->
 <div class="imgbox"><div>
 
-+ Yay for **multi-col** layout!
++ **Multi-col** layout!
 + 1/3 width for text
-+ use `imgbox` div
++ `imgbox` div
 
 </div>
 <div style="flex:2">
