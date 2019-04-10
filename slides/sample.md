@@ -55,6 +55,7 @@ class BST:
       else:               # found it!
         return cur
 ```
+<!-- .element: data-line-numbers="14-17" -->
 
 ******
 <!-- .slide: data-background="white" -->
