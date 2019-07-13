@@ -44,14 +44,14 @@
         "integrity": "sha256-OxiHrn+gXudPDHxTvXiQzeFjZU/FllSSPmOOYAZ1O/g="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css",
-        "integrity": "sha256-akwTLZec/XAFvgYgVH1T5/369lhA2Efr22xzCNl1nHs="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-dark.min.css",
+        "integrity": "sha256-GA29iW/iYj9FcuQQktvW45pRzHvZeFfgeFvA4tGVjpM="
       }
     ],
     "js": [
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js",
-        "integrity": "sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js",
+        "integrity": "sha256-js+I1fdbke/DJrW2qXQlrw7VUEqmdeFeOW37UC0bEiU="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js",
@@ -79,7 +79,7 @@
   "private": true,
   "dependencies": {
     "reveal.js": "^3.8.0",
-    "highlight.js": "^9.15.6",
+    "highlight.js": "^9.15.8",
     "socket.io": "^2.2.0",
     "marked": "^0.6.2"
   },
