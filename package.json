@@ -85,7 +85,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.4",
-    "load-grunt-tasks": "^5.0.0",
+    "load-grunt-tasks": "^5.1.0",
     "grunt-contrib-connect": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "node-sass": "^4.12.0",
