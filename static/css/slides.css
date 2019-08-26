@@ -30,7 +30,10 @@ section.empty[data-background-image] { background: none }
 .reveal section.has-light-background h2:after { display: none }
 
 /* Larger font for Chinese */
-.reveal section .zh { font-size: larger }
+.reveal section .zh,
+.reveal section a[title="zh"] {
+  font-size: larger;
+}
 
 /* Text highlight colors */
 .reveal strong { color: yellow }
