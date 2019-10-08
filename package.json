@@ -92,7 +92,7 @@
     "grunt-sass": "^3.1.0",
     "grunt-exec": "^3.0.0",
     "qrcode": "^1.4.2",
-    "decktape": "^2.9.3"
+    "decktape": "^2.10.0"
   },
   "scripts": {
     "postinstall": "grunt install",
