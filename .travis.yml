@@ -12,7 +12,8 @@ before_deploy:
   - npm run dist
 deploy:
   provider: pages
-  token: $github_key
+  skip_cleanup: true
+  github_token: $github_key
   local_dir: dist
   committer_from_gh: true
   on:
