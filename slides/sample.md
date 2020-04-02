@@ -2,11 +2,9 @@
 # Reveal-Skel
 ## A template for Reveal.js-based presentations
 
-<div>
-[![Travis builds](https://travis-ci.org/sermons/reveal-skel.svg)](https://travis-ci.org/sermons/reveal-skel)
+[![Travis builds](https://api.travis-ci.org/sermons/reveal-skel.svg)](https://travis-ci.org/github/sermons/reveal-skel)
 [![Node deps](https://david-dm.org/sermons/reveal-skel.svg)](https://david-dm.org/sermons/reveal-skel)
 [![Node devDeps](https://david-dm.org/sermons/reveal-skel/dev-status.svg)](https://david-dm.org/sermons/reveal-skel?type=dev)
-</div>
 
 [(open master view)](http://reveal-skel.seanho.com/?s=45ba034647cea150 "ref")
 
@@ -36,26 +34,18 @@ Six underscores create a horizontal rule in the notes
 ******
 <!-- six stars create a vertical slide -->
 ## Point One
-```
-class BSTNode:
-  def __init__(self, key=None,
-      par=None, left=None, right=None):
-    (self.key, self.par) = (key, par)
-    (self.left, self.right) = (left, right)
 
+```
 class BST:
   def __init__(self):
     self.root = None
 
-  def search(self, key):      # iterative search
+  def search(self, key): # iterative search
     cur = self.root
     while (cur != None):
-      if key &lt; cur.key:        # go left
-        cur = cur.left
-      else if key &gt; cur.key:   # go right
-        cur = cur.right
-      else:               # found it!
-        return cur
+      if key &lt; cur.key: cur = cur.left
+      else if key &gt; cur.key: cur = cur.right
+      else: return cur
 ```
 
 ******
@@ -74,16 +64,19 @@ class BST:
 ******
 ## Point Two
 
-<div class="imgbox">
-<div>
-Yay for **multi-col** layout! <br/>
-1/3 width for text <br/>
-No block-level markdown
+<!-- HTML in separate paragraph -->
+<div class="imgbox"><div>
+
++ **Multi-col** layout!
++ 1/3 width for text
++ `imgbox` div
+
 </div>
 <div style="flex:2">
+
 ![Stars](https://sermons.seanho.com/img/bg/unsplash-Jztmx9yqjBw-stars.jpg)
-</div>
-</div>
+
+</div></div>
 
 ******
 <!-- .slide: data-background="white" -->

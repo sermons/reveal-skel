@@ -1,0 +1,76 @@
+#! /bin/sh
+# Run node.js script
+# Link this script to .git/hooks/
+
+repo=$PWD
+name=$(basename $repo)
+work=/tmp/$name
+prod=/var/www/$name
+
+extrepo=/home/git/$name
+extbranch=site
+extname=$(basename $extrepo)
+
+unset GIT_DIR
+export GIT_AUTHOR_EMAIL=git@seanho.com
+export GIT_AUTHOR_NAME="Sean Ho"
+
+while read oldrev newrev ref; do
+  [[ $ref =~ .*/master$ ]] || continue
+
+  export TRAVIS_COMMIT=$newrev
+
+  if [ -d $work/.git ]; then
+    echo "Using existing working dir $work..."
+    cd $work
+    git pull || exit 1
+  else
+    echo "Creating local checkout..."
+    mkdir $work && cd $work || exit 1
+    git clone $repo . || exit 1
+  fi
+
+  echo "Running npm install..."
+  npm install || exit 1
+
+  if [ -d $extname/.git ]; then
+    echo "Updating existing external repo $extname/$extbranch..."
+    cd $extname
+    git pull || exit 1
+    cd ..
+  else
+    echo "Cloning external repo $extname/$extbranch..."
+    git clone -b $extbranch $extrepo || exit 1
+  fi
+
+  echo "Importing images from $extname..."
+  mkdir -p static/$extname
+  cp -a $extname/*_files/figure-html/* static/$extname/ || exit 1
+
+  echo "Running npm test..."
+  npm test || exit 1
+
+  if [ -d dist/.git ]; then
+    echo "Using existing site branch..."
+  else 
+    echo "Checking out site branch..."
+    rm -fr dist
+    git clone -b site $repo dist || exit 1
+  fi
+  rm -fr dist/*
+
+  echo "Running npm run dist..."
+  npm run dist || exit 1
+
+  echo "Committing to site..."
+  cd dist
+  git config user.email "$GIT_AUTHOR_EMAIL" || exit 1 
+  git config user.name "$GIT_AUTHOR_NAME" || exit 1 
+  git add . || exit 1
+  git commit -m "update site" || exit 1
+  git push || exit 1
+
+  echo "Deploying dist to production..."
+  rm -fr $prod/*
+  git --work-tree=$prod --git-dir=$repo checkout -f site || exit 1
+done

@@ -8,7 +8,7 @@ into a subdir and push to the gh-pages branch.
 
 ## Usage
 * **Fork** the [reveal-skel](https://github.com/sermons/reveal-skel) project
-  + Or `git remote add upstream https://github.com/sermons/reveal-skel`
+  + Or in your own git repo, run `git remote add upstream https://github.com/sermons/reveal-skel`
 * Setup a **Github token** for Travis [(see below)](#github-token-for-travis)
 * **Edit** [package.json](package.json):
   + Package name, git repo, cname/URL
