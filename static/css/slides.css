@@ -4,13 +4,13 @@
 
 /* Darken background images */
 .reveal .slide-background-content[background-image] {
-  background-color: rgba(0,0,0,0.2);
-  background-blend-mode: color;
+  opacity: 80%;
 }
 
 /* Shade text if background image */
 section[data-background-image],
-.reveal section#title h1 {
+.reveal section[data-background-image] h1,
+.reveal section[data-background-image] h2 {
   text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
 }
 
