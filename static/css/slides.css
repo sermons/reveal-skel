@@ -4,7 +4,7 @@
 
 /* Darken background images */
 .reveal .slide-background-content {
-  opacity: 80%;
+  opacity: 60%;
 }
 
 /* Shade text if background image */
