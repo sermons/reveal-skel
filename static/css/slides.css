@@ -3,7 +3,7 @@
  *********************************************/
 
 /* Darken background images */
-.reveal .slide-background-content[background-image] {
+.reveal .slide-background-content {
   opacity: 80%;
 }
 
