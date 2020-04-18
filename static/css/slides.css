@@ -2,12 +2,17 @@
  * Local styles specific to my presentations
  *********************************************/
 
-/* Shade background images */
-section[data-background-image] {
-  background-color: rgba(0,0,0,0.7);
-/*  text-shadow: 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black, 0 0 0.4em black; */
+/* Darken background images */
+.reveal .slide-background-content {
+  opacity: 60%;
 }
-section.empty[data-background-image] { background: none }
+
+/* Shade text if background image */
+section[data-background-image],
+.reveal section[data-background-image] h1,
+.reveal section[data-background-image] h2 {
+  text-shadow: 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black, 0 0 0.2em black;
+}
 
 /* Override slide centering (interferes with print-pdf?) */
 @media screen {
