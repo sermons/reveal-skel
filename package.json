@@ -5,7 +5,7 @@
   "keywords": [
     "slides"
   ],
-  "version": "1.7.7",
+  "version": "1.8.0",
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
     "pretty_url": "reveal-skel.seanho.com",
