@@ -26,7 +26,7 @@ module.exports = (grunt) ->
 
     copy:
       index:
-        src: '_index.html'
+        src: 'index.html'
         dest: 'dist/index.html'
         options:
           process: (content, path) ->
