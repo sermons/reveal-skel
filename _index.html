@@ -6,14 +6,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
-    <link rel=icon href="static/img/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel=icon href="img/favicon.svg" sizes="any" type="image/svg+xml" />
 
     <% pkg.config.css.forEach( function(css) { %>
     <link rel="stylesheet" href="<%= css.href %>" integrity="<%= css.integrity %>" crossorigin="anonymous" />
     <% } ) %>
 
-    <link rel="stylesheet" href="static/css/boldblack.css" id="theme" />
-    <link rel="stylesheet" href="static/css/slides.css" />
+    <link rel="stylesheet" href="css/boldblack.css" id="theme" />
+    <link rel="stylesheet" href="css/slides.css" />
 
   </head>
   <body>
@@ -41,7 +41,7 @@
         <span class="links">
           <a href="https://github.com/<%= pkg.repository %>">
             <i class="fa fa-github fa-inverse"></i></a>
-          <a href="<%= pkg.pdf %>">
+          <a href="<%= pkg.shortname %>.pdf">
             <i class="fa fa-file-pdf-o fa-inverse"></i></a>
         </span>
         <span class="commit"><%= pkg.commit %></span>
@@ -91,7 +91,7 @@
     <% pkg.config.plugins.forEach( function(js) { %>
     <script src="<%= pkg.config.reveal + "/plugin/" + js %>" crossorigin="anonymous"></script>
     <% } ) %>
-    <script src="static/js/notes.js"></script>
+    <script src="js/notes.js"></script>
 
     <script>
       hljs.initHighlightingOnLoad();

@@ -18,9 +18,9 @@ module.exports = (grunt) ->
           'static/css/boldblack.css': 'scss/boldblack.scss'
 
     exec:
-      print: 'decktape -s 1024x768 reveal "http://localhost:9000/" <%= pkg.pdf %> --no-sandbox; true'
+      print: 'decktape -s 1024x768 reveal "http://localhost:9000/" print.pdf --no-sandbox; true'
       thumbnail: 'decktape -s 800x600 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/#/title" static/img/thumbnail.jpg --no-sandbox; true'
-      reducePDF: 'mv <%= pkg.pdf %> print.pdf; gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=<%= pkg.pdf %> print.pdf'
+      reducePDF: 'gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=static/<%= pkg.shortname %>.pdf print.pdf'
       qr: 'echo https://<%= pkg.config.pretty_url %> | qrcode -o static/img/<%= pkg.shortname %>-qr.png'
 
     copy:
@@ -55,7 +55,6 @@ module.exports = (grunt) ->
   grunt.config.merge
     pkg:
       shortname: grunt.config('pkg.name').replace(/.*\//, '')
-      pdf: 'static/<%= pkg.shortname %>.pdf'
       commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
     img: (id) ->
       'https://sermons.seanho.com/img/' + id
