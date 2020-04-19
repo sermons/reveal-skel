@@ -38,15 +38,16 @@ module.exports = (grunt) ->
       dist:
         files: [{
           expand: true
-          src: [
-            'static/**'
-            'index.html'
-          ]
+          cwd: 'static',
+          src: '**',
           dest: 'dist/'
         },{
           expand: true
           flatten: true
-          src: 'static/img/favicon.*'
+          src: [
+            'index.html',
+            'static/img/favicon.*'
+          ]
           dest: 'dist/'
         }]
 
