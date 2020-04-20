@@ -12,7 +12,7 @@
 
 // Include theme-specific fonts
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
-@import "cwtexkai";
+@import "_cwtexkai";
 
 // Override theme settings (see template/settings.scss)
 $mainFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
