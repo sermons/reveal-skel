@@ -27,6 +27,7 @@ module.exports = (grunt) ->
     copy:
       static:
         expand: true
+        dot: true
         cwd: 'static'
         src: '**'
         dest: 'dist/'
