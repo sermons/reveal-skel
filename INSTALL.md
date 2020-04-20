@@ -3,8 +3,11 @@
 ## Intro
 Reveal-skel is a forkable template for a presentation based on the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML framework.
 
-[Travis integration](.travis.yml) deploys to Github Pages via an [NPM script](package.json), calling a [Grunt task](Gruntfile.coffee) to copy the rendered site
-into a subdir and push to the gh-pages branch.
+[Travis-CI config](.travis.yml)
+runs a [Node.js project](package.json), 
+calling [Grunt tasks](Gruntfile.coffee) to
+build [the presentation](template/index.html) as a website and
+deploy it on Github Pages via the `gh-pages` branch.
 
 ## Usage
 * **Fork** the [reveal-skel](https://github.com/sermons/reveal-skel) project
@@ -17,9 +20,10 @@ into a subdir and push to the gh-pages branch.
 * Your slide **content** goes in [slides/slides.md](slides/slides.md)
 * You may also want to **customize**:
   + user name, email in [package.json](package.json)
+    + `pretty_url` defaults to the CNAME if it exists
   + [README](README.md), [favicon](static/favicon.ico)
 * Static **assets** (CSS, JS, images, etc) go in [`static`](static)
-  + Grunt will copy this dir as-is to the deployed site
+  + Grunt will copy this dir as-is to the root of the deployed site
 
 ## Github token for Travis
 + **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
