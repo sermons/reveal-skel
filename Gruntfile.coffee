@@ -66,10 +66,6 @@ module.exports = (grunt) ->
       if grunt.config 'pkg.config.cname'
         grunt.file.write 'dist/CNAME', grunt.config 'pkg.config.cname'
 
-  grunt.registerTask 'nojekyll',
-    'Disable Jekyll processing on Github Pages', ->
-      grunt.file.write 'dist/.nojekyll', ''
-
   grunt.registerTask 'install',
     '*Build* site', [
       'copy:static'
@@ -86,7 +82,6 @@ module.exports = (grunt) ->
       'exec:thumbnail'
       'exec:qr'
       'cname'
-      'nojekyll'
     ]
 
   # Define default task.
