@@ -43,11 +43,6 @@ module.exports = (grunt) ->
         flatten: true
         src: 'node_modules/reveal.js/plugin/notes/*'
         dest: 'dist/js/'
-      favicon:
-        expand: true
-        flatten: true
-        src: 'static/img/favicon.*'
-        dest: 'dist/'
 
   # Macros for convenience
   grunt.config.merge
@@ -80,7 +75,6 @@ module.exports = (grunt) ->
       'copy:static'
       'copy:template'
       'copy:plugin'
-      'copy:favicon'
       'sass:theme'
     ]
 
