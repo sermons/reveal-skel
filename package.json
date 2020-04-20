@@ -8,7 +8,7 @@
   "version": "1.8.0",
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
-    "pretty_url": "reveal-skel.seanho.com",
+    "pretty_url": "",
     "cname": "reveal-skel.seanho.com",
     "multiplex": {
       "url": "https://mp.seanho.com/",

@@ -11,13 +11,13 @@ into a subdir and push to the gh-pages branch.
   + Or in your own git repo, run `git remote add upstream https://github.com/sermons/reveal-skel`
 * Setup a **Github token** for Travis [(see below)](#github-token-for-travis)
 * **Edit** [package.json](package.json):
-  + Package name, git repo, cname/URL
+  + Package name, git repo, CNAME
   + Change `sample.md` to `slides.md`
   + Generate a new **multiplex ID** [(see below)](#multiplex-remote-control)
 * Your slide **content** goes in [slides/slides.md](slides/slides.md)
 * You may also want to **customize**:
   + user name, email in [package.json](package.json)
-  + [README](README.md), [favicon](static/img/favicon.ico)
+  + [README](README.md), [favicon](static/favicon.ico)
 * Static **assets** (CSS, JS, images, etc) go in [`static`](static)
   + Grunt will copy this dir as-is to the deployed site
 
