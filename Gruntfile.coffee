@@ -30,11 +30,11 @@ module.exports = (grunt) ->
         outputStyle: 'compressed'
       theme:
         files: 
-	  expand: true
-	  cwd: 'scss'
-	  src: ['*.scss']
-	  dest: '../dist/css/'
-	  ext: '.css'
+          expand: true
+          cwd: 'scss'
+          src: ['*.scss']
+          dest: '../dist/css/'
+          ext: '.css'
 
     connect:
       serve:
