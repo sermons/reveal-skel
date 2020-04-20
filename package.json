@@ -27,7 +27,7 @@
       }
     ],
     "slides": [
-      "slides/sample.md"
+      "sample.md"
     ],
     "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0",
     "mathjax": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js",
@@ -93,7 +93,6 @@
   },
   "scripts": {
     "postinstall": "grunt install",
-    "test": "grunt test",
-    "dist": "grunt dist"
+    "test": "grunt test"
   }
 }

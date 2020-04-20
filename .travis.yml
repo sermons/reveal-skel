@@ -8,8 +8,6 @@ addons:
   apt:
     packages:
       - ghostscript
-before_deploy:
-  - npm run dist
 deploy:
   provider: pages
   skip_cleanup: true
