@@ -62,11 +62,6 @@ module.exports = (grunt) ->
   # Autoload tasks from grunt plugins
   require('load-grunt-tasks')(grunt)
 
-  grunt.registerTask 'cname',
-    'Create CNAME for Github Pages', ->
-      if grunt.config 'pkg.config.cname'
-        grunt.file.write 'dist/CNAME', grunt.config 'pkg.config.cname'
-
   grunt.registerTask 'install',
     '*Build* site', [
       'copy:static'
@@ -82,7 +77,6 @@ module.exports = (grunt) ->
       'exec:reducePDF'
       'exec:thumbnail'
       'exec:qr'
-      'cname'
     ]
 
   # Define default task.
