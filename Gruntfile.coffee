@@ -80,6 +80,7 @@ module.exports = (grunt) ->
       'copy:index'
       'copy:plugin'
       'copy:static'
+      'copy:favicon'
       'sass:theme'
     ]
 
