@@ -25,9 +25,11 @@ module.exports = (grunt) ->
       qr: 'echo https://<%= pkg.config.pretty_url %> | qrcode -o dist/img/<%= pkg.shortname %>-qr.png'
 
     copy:
-      index:
-        src: 'index.html'
-        dest: 'dist/index.html'
+      template:
+        expand: true
+        cwd: 'template'
+        src: '**'
+        dest: 'dist/'
         options:
           process: (content, path) ->
             return grunt.template.process content
@@ -76,8 +78,8 @@ module.exports = (grunt) ->
       grunt.file.write 'dist/.nojekyll', ''
 
   grunt.registerTask 'install',
-    '*Compile* templates', [
-      'copy:index'
+    '*Build* site', [
+      'copy:template'
       'copy:plugin'
       'copy:static'
       'copy:favicon'
