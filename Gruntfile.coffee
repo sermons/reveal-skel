@@ -50,7 +50,7 @@ module.exports = (grunt) ->
           dest: 'dist/'
         }]
 
-  # Generated grunt vars
+  # Macros for convenience
   grunt.config.merge
     pkg:
       shortname: grunt.config('pkg.name').replace(/.*\//, '')
