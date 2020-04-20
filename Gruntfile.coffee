@@ -2,28 +2,6 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
 
-    connect:
-      serve:
-        options:
-          port: 9000
-          hostname: 'localhost'
-          base: 'dist'
-
-    sass:
-      options:
-        implementation: require('node-sass')
-        includePaths: ['node_modules/reveal.js/css/theme/']
-        outputStyle: 'compressed'
-      theme:
-        files:
-          'dist/css/boldblack.css': 'scss/boldblack.scss'
-
-    exec:
-      print: 'decktape -s 1024x768 reveal "http://localhost:9000/" print.pdf --no-sandbox; true'
-      thumbnail: 'decktape -s 800x600 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/#/title" dist/img/<%= pkg.shortname %>.jpg --no-sandbox; true'
-      reducePDF: 'gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=dist/<%= pkg.shortname %>.pdf print.pdf'
-      qr: 'echo https://<%= pkg.config.pretty_url %> | qrcode -o dist/img/<%= pkg.shortname %>-qr.png'
-
     copy:
       static:
         expand: true
@@ -44,6 +22,28 @@ module.exports = (grunt) ->
         flatten: true
         src: 'node_modules/reveal.js/plugin/notes/*'
         dest: 'dist/js/'
+
+    sass:
+      options:
+        implementation: require('node-sass')
+        includePaths: ['node_modules/reveal.js/css/theme/']
+        outputStyle: 'compressed'
+      theme:
+        files:
+          'dist/css/boldblack.css': 'scss/boldblack.scss'
+
+    connect:
+      serve:
+        options:
+          port: 9000
+          hostname: 'localhost'
+          base: 'dist'
+
+    exec:
+      print: 'decktape -s 1024x768 reveal "http://localhost:9000/" print.pdf --no-sandbox; true'
+      thumbnail: 'decktape -s 800x600 --screenshots --screenshots-directory . --slides 1 reveal "http://localhost:9000/#/title" dist/img/<%= pkg.shortname %>.jpg --no-sandbox; true'
+      reducePDF: 'gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=dist/<%= pkg.shortname %>.pdf print.pdf'
+      qr: 'echo https://<%= pkg.config.pretty_url %> | qrcode -o dist/img/<%= pkg.shortname %>-qr.png'
 
   # Macros for convenience
   grunt.config.merge
