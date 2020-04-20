@@ -29,8 +29,13 @@ module.exports = (grunt) ->
         includePaths: ['node_modules/reveal.js/css/theme/']
         outputStyle: 'compressed'
       theme:
-        files:
-          'dist/css/boldblack.css': 'scss/boldblack.scss'
+        files: [{
+	  expand: true
+	  cwd: 'scss'
+	  src: ['*.scss']
+	  dest: '../dist/css/'
+	  ext: '.css'
+	}]
 
     connect:
       serve:
