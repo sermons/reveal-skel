@@ -25,6 +25,11 @@ module.exports = (grunt) ->
       qr: 'echo https://<%= pkg.config.pretty_url %> | qrcode -o dist/img/<%= pkg.shortname %>-qr.png'
 
     copy:
+      static:
+        expand: true
+        cwd: 'static'
+        src: '**'
+        dest: 'dist/'
       template:
         expand: true
         cwd: 'template'
@@ -38,17 +43,10 @@ module.exports = (grunt) ->
         flatten: true
         src: 'node_modules/reveal.js/plugin/notes/*'
         dest: 'dist/js/'
-      static:
-        expand: true
-        src: [
-          'img/**',
-          'css/**'
-        ]
-        dest: 'dist/'
       favicon:
         expand: true
         flatten: true
-        src: 'img/favicon.*'
+        src: 'static/img/favicon.*'
         dest: 'dist/'
 
   # Generated grunt vars
@@ -79,9 +77,9 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'install',
     '*Build* site', [
+      'copy:static'
       'copy:template'
       'copy:plugin'
-      'copy:static'
       'copy:favicon'
       'sass:theme'
     ]
