@@ -51,7 +51,7 @@ module.exports = (grunt) ->
       shortname: grunt.config('pkg.name').replace(/.*\//, '')
       commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
       config:
-        pretty_url = grunt.config('pkg.config.cname') unless grunt.config('pkg.config.pretty_url')
+        pretty_url: grunt.config('pkg.config.cname') unless grunt.config('pkg.config.pretty_url')
     img: (id) ->
       'https://sermons.seanho.com/img/' + id
     bg: (id) ->
