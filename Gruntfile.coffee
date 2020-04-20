@@ -49,7 +49,7 @@ module.exports = (grunt) ->
         src: 'static/img/favicon.*'
         dest: 'dist/'
 
-  # Generated grunt vars
+  # Macros for convenience
   grunt.config.merge
     pkg:
       shortname: grunt.config('pkg.name').replace(/.*\//, '')
