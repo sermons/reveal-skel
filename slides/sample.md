@@ -2,7 +2,7 @@
 # Reveal-Skel
 ## A template for Reveal.js-based presentations
 
-[![Travis builds](https://api.travis-ci.org/sermons/reveal-skel.svg)](https://travis-ci.org/github/sermons/reveal-skel)
+[![Travis](https://api.travis-ci.org/sermons/reveal-skel.svg)](https://travis-ci.org/github/sermons/reveal-skel)
 [![Node deps](https://david-dm.org/sermons/reveal-skel.svg)](https://david-dm.org/sermons/reveal-skel)
 [![Node devDeps](https://david-dm.org/sermons/reveal-skel/dev-status.svg)](https://david-dm.org/sermons/reveal-skel?type=dev)
 
@@ -12,7 +12,7 @@
 
 >>>
 + Speaker notes go here.
-+ Markdown is supported.
++ **Markdown** is supported.
 
 ______
 
@@ -22,18 +22,18 @@ Six underscores create a horizontal rule in the notes
 <!-- .slide: data-background="white" -->
 # Opening **Question**
 
-[###](#/outline "secret")
-
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="outline" class="outline" -->
-## Outline [(ref)](# "ref")
-1. Point **One** <%= bible('(Rom 1:1,5)') %>
-2. Point **Two** <%= bible('rom1.2', '(v2)') %>
-3. Point **Three** <%= bible('rom1.3-4', '(v3-4)', 'ESV') %>
+## Outline <span class="zh">大綱</span>
+1. Point **One** [(ref)](# "ref")
+1. Point *Two* 
+1. Point *Three* 
+
+\` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
 
 ******
 <!-- six stars create a vertical slide -->
-## Point One
+## Code Block
 
 ```
 class BST:
@@ -48,21 +48,8 @@ class BST:
       else: return cur
 ```
 
-******
-<!-- .slide: data-background="white" -->
-# Review question for Point **One**
-
 ---
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="outline" -->
-## Outline <span class="zh">大綱</span>
-1. Point *One* [(v1)](# "ref")
-2. **Point Two** [(v2)](# "ref")
-3. Point *Three* [(v3)](# "ref")
-  + A bit of math: <br>
-    \` hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx \`
-
-******
-## Point Two
+## Flexbox Layout
 
 <!-- HTML in separate paragraph -->
 <div class="imgbox"><div>
@@ -78,19 +65,8 @@ class BST:
 
 </div></div>
 
-******
-<!-- .slide: data-background="white" -->
-# Review question for Point **Two**
-
 ---
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="outline" -->
-## Outline
-1. Point *One* [(v1)](# "ref")
-2. Point *Two* [(v2)](# "ref")
-3. **Point Three** [(v3)](# "ref")
-
-******
-## Point Three
+## Markdown Table
 
 | ID |     Date    | Intensity | Diffusion |
 |---:|:-----------:|----------:|----------:|
@@ -99,17 +75,6 @@ class BST:
 | 39 | 2017 Mar  1 |   219.0   |   0.912   |
 | 12 | 2017 Apr  2 |     5.2   |   0.465   |
 | 65 | 2017 May  2 |  1022.6   |   0.663   |
-
-******
-<!-- .slide: data-background="white" -->
-# Review question for Point **Three**
-
----
-<!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="outline" -->
-## Outline
-1. Point **One** [(v1)](# "ref")
-2. Point **Two** [(v2)](# "ref")
-3. Point **Three** [(v3)](# "ref")
 
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> class="empty" -->
