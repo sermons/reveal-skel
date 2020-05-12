@@ -6,6 +6,7 @@
 #   travis login
 
 # Usage: $0 [-r user/repo] [<other travis opts>]
+# If repo is not specified, travis defaults to repo from current dir
 
 # defaults
 github_key=""
