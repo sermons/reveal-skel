@@ -3,7 +3,7 @@
 # Install Travis gem:
 #   apt-get install gcc libffi-dev ruby ruby-dev
 #   gem install travis --no-rdoc --no-ri
-#   travis login --org
+#   travis login
 
 # Usage: $0 [-r user/repo] [<other travis opts>]
 
@@ -14,6 +14,6 @@ github_key=""
 CONF=$HOME/.travis-key.conf
 [ -r "$CONF" ] && . "$CONF"
 
-travis sync --org
-travis enable --org $@
+travis sync
+travis enable $@
 travis env set github_key "$github_key" -p $@
