@@ -29,7 +29,7 @@
     "slides": [
       "sample.md"
     ],
-    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0",
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.0.2",
     "mathjax": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js",
     "css": [
       {
@@ -55,16 +55,16 @@
         "integrity": "sha256-Dul4c09cdrWKXVtallPxF558lwxMwCC8dXJdZ0PVW54="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js",
-        "integrity": "sha256-pv4AarTAzSO6lz+bbMPwmV29XMjkzmFOn601b2pWqXE="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.0.2/js/reveal.min.js",
+        "integrity": "sha256-uz6Z3d/QceIszhaRFwoDWAtdJaXco+mASVVWqwF9uak="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/marked/1.0.0/marked.min.js",
         "integrity": "sha256-JUIJCIbiDdnT6IGIU/ZbydNyumUIMsEelMTrSfDb1Sc="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/markdown/markdown.min.js",
-        "integrity": "sha256-p6zZf7+dsrD1lcLQCXRgmXAAMyr9pWWCP4a9KfB0klE="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.0.2/plugin/markdown/markdown.min.js",
+        "integrity": "sha256-T7NvuTTwxNxud2NqvMqbMNSxnYcw8xAbDgLWzWMeizE="
       }
     ],
     "plugins": [
@@ -75,7 +75,7 @@
   "license": "CC-BY-SA-4.0",
   "private": true,
   "dependencies": {
-    "reveal.js": "^3.8.0",
+    "reveal.js": "^4.0.2",
     "highlight.js": "^10.0.3",
     "socket.io": "^2.3.0",
     "marked": "^1.0.0"
