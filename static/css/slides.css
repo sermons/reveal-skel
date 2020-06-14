@@ -118,6 +118,8 @@ section[data-background-image],
   opacity: 0.2;
 }
 
+#footer a { color: white }
+
 /* Placeholder if Javascript is disabled */
 noscript .noscript {
   padding: 20% 5%;
