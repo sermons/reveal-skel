@@ -46,7 +46,7 @@ module.exports = (grunt) ->
 
     exec:
       print: 'decktape -s 1024x768 --chrome-arg=--no-sandbox reveal "http://localhost:9000/" print.pdf; true'
-      thumbnail: 'decktape -s 800x600 --screenshots --screenshots-directory . --slides 1 --chrome-arg=--no-sandbox reveal "http://localhost:9000/#/title" dist/img/<%= pkg.shortname %>.jpg; true'
+      thumbnail: 'decktape -s 800x600 --screenshots --screenshots-directory . --slides 1 --chrome-arg=--no-sandbox reveal "http://localhost:9000/#/title" thumb.pdf; mv thumb*.png dist/img/<%= pkg.shortname %>.png; true'
       reducePDF: 'gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=dist/<%= pkg.shortname %>.pdf print.pdf'
       qr: 'echo https://<%= pkg.config.pretty_url %> | qrcode -o dist/img/<%= pkg.shortname %>-qr.png'
 
