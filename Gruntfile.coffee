@@ -23,9 +23,8 @@ module.exports = (grunt) ->
         src: 'node_modules/reveal.js/plugin/notes/*'
         dest: 'dist/js/'
       thumbnail:
-        expand: true
         cwd: 'dist/img'
-        src: 'print_1_*.png'
+        src: 'print_1_1920x1080.png'
         dest: 'dist/img/<%= pkg.shortname %>.png'
 
     sass:
