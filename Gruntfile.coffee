@@ -22,6 +22,10 @@ module.exports = (grunt) ->
         flatten: true
         src: 'node_modules/reveal.js/plugin/notes/*'
         dest: 'dist/js/'
+      thumbnail:
+        expand: true
+        src: 'dist/img/print_1_*.png'
+        dest: 'dist/img/<%= pkg.shortname %>.png'
 
     sass:
       options:
@@ -46,7 +50,6 @@ module.exports = (grunt) ->
 
     exec:
       print: 'decktape -s 1024x768 --screenshots --screenshots-size 1920x1080 --screenshots-directory dist/img --chrome-arg=--no-sandbox reveal "http://localhost:9000/" print.pdf'
-      thumbnail: 'cp dist/img/print_1_*.png dist/img/<%= pkg.shortname %>.png'
       reducePDF: 'gs -q -dNOPAUSE -dBATCH -dSAFER -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -sOutputFile=dist/<%= pkg.shortname %>.pdf print.pdf'
       qr: 'echo https://<%= pkg.config.pretty_url %> | qrcode -o dist/img/<%= pkg.shortname %>-qr.png'
 
@@ -82,7 +85,7 @@ module.exports = (grunt) ->
       'connect:serve'
       'exec:print'
       'exec:reducePDF'
-      'exec:thumbnail'
+      'copy:thumbnail'
       'exec:qr'
     ]
 
