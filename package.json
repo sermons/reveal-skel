@@ -49,14 +49,14 @@
         "integrity": "sha256-OxiHrn+gXudPDHxTvXiQzeFjZU/FllSSPmOOYAZ1O/g="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/atom-one-dark.min.css",
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/atom-one-dark.min.css",
         "integrity": "sha256-91Q4dP2FrFQCLpK/8fPlQyatehNmhUOXKRFM1CtE7Sw="
       }
     ],
     "js": [
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js",
-        "integrity": "sha256-/2C3CAfmuTGkUqK2mVrhkTacBscoR1caE0u2QZZ3Uh8="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js",
+        "integrity": "sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.slim.js",
@@ -84,7 +84,7 @@
   "private": true,
   "dependencies": {
     "reveal.js": "^3.8.0",
-    "highlight.js": "^10.0.3",
+    "highlight.js": "^10.1.1",
     "socket.io": "^2.3.0",
     "marked": "^1.0.0"
   },
