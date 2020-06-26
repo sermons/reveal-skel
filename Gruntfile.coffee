@@ -24,7 +24,8 @@ module.exports = (grunt) ->
         dest: 'dist/js/'
       thumbnail:
         expand: true
-        src: 'dist/img/print_1_*.png'
+        cwd: 'dist/img'
+        src: 'print_1_*.png'
         dest: 'dist/img/<%= pkg.shortname %>.png'
 
     sass:
