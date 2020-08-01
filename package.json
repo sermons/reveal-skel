@@ -90,6 +90,7 @@
   },
   "devDependencies": {
     "grunt": "^1.2.1",
+    "coffeescript": "^2.5.1",
     "load-grunt-tasks": "^5.1.0",
     "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-copy": "^1.0.0",
