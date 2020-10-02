@@ -24,7 +24,7 @@ Six underscores create a horizontal rule in the notes
 
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="outline" class="outline" -->
-## Outline <span class="zh">大綱</span>
+## Outline [大綱](# "zh")
 1. Point **One** [(ref)](# "ref")
 1. Point *Two* 
 1. Point *Three* 
