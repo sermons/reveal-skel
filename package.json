@@ -98,7 +98,9 @@
     "grunt-sass": "^3.1.0",
     "grunt-exec": "^3.0.0",
     "qrcode": "^1.4.4",
-    "decktape": "^3.1.0"
+    "decktape": "^3.1.0",
+    "puppeteer": "^5.4.0",
+    "puppeteer-core": "^5.4.0"
   },
   "scripts": {
     "postinstall": "grunt install",
