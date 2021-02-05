@@ -100,7 +100,7 @@
     "qrcode": "^1.4.4",
     "decktape": "^3.1.0",
     "puppeteer": "^5.5.0",
-    "puppeteer-core": "^6.0.0"
+    "puppeteer-core": "^7.0.0"
   },
   "scripts": {
     "postinstall": "grunt install",
