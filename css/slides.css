@@ -1,0 +1,127 @@
+/*********************************************
+ * Local styles specific to my presentations
+ *********************************************/
+
+/* Darken background images */
+.reveal .slide-background-content {
+  opacity: 60%;
+}
+
+/* Shade text if background image */
+section[data-background-image],
+.reveal section[data-background-image] h1,
+.reveal section[data-background-image] h2 {
+  text-shadow: 0 0 0.2rem black, 0 0 0.2rem black;
+}
+
+/* Override slide centering (interferes with print-pdf?) */
+@media screen {
+  section.top { top: 0 !important; }
+  section.bottom {
+    top: initial !important;
+    bottom: 0;
+  }
+}
+
+/* Line separator below H2 */
+.reveal section h2:after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 30%;
+  border-bottom: 1px solid;
+}
+/* Except on special reverse-color slides */
+.reveal section.has-light-background h2:after { display: none }
+
+/* Larger font for Chinese */
+.reveal section .zh,
+.reveal section a[title="zh"] {
+  font-size: larger;
+}
+
+/* Text highlight colors */
+.reveal strong { color: yellow }
+.reveal em { color: #17ff2e }
+.reveal .hl1 { color: #17ff2e }
+.reveal .hl2 { color: #19b1ff }
+.reveal .hl3 { color: #ff2c2d }
+
+/* Colors for reverse-color slides */
+.reveal .has-light-background strong { color: #e20606 }
+.reveal .has-light-background em { color: #0ca042 }
+
+/* use *italic* for secondary highlight */
+.reveal em { font-style: normal }
+
+/* List setting missing from template */
+.reveal ol ol { list-style-type: lower-alpha }
+
+/* References/links, e.g., Bible verses */
+.reveal section .ref,
+.reveal section a[title="ref"] {
+  font-size: 0.75em;
+  color: #19b1ff;
+}
+
+/* Image captions */
+.reveal section .caption,
+.reveal section a[title="caption"] {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  text-align: right;
+  position: absolute;
+  right: 0.5em;
+  top: 100%;
+}
+
+/* Hidden link for private use */
+.reveal a[title="secret"] { opacity: 0.2 }
+
+/* Presentation outline */
+.reveal section .outline,
+.reveal section.outline > ol,
+.reveal section.outline > ul { font-size: 1.2em }
+
+/* Flexbox slide layout (Reveal.js display: flex) */
+.reveal section {
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+/* Flexbox layout for images */
+.imgbox {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.imgbox > div {
+  flex: 1;
+}
+
+/* Common slide header/footer */
+#header, #footer {
+  position: absolute;
+  z-index: 20;
+  left: 0.5em;
+  font-size: 18px;
+}
+#header { top: 0.5em }
+#footer { bottom: 0.5em }
+
+#footer .links { margin: 0 1em }
+
+#footer .commit {
+  font-size: 0.75em;
+  opacity: 0.4;
+}
+
+#footer a { color: white }
+
+/* Placeholder if Javascript is disabled */
+noscript .noscript {
+  padding: 20% 5%;
+  text-align: center;
+}
