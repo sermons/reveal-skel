@@ -67,8 +67,8 @@
         "integrity": "sha256-pv4AarTAzSO6lz+bbMPwmV29XMjkzmFOn601b2pWqXE="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.7/marked.min.js",
-        "integrity": "sha512-Sl04EWeJ0QgILm83WoubQbZqh71aWLJP8xnswnKSBI37S+ZtrWVtSHmd1YaYYdC1g9PWN1siY7KO2jU3HtCVHA=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.9/marked.min.js",
+        "integrity": "sha512-9tQuY8kaboYKG7YDh+/p76HjyCy2NQ6lrTZ0kHikxj1Qgc7k40NGVCrkv8U9YdPoAemTlfnn3/1LAK2jS2BwKw=="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/markdown/markdown.min.js",
@@ -86,7 +86,7 @@
     "reveal.js": "^3.8.0",
     "highlight.js": "^10.4.1",
     "socket.io": "^3.1.1",
-    "marked": "^1.2.7"
+    "marked": "^1.2.9"
   },
   "devDependencies": {
     "grunt": "^1.3.0",
