@@ -1,7 +1,9 @@
 name: Build static site
 on:
   push:
-    branches: [ $default-branch ]
+    branches: 
+    - master
+    - $default-branch
   workflow_dispatch:
 jobs:
   build:
