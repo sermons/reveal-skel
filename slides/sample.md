@@ -2,7 +2,7 @@
 # Reveal-Skel
 ## A template for Reveal.js-based presentations
 
-[![Travis](https://api.travis-ci.com/sermons/reveal-skel.svg)](https://travis-ci.com/github/sermons/reveal-skel)
+[![Build status](https://github.com/sermons/reveal-skel/actions/workflows/build.yml/badge.svg)](https://github.com/sermons/reveal-skel/actions/workflows/build.yml)
 [![Node deps](https://david-dm.org/sermons/reveal-skel.svg)](https://david-dm.org/sermons/reveal-skel)
 [![Node devDeps](https://david-dm.org/sermons/reveal-skel/dev-status.svg)](https://david-dm.org/sermons/reveal-skel?type=dev)
 
