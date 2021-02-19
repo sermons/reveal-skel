@@ -54,7 +54,7 @@ module.exports = (grunt) ->
   grunt.config.merge
     pkg:
       shortname: grunt.config('pkg.name').replace(/.*\//, '')
-      commit: (process.env.TRAVIS_COMMIT || "testing").substr(0,7)
+      commit: (process.env.GITHUB_SHA || "testing").substr(0,7)
       config:
         pretty_url: grunt.config('pkg.config.cname') unless grunt.config('pkg.config.pretty_url')
     img: (id) ->

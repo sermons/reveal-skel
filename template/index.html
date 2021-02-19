@@ -41,7 +41,7 @@
         <span class="links">
           <a href="<%= pkg.shortname %>.pdf">
             <i class="fas fa-file-pdf"></i></a>
-	  <a href="<%= process.env.TRAVIS_BUILD_WEB_URL %>">
+          <a href="https://github.com/<%= pkg.repository %>/actions/runs/<%= process.env.GITHUB_RUN_ID %>">
             <i class="fas fa-hammer"></i></a>
         </span>
         <span class="commit">
