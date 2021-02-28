@@ -84,6 +84,8 @@
           secret: Reveal.getQueryHash().s || null
         },
 
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+
         dependencies: [
           { src: Reveal.getQueryHash().s ? '<%= pkg.config.reveal %>/plugin/multiplex/master.min.js' : '<%= pkg.config.reveal %>/plugin/multiplex/client.min.js', async:true }
         ]

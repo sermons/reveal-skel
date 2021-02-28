@@ -29,7 +29,7 @@
     "slides": [
       "sample.md"
     ],
-    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.0.2",
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0",
     "mathjax": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js",
     "css": [
       {
@@ -45,8 +45,8 @@
         "integrity": "sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css",
-        "integrity": "sha256-OxiHrn+gXudPDHxTvXiQzeFjZU/FllSSPmOOYAZ1O/g="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/css/reveal.min.css",
+        "integrity": "sha512-zu0eodDPCBAZf1vnIgwZ6qchMBt1xqgGkS9vBjVmunoH8pU7cc9OQKBiSQCclpvqySupy9Y1pLZc87VB40G4Sw=="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css",
@@ -63,16 +63,16 @@
         "integrity": "sha512-fANg+hKlIqBdTzgYBT8eFIlZgKYTLij0S7Afvda/rw/Rm33I9+74HSdR1Urz2zGgCSZiQweMin46+l1obnoLWQ=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.0.2/js/reveal.min.js",
-        "integrity": "sha256-uz6Z3d/QceIszhaRFwoDWAtdJaXco+mASVVWqwF9uak="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/js/reveal.min.js",
+        "integrity": "sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ=="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js",
         "integrity": "sha512-pjhyz9DR7D4w90mc3iiAjhSRSmVrF3egxvfbOO6948qG0GACeOVpnP+xWEm7ihN5m1rg8tEHKRBhRrYEGhIR6Q=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.0.2/plugin/markdown/markdown.min.js",
-        "integrity": "sha256-T7NvuTTwxNxud2NqvMqbMNSxnYcw8xAbDgLWzWMeizE="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js",
+        "integrity": "sha512-eZZqO4ECmVvGhCt+6VZ7ian2bCu4S6yrjSFH9fXLY1zTokpAWsxAxQwM4x6+7G+G4ha5tFIe0jY0XjpBUqS49Q=="
       }
     ],
     "plugins": [
