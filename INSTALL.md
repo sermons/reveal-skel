@@ -26,7 +26,7 @@ deploy it on Github Pages via the `gh-pages` branch.
   + Grunt will copy this dir as-is to the root of the deployed site
 
 ## Github token for Travis
-+ **Connect** [Travis](https://travis-ci.org) to your Github account, if you haven't already
++ **Connect** [Travis](https://travis-ci.com) to your Github account, if you haven't already
 + On Github, create an access token: *Settings* &rarr; *Developer Settings* &rarr; *Personal access tokens* &rarr; **Generate new token**
   + *Token description*: e.g., "Travis push to gh-pages"
   + *Select scopes*: check "**repo**"
@@ -36,7 +36,7 @@ deploy it on Github Pages via the `gh-pages` branch.
 + [Install](https://github.com/travis-ci/travis.rb#installation) the Travis **gem**
   + See note in the [travis-key script](travis-key) for details
 + Run `./travis-key` to [securely store the token in Travis](https://docs.travis-ci.com/user/encrypting-files/):
-+ Commit, **push**, and check the [build log](https://travis-ci.org/) for errors
++ Commit, **push**, and check the [build log](https://travis-ci.com/) for errors
 
 ## Bot user for Travis deploy
 If you don't want Travis to have full write-access 

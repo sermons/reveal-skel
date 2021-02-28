@@ -115,8 +115,10 @@ section[data-background-image],
 
 #footer .commit {
   font-size: 0.75em;
-  opacity: 0.2;
+  opacity: 0.4;
 }
+
+#footer a { color: white }
 
 /* Placeholder if Javascript is disabled */
 noscript .noscript {

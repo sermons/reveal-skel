@@ -1,3 +1,5 @@
 *.sw[op]
 ~*
 *~
+dist/
+node_modules/
