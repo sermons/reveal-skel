@@ -49,14 +49,14 @@
         "integrity": "sha256-OxiHrn+gXudPDHxTvXiQzeFjZU/FllSSPmOOYAZ1O/g="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/atom-one-dark.min.css",
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css",
         "integrity": "sha512-Fcqyubi5qOvl+yCwSJ+r7lli+CO1eHXMaugsZrnxuU4DVpLYWXTVoHy55+mCb4VZpMgy7PBhV7IiymC0yu9tkQ=="
       }
     ],
     "js": [
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js",
-        "integrity": "sha512-d00ajEME7cZhepRqSIVsQVGDJBdZlfHyQLNC6tZXYKTG7iwcF8nhlFuppanz8hYgXr8VvlfKh4gLC25ud3c90A=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js",
+        "integrity": "sha512-s+tOYYcC3Jybgr9mVsdAxsRYlGNq4mlAurOrfNuGMQ/SCofNPu92tjE7YRZCsdEtWL1yGkqk15fU/ark206YTg=="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js",
@@ -84,7 +84,7 @@
   "private": true,
   "dependencies": {
     "reveal.js": "^3.8.0",
-    "highlight.js": "^10.7.1",
+    "highlight.js": "^10.7.2",
     "socket.io": "^4.0.1",
     "marked": "^2.0.1"
   },
