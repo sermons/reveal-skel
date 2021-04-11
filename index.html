@@ -15,7 +15,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css" integrity="sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s=" crossorigin="anonymous" />
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css" integrity="sha256-OxiHrn+gXudPDHxTvXiQzeFjZU/FllSSPmOOYAZ1O/g=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css" integrity="sha512-zu0eodDPCBAZf1vnIgwZ6qchMBt1xqgGkS9vBjVmunoH8pU7cc9OQKBiSQCclpvqySupy9Y1pLZc87VB40G4Sw==" crossorigin="anonymous" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css" integrity="sha512-Fcqyubi5qOvl+yCwSJ+r7lli+CO1eHXMaugsZrnxuU4DVpLYWXTVoHy55+mCb4VZpMgy7PBhV7IiymC0yu9tkQ==" crossorigin="anonymous" />
     
@@ -129,11 +129,11 @@ class BST:
         <span class="links">
           <a href="reveal-skel.pdf">
             <i class="fas fa-file-pdf"></i></a>
-          <a href="https://github.com/sermons/reveal-skel/actions/runs/737167766">
+          <a href="https://github.com/sermons/reveal-skel/actions/runs/737266572">
             <i class="fas fa-hammer"></i></a>
         </span>
         <span class="commit">
-          <a href="https://github.com/sermons/reveal-skel/commit/4f204fa">4f204fa</a>
+          <a href="https://github.com/sermons/reveal-skel/commit/37e3411">37e3411</a>
 	</span>
       </div>
 
@@ -144,11 +144,19 @@ class BST:
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js" integrity="sha512-4qko7Jy+TE0yur/aXuQrVCb3ts9dtKqI3zTaGJ89o6iOk+DMlyaTgwmeGYqAZ1llKwFD99jWjXesrFsNp0ZUeA==" crossorigin="anonymous"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js" integrity="sha256-pv4AarTAzSO6lz+bbMPwmV29XMjkzmFOn601b2pWqXE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js" integrity="sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ==" crossorigin="anonymous"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js" integrity="sha512-pjhyz9DR7D4w90mc3iiAjhSRSmVrF3egxvfbOO6948qG0GACeOVpnP+xWEm7ihN5m1rg8tEHKRBhRrYEGhIR6Q==" crossorigin="anonymous"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/markdown/markdown.min.js" integrity="sha256-p6zZf7+dsrD1lcLQCXRgmXAAMyr9pWWCP4a9KfB0klE=" crossorigin="anonymous"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/math/math.min.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js" crossorigin="anonymous"></script>
     
 
     <script type="text/x-mathjax-config">
@@ -178,20 +186,17 @@ class BST:
         multiplex: {
           url: 'https://mp.seanho.com/',
           id : '22bc761ffc97809b',
-          secret: Reveal.getQueryHash().s || null
+          secret: Reveal().getQueryHash().s || null
         },
 
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+
         dependencies: [
-          { src: Reveal.getQueryHash().s ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/multiplex/master.min.js' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/multiplex/client.min.js', async:true }
+          { src: 'https://raw.githubusercontent.com/reveal/multiplex/master/' + 
+		  Reveal().getQueryHash().s ? 'master.js' : 'client.js', async:true }
         ]
       });
     </script>
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/math/math.min.js" crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/highlight/highlight.min.js" crossorigin="anonymous"></script>
-    
     <script src="js/notes.js"></script>
 
     <script>
