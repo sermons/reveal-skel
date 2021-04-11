@@ -45,7 +45,7 @@
         "integrity": "sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/css/reveal.min.css",
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css",
         "integrity": "sha512-zu0eodDPCBAZf1vnIgwZ6qchMBt1xqgGkS9vBjVmunoH8pU7cc9OQKBiSQCclpvqySupy9Y1pLZc87VB40G4Sw=="
       },
       {
@@ -63,7 +63,7 @@
         "integrity": "sha512-4qko7Jy+TE0yur/aXuQrVCb3ts9dtKqI3zTaGJ89o6iOk+DMlyaTgwmeGYqAZ1llKwFD99jWjXesrFsNp0ZUeA=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/js/reveal.min.js",
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js",
         "integrity": "sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ=="
       },
       {
@@ -76,8 +76,10 @@
       }
     ],
     "plugins": [
+      "markdown/markdown.min.js",
+      "highlight/highlight.min.js",
       "math/math.min.js",
-      "highlight/highlight.min.js"
+      "notes/notes.min.js"
     ]
   },
   "license": "CC-BY-SA-4.0",
