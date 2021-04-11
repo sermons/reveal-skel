@@ -95,8 +95,8 @@
         plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
 
         dependencies: [
-          { src: mpdep, async:true }
-        ]
+	  (mpkey == 'none') ? null : { src: mpdep, async:true }
+	].filter(v => v)
       });
     </script>
 
