@@ -5,7 +5,7 @@
   "keywords": [
     "slides"
   ],
-  "version": "2.3.0",
+  "version": "2.3.2",
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
     "pretty_url": "",
@@ -30,7 +30,7 @@
       "sample.md"
     ],
     "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0",
-    "mathjax": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js",
+    "mathjax": "https://cdn.jsdelivr.net/npm/mathjax@2",
     "css": [
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css",
@@ -49,18 +49,18 @@
         "integrity": "sha512-zu0eodDPCBAZf1vnIgwZ6qchMBt1xqgGkS9vBjVmunoH8pU7cc9OQKBiSQCclpvqySupy9Y1pLZc87VB40G4Sw=="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atom-one-dark.min.css",
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css",
         "integrity": "sha512-Fcqyubi5qOvl+yCwSJ+r7lli+CO1eHXMaugsZrnxuU4DVpLYWXTVoHy55+mCb4VZpMgy7PBhV7IiymC0yu9tkQ=="
       }
     ],
     "js": [
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js",
-        "integrity": "sha512-zol3kFQ5tnYhL7PzGt0LnllHHVWRGt2bTCIywDiScVvLIlaDOVJ6sPdJTVi0m3rA660RT+yZxkkRzMbb1L8Zkw=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js",
+        "integrity": "sha512-s+tOYYcC3Jybgr9mVsdAxsRYlGNq4mlAurOrfNuGMQ/SCofNPu92tjE7YRZCsdEtWL1yGkqk15fU/ark206YTg=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.2/socket.io.min.js",
-        "integrity": "sha512-fANg+hKlIqBdTzgYBT8eFIlZgKYTLij0S7Afvda/rw/Rm33I9+74HSdR1Urz2zGgCSZiQweMin46+l1obnoLWQ=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js",
+        "integrity": "sha512-4qko7Jy+TE0yur/aXuQrVCb3ts9dtKqI3zTaGJ89o6iOk+DMlyaTgwmeGYqAZ1llKwFD99jWjXesrFsNp0ZUeA=="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/js/reveal.min.js",
@@ -83,24 +83,23 @@
   "license": "CC-BY-SA-4.0",
   "private": true,
   "dependencies": {
+    "highlight.js": "^10.7.2",
+    "marked": "^2.0.1",
     "reveal.js": "^4.1.0",
-    "highlight.js": "^10.6.0",
-    "socket.io": "^3.1.2",
-    "marked": "^2.0.1"
+    "socket.io": "^4.0.1"
   },
   "devDependencies": {
-    "grunt": "^1.3.0",
-    "ini": "^2.0.0",
     "coffeescript": "^2.5.1",
-    "load-grunt-tasks": "^5.1.0",
+    "decktape": "^3.1.0",
+    "grunt": "^1.3.0",
     "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "node-sass": "^5.0.0",
-    "grunt-sass": "^3.1.0",
     "grunt-exec": "^3.0.0",
-    "qrcode": "^1.4.4",
-    "decktape": "^3.1.0",
-    "puppeteer": "^8.0.0"
+    "grunt-sass": "^3.1.0",
+    "ini": "^2.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "node-sass": "^5.0.0",
+    "qrcode": "^1.4.4"
   },
   "scripts": {
     "postinstall": "grunt install",

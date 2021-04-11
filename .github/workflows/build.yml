@@ -32,7 +32,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Deploy to gh-pages
-      uses: JamesIves/github-pages-deploy-action@4.0.0
+      uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
         folder: dist
