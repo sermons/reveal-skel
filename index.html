@@ -129,11 +129,11 @@ class BST:
         <span class="links">
           <a href="reveal-skel.pdf">
             <i class="fas fa-file-pdf"></i></a>
-          <a href="https://github.com/sermons/reveal-skel/actions/runs/737275552">
+          <a href="https://github.com/sermons/reveal-skel/actions/runs/737315913">
             <i class="fas fa-hammer"></i></a>
         </span>
         <span class="commit">
-          <a href="https://github.com/sermons/reveal-skel/commit/9a8115a">9a8115a</a>
+          <a href="https://github.com/sermons/reveal-skel/commit/8e6784f">8e6784f</a>
 	</span>
       </div>
 
@@ -167,6 +167,9 @@ class BST:
     </script>
 
     <script>
+      mpkey = Reveal().getQueryHash().s || null
+      mpdep = 'js/reveal-multiplex/' + (mpkey ? 'master' : 'client') + '.js'
+
       Reveal.initialize({
         display: 'flex',
         maxScale: 4.0,
@@ -186,14 +189,13 @@ class BST:
         multiplex: {
           url: 'https://mp.seanho.com/',
           id : '22bc761ffc97809b',
-          secret: Reveal().getQueryHash().s || null
+          secret: mpkey
         },
 
         plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
 
         dependencies: [
-          { src: 'https://raw.githubusercontent.com/reveal/multiplex/master/' + 
-		  Reveal().getQueryHash().s ? 'master.js' : 'client.js', async:true }
+          { src: mpdep, async:true }
         ]
       });
     </script>
