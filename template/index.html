@@ -67,6 +67,9 @@
     </script>
 
     <script>
+      mpkey = Reveal().getQueryHash().s || null
+      mpdep = 'js/reveal-multiplex/' + (mpkey ? 'master' : 'client') + '.js'
+
       Reveal.initialize({
         display: 'flex',
         maxScale: 4.0,
@@ -86,14 +89,13 @@
         multiplex: {
           url: '<%= pkg.config.multiplex.url %>',
           id : '<%= pkg.config.multiplex.id  %>',
-          secret: Reveal().getQueryHash().s || null
+          secret: mpkey
         },
 
         plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
 
         dependencies: [
-          { src: 'https://raw.githubusercontent.com/reveal/multiplex/master/' + 
-		  Reveal().getQueryHash().s ? 'master.js' : 'client.js', async:true }
+          { src: mpdep, async:true }
         ]
       });
     </script>

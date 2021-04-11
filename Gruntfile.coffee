@@ -19,8 +19,8 @@ module.exports = (grunt) ->
             return grunt.template.process content
       plugin:
         expand: true
-        flatten: true
-        src: 'node_modules/reveal.js/plugin/notes/*'
+        cwd: 'node_modules'
+        src: 'reveal-multiplex/*.js'
         dest: 'dist/js/'
 
     sass:
