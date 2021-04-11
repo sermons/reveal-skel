@@ -29,7 +29,7 @@
     "slides": [
       "sample.md"
     ],
-    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0",
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0",
     "mathjax": "https://cdn.jsdelivr.net/npm/mathjax@2",
     "css": [
       {
@@ -45,8 +45,8 @@
         "integrity": "sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css",
-        "integrity": "sha256-OxiHrn+gXudPDHxTvXiQzeFjZU/FllSSPmOOYAZ1O/g="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css",
+        "integrity": "sha512-zu0eodDPCBAZf1vnIgwZ6qchMBt1xqgGkS9vBjVmunoH8pU7cc9OQKBiSQCclpvqySupy9Y1pLZc87VB40G4Sw=="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css",
@@ -63,21 +63,19 @@
         "integrity": "sha512-4qko7Jy+TE0yur/aXuQrVCb3ts9dtKqI3zTaGJ89o6iOk+DMlyaTgwmeGYqAZ1llKwFD99jWjXesrFsNp0ZUeA=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js",
-        "integrity": "sha256-pv4AarTAzSO6lz+bbMPwmV29XMjkzmFOn601b2pWqXE="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js",
+        "integrity": "sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ=="
       },
       {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.1/marked.min.js",
         "integrity": "sha512-pjhyz9DR7D4w90mc3iiAjhSRSmVrF3egxvfbOO6948qG0GACeOVpnP+xWEm7ihN5m1rg8tEHKRBhRrYEGhIR6Q=="
-      },
-      {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/markdown/markdown.min.js",
-        "integrity": "sha256-p6zZf7+dsrD1lcLQCXRgmXAAMyr9pWWCP4a9KfB0klE="
       }
     ],
     "plugins": [
+      "markdown/markdown.min.js",
+      "highlight/highlight.min.js",
       "math/math.min.js",
-      "highlight/highlight.min.js"
+      "notes/notes.min.js"
     ]
   },
   "license": "CC-BY-SA-4.0",
@@ -85,7 +83,7 @@
   "dependencies": {
     "highlight.js": "^10.7.2",
     "marked": "^2.0.1",
-    "reveal.js": "^3.8.0",
+    "reveal.js": "^4.1.0",
     "socket.io": "^4.0.1"
   },
   "devDependencies": {

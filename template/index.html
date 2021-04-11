@@ -55,6 +55,10 @@
     <script src="<%= js.src %>" integrity="<%= js.integrity %>" crossorigin="anonymous"></script>
     <% } ) %>
 
+    <% pkg.config.plugins.forEach( function(js) { %>
+    <script src="<%= pkg.config.reveal + "/plugin/" + js %>" crossorigin="anonymous"></script>
+    <% } ) %>
+
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         SVG: { scale: 77 },
@@ -82,18 +86,17 @@
         multiplex: {
           url: '<%= pkg.config.multiplex.url %>',
           id : '<%= pkg.config.multiplex.id  %>',
-          secret: Reveal.getQueryHash().s || null
+          secret: Reveal().getQueryHash().s || null
         },
 
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+
         dependencies: [
-          { src: Reveal.getQueryHash().s ? '<%= pkg.config.reveal %>/plugin/multiplex/master.min.js' : '<%= pkg.config.reveal %>/plugin/multiplex/client.min.js', async:true }
+          { src: 'https://raw.githubusercontent.com/reveal/multiplex/master/' + 
+		  Reveal().getQueryHash().s ? 'master.js' : 'client.js', async:true }
         ]
       });
     </script>
-
-    <% pkg.config.plugins.forEach( function(js) { %>
-    <script src="<%= pkg.config.reveal + "/plugin/" + js %>" crossorigin="anonymous"></script>
-    <% } ) %>
     <script src="js/notes.js"></script>
 
     <script>
