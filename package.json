@@ -59,10 +59,6 @@
         "integrity": "sha512-s+tOYYcC3Jybgr9mVsdAxsRYlGNq4mlAurOrfNuGMQ/SCofNPu92tjE7YRZCsdEtWL1yGkqk15fU/ark206YTg=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js",
-        "integrity": "sha512-4qko7Jy+TE0yur/aXuQrVCb3ts9dtKqI3zTaGJ89o6iOk+DMlyaTgwmeGYqAZ1llKwFD99jWjXesrFsNp0ZUeA=="
-      },
-      {
         "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js",
         "integrity": "sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ=="
       },
@@ -83,9 +79,8 @@
   "dependencies": {
     "highlight.js": "^10.7.2",
     "marked": "^2.0.1",
-    "reveal-multiplex": "^0.1.0",
     "reveal.js": "^4.1.0",
-    "socket.io": "^4.0.1"
+    "socket.io-client": "^4.0.1"
   },
   "devDependencies": {
     "coffeescript": "^2.5.1",

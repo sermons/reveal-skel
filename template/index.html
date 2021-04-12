@@ -59,6 +59,8 @@
     <script src="<%= pkg.config.reveal + "/plugin/" + js %>" crossorigin="anonymous"></script>
     <% } ) %>
 
+    <script src="lib/socket.io/socket.io.min.js"></script>
+
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         SVG: { scale: 77 },
@@ -68,7 +70,7 @@
 
     <script>
       mpkey = Reveal().getQueryHash().s || null
-      mpdep = 'js/reveal-multiplex/' + (mpkey ? 'master' : 'client') + '.js'
+      mpdep = '<%= pkg.config.multiplex.url %>' + (mpkey ? 'master' : 'client') + '.js'
 
       Reveal.initialize({
         display: 'flex',

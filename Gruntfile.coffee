@@ -19,9 +19,9 @@ module.exports = (grunt) ->
             return grunt.template.process content
       plugin:
         expand: true
-        cwd: 'node_modules'
-        src: 'reveal-multiplex/*.js'
-        dest: 'dist/js/'
+        flatten: true
+        src: 'node_modules/socket.io-client/dist/*'
+        dest: 'dist/lib/socket.io/'
 
     sass:
       options:
