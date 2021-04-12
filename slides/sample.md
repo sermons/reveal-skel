@@ -20,7 +20,8 @@ Six underscores create a horizontal rule in the notes
 
 ---
 <!-- .slide: data-background="white" -->
-# Opening **Question**
+# Opening <br> **Question**
+<!-- .element: class="r-fit-text" -->
 
 ---
 <!-- .slide: <%= bg("unsplash-Jztmx9yqjBw-stars.jpg") %> id="outline" class="outline" -->
