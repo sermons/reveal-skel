@@ -10,11 +10,13 @@
 # To force 'travis-ci.com' endpoint, use '--com'
 
 # defaults
+opts="--com"
 github_key=""
 
 # config can override defaults
 CONF=$HOME/.travis-key.conf
 [ -r "$CONF" ] && . "$CONF"
 
-travis enable $@
-travis env set github_key "$github_key" -p $@
+travis sync $opts
+travis enable $opts $@
+travis env set github_key "$github_key" -p $opts $@
