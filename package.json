@@ -79,7 +79,7 @@
   },
   "devDependencies": {
     "coffeescript": "^2.5.1",
-    "decktape": "^3.1.0",
+    "decktape": "^3.2.0",
     "grunt": "^1.4.1",
     "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-copy": "^1.0.0",
