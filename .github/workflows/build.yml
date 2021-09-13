@@ -14,8 +14,10 @@ jobs:
     steps:
     - name: Checkout repo from Github
       uses: actions/checkout@v2
-    - name: Install Ubuntu packages
+    - name: Update package list
       run: sudo apt update
+    - name: Install gs
+      run: sudo apt install ghostscript
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
