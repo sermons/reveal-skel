@@ -34,15 +34,15 @@
     "css": [
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css",
-        "integrity": "sha256-CuUPKpitgFmSNQuPDL5cEfPOOJT/+bwUlhfumDJ9CI4="
+        "integrity": "sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.min.css",
-        "integrity": "sha256-pIAzc/BIIo/hSvtNEDIiMTBtR9EfK3COmnH2pt8cPDY="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css",
+        "integrity": "sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/brands.min.css",
-        "integrity": "sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css",
+        "integrity": "sha512-8Jp5PI7qKEn304XONokQQRgiu/1P9kTBlvpLc7zRukkTBYGKt6z4CkwJUJhCwwWYnjSdxJcGqW9ifT7ZxPNgbg=="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css",
