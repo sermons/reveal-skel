@@ -29,7 +29,7 @@
     "slides": [
       "sample.md"
     ],
-    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0",
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2",
     "mathjax": "https://cdn.jsdelivr.net/npm/mathjax@2",
     "css": [
       {
@@ -45,8 +45,8 @@
         "integrity": "sha256-wfbbsQFYKnizQi/WLPXS3wVDu0Dpi2yUQpZBDsb2H1s="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css",
-        "integrity": "sha512-zu0eodDPCBAZf1vnIgwZ6qchMBt1xqgGkS9vBjVmunoH8pU7cc9OQKBiSQCclpvqySupy9Y1pLZc87VB40G4Sw=="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css",
+        "integrity": "sha512-WFGU7IgfYR0dq5aORzbD+NApAXdExNZFb7LaoO8olYImBW/iZxAwjKEuT+oYcFR6gOd+DAFssq/icMn8YVbQxQ=="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css",
@@ -59,8 +59,8 @@
         "integrity": "sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.js",
-        "integrity": "sha512-Xu/cezKABTI81MGnaBm64vdiS7XkttHeYGOgr2Mdga0bTplSBGongLq2lhK2HwL79wefKM0u4uTCLD0ha1sRzQ=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js",
+        "integrity": "sha512-K7P1+dtPriNNHlE4aJr+JKx1X6R0wvy24QBqL2CxaHc4XdkQjrH2t2FCrgoxZGMh6s1TgigNLEdrWa6NJra6Zg=="
       }
     ],
     "plugins": [
