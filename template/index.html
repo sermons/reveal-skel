@@ -70,7 +70,7 @@
 
     <script>
       mpkey = Reveal().getQueryHash().s || null
-      mpdep = '<%= pkg.config.multiplex.url %>' + (mpkey ? 'master' : 'client') + '.js'
+      mpdep = 'https://raw.githack.com/reveal/multiplex/master/' + (mpkey ? 'master' : 'client') + '.js'
 
       Reveal.initialize({
         display: 'flex',
