@@ -33,7 +33,7 @@
     "mathjax": "https://cdn.jsdelivr.net/npm/mathjax@2",
     "css": [
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css",
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css",
         "integrity": "sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
       },
       {
