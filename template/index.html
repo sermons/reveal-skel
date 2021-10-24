@@ -41,15 +41,13 @@
         <span class="links">
           <a href="<%= pkg.shortname %>.pdf">
             <i class="fas fa-file-pdf"></i></a>
+	  <a onclick='Reveal.getPlugin("notes").open()'>
+	    <i class="fas fa-comment"></i></a>
           <a href="https://github.com/<%= pkg.repository %>/actions/runs/<%= process.env.GITHUB_RUN_ID %>">
             <i class="fas fa-hammer"></i></a>
         </span>
         <span class="commit">
           <a href="https://github.com/<%= pkg.repository %>/commit/<%= pkg.commit %>"><%= pkg.commit %></a>
-	</span>
-	<span class="actions">
-	  <a onclick='Reveal.getPlugin("notes").open()'>
-	  <i class="fas fa-comment"></i></a>
 	</span>
       </div>
 

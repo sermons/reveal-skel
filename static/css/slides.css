@@ -111,7 +111,7 @@ section[data-background-image],
 #header { top: 0.5em }
 #footer { bottom: 0.5em }
 
-#footer .links { margin: 0 1em }
+#footer .links a { padding: 0 0.5em }
 
 #footer .commit {
   font-size: 0.75em;
