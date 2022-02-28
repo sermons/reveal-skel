@@ -29,7 +29,7 @@
     "slides": [
       "sample.md"
     ],
-    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2",
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0",
     "mathjax": "https://cdn.jsdelivr.net/npm/mathjax@2",
     "css": [
       {
@@ -45,8 +45,8 @@
         "integrity": "sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css",
-        "integrity": "sha512-WFGU7IgfYR0dq5aORzbD+NApAXdExNZFb7LaoO8olYImBW/iZxAwjKEuT+oYcFR6gOd+DAFssq/icMn8YVbQxQ=="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.css",
+        "integrity": "sha512-e3dnmFe5hH2bJx1MvUU3PFToGVQ2xykp/VGERCkuh4lTGMJ5QuxKFRIwix8DfnfkavwJiL6rehb9e1d6mFLwlg=="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css",
@@ -59,8 +59,8 @@
         "integrity": "sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.js",
-        "integrity": "sha512-K7P1+dtPriNNHlE4aJr+JKx1X6R0wvy24QBqL2CxaHc4XdkQjrH2t2FCrgoxZGMh6s1TgigNLEdrWa6NJra6Zg=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.js",
+        "integrity": "sha512-m6ShsCUzCQmgDHleTy2FbuzCPKnSOOypMBALE6LT/q858WxkGMJLajB5Obw+BT8C3mIIoBfEM5F+G5/Eemixfw=="
       }
     ],
     "plugins": [
@@ -74,7 +74,7 @@
   "private": true,
   "dependencies": {
     "highlight.js": "^11.3.1",
-    "reveal.js": "^4.2.0",
+    "reveal.js": "^4.3.0",
     "socket.io-client": "^4.4.1"
   },
   "devDependencies": {
