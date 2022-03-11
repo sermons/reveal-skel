@@ -63,13 +63,6 @@
 
     <script src="lib/socket.io/socket.io.min.js"></script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        SVG: { scale: 77 },
-	showMathMenu: false
-      });
-    </script>
-
     <script>
       mpkey = Reveal().getQueryHash().s || null
       mpdep = 'https://raw.githack.com/reveal/multiplex/master/' + (mpkey ? 'master' : 'client') + '.js'
@@ -85,18 +78,13 @@
           smartypants: true
         },
 
-        math: {
-          mathjax: '<%= pkg.config.mathjax %>',
-          config: 'AM_SVG'
-        },
-
         multiplex: {
           url: '<%= pkg.config.multiplex.url %>',
           id : '<%= pkg.config.multiplex.id  %>',
           secret: mpkey
         },
 
-        plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ],
 
         dependencies: [
 	  (mpkey == 'none') ? null : { src: mpdep, async:true }

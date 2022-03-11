@@ -30,7 +30,6 @@
       "sample.md"
     ],
     "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0",
-    "mathjax": "https://cdn.jsdelivr.net/npm/mathjax@2",
     "css": [
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css",
