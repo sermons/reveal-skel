@@ -131,11 +131,11 @@ class BST:
             <i class="fas fa-file-pdf"></i></a>
 	  <a onclick='Reveal.getPlugin("notes").open()'>
 	    <i class="fas fa-comment"></i></a>
-          <a href="https://github.com/sermons/reveal-skel/actions/runs/1970394232">
+          <a href="https://github.com/sermons/reveal-skel/actions/runs/1971127860">
             <i class="fas fa-hammer"></i></a>
         </span>
         <span class="commit">
-          <a href="https://github.com/sermons/reveal-skel/commit/135ad16">135ad16</a>
+          <a href="https://github.com/sermons/reveal-skel/commit/37b8afd">37b8afd</a>
 	</span>
       </div>
 
@@ -159,13 +159,6 @@ class BST:
 
     <script src="lib/socket.io/socket.io.min.js"></script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        SVG: { scale: 77 },
-	showMathMenu: false
-      });
-    </script>
-
     <script>
       mpkey = Reveal().getQueryHash().s || null
       mpdep = 'https://raw.githack.com/reveal/multiplex/master/' + (mpkey ? 'master' : 'client') + '.js'
@@ -181,18 +174,13 @@ class BST:
           smartypants: true
         },
 
-        math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2',
-          config: 'AM_SVG'
-        },
-
         multiplex: {
           url: 'https://mp.seanho.com/',
           id : '22bc761ffc97809b',
           secret: mpkey
         },
 
-        plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ],
 
         dependencies: [
 	  (mpkey == 'none') ? null : { src: mpdep, async:true }
