@@ -2,8 +2,7 @@
 ## A Template for Presentations in [Reveal.js](https://github.com/hakimel/reveal.js/)
 
 [![Build status](https://github.com/sermons/reveal-skel/actions/workflows/build.yml/badge.svg)](https://github.com/sermons/reveal-skel/actions/workflows/build.yml)
-[![David](https://img.shields.io/david/sermons/reveal-skel)](https://david-dm.org/sermons/reveal-skel)
-[![David (dev)](https://img.shields.io/david/dev/sermons/reveal-skel)](https://david-dm.org/sermons/reveal-skel?type=dev)
+![Dependency check](https://img.shields.io/librariesio/github/sermons/reveal-skel)
 
 Template presentation: [reveal-skel](https://github.com/sermons/reveal-skel)
 
