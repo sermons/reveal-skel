@@ -3,8 +3,7 @@
 ## A template for Reveal.js-based presentations
 
 [![Build status](https://github.com/sermons/reveal-skel/actions/workflows/build.yml/badge.svg)](https://github.com/sermons/reveal-skel/actions/workflows/build.yml)
-[![David](https://img.shields.io/david/sermons/reveal-skel)](https://david-dm.org/sermons/reveal-skel)
-[![David (dev)](https://img.shields.io/david/dev/sermons/reveal-skel)](https://david-dm.org/sermons/reveal-skel?type=dev)
+![Dependency check](https://img.shields.io/librariesio/github/sermons/reveal-skel)
 
 [(open master view)](http://reveal-skel.seanho.com/?s=45ba034647cea150 "ref")
 
