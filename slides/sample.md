@@ -29,7 +29,7 @@ Six underscores create a horizontal rule in the notes
 1. Point *Two* 
 1. Point *Three* 
 
-`$$ hat(f)(omega) = int\_-oo^oo f(x)e^(-2pi x omega) dx $$`
+`$$ \hat{f}(\omega) = \int_{-\infty}^\infty f(x)e^{-2\pi x \omega} \,dx $$`
 
 ******
 <!-- six stars create a vertical slide -->
