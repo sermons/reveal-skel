@@ -4,7 +4,7 @@
 
 [![Build status](https://github.com/sermons/reveal-skel/actions/workflows/build.yml/badge.svg)](https://github.com/sermons/reveal-skel/actions/workflows/build.yml)
 ![Dependency check](https://img.shields.io/librariesio/github/sermons/reveal-skel)
-
+<br>
 [(open master view)](http://reveal-skel.seanho.com/?s=45ba034647cea150 "ref")
 
 [Ryan Hutton](https://unsplash.com/photos/Jztmx9yqjBw "caption")
