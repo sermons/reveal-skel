@@ -44,8 +44,8 @@
         "integrity": "sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.css",
-        "integrity": "sha512-e3dnmFe5hH2bJx1MvUU3PFToGVQ2xykp/VGERCkuh4lTGMJ5QuxKFRIwix8DfnfkavwJiL6rehb9e1d6mFLwlg=="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css",
+        "integrity": "sha512-ITH3NSfntO7uI5n+BnxGNXpzDUoOsmAXuG37UDONLxNYIdc0EBBOOQ1xyc+t9ag9ETSuBXFApx+Rod0uURfDYw=="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css",
@@ -58,8 +58,8 @@
         "integrity": "sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.0/reveal.min.js",
-        "integrity": "sha512-m6ShsCUzCQmgDHleTy2FbuzCPKnSOOypMBALE6LT/q858WxkGMJLajB5Obw+BT8C3mIIoBfEM5F+G5/Eemixfw=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js",
+        "integrity": "sha512-131e3mIrDAyUD075SVzvIjS0g97uDg0+/qAobDHd++h+lgFi4z88DVOpidm06jpb+0PzK4kcm9w79r6EHV0SkA=="
       }
     ],
     "plugins": [
@@ -73,7 +73,7 @@
   "private": true,
   "dependencies": {
     "highlight.js": "^11.4.0",
-    "reveal.js": "^4.3.0",
+    "reveal.js": "^4.3.1",
     "socket.io-client": "^4.4.1"
   },
   "devDependencies": {
