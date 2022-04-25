@@ -77,7 +77,7 @@
     "socket.io-client": "^4.4.1"
   },
   "devDependencies": {
-    "coffeescript": "^2.6.1",
+    "coffeescript": "^2.7.0",
     "decktape": "^3.4.1",
     "grunt": "^1.5.2",
     "grunt-contrib-connect": "^3.0.0",
