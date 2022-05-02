@@ -74,10 +74,10 @@
   "dependencies": {
     "highlight.js": "^11.5.0",
     "reveal.js": "^4.3.1",
-    "socket.io-client": "^4.4.1"
+    "socket.io-client": "^4.5.0"
   },
   "devDependencies": {
-    "coffeescript": "^2.6.1",
+    "coffeescript": "^2.7.0",
     "decktape": "^3.4.1",
     "grunt": "^1.4.1",
     "grunt-contrib-connect": "^3.0.0",
