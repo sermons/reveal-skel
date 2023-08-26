@@ -7,6 +7,11 @@
   opacity: 60%;
 }
 
+/* Blur most of bg img */
+.reveal .slides {
+  backdrop-filter: blur(0.1rem)
+}
+
 /* Shade text if background image */
 section[data-background-image],
 .reveal section[data-background-image] h1,
