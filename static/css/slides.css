@@ -7,8 +7,8 @@
   opacity: 60%;
 }
 
-/* Blur most of bg img */
-.reveal .slides {
+/* Blur bg img behind slide content */
+section[data-background-image] {
   backdrop-filter: blur(0.1rem)
 }
 
@@ -72,7 +72,7 @@ section[data-background-image],
 /* Image captions */
 .reveal section .caption,
 .reveal section a[title="caption"] {
-  font-size: 14px;
+  font-size: 0.25rem;
   color: rgba(255,255,255,0.7);
   text-align: right;
   position: absolute;
