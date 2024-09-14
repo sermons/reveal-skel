@@ -6,7 +6,7 @@ on:
     - $default-branch
   workflow_dispatch:
 permissions:
-  content: read
+  contents: read
   pages: write
   id-token: write
 
