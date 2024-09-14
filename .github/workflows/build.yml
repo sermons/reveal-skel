@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repo from Github
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
     - name: Update package list
       run: sudo apt update
     - name: Install gs
       run: sudo apt install ghostscript
     - name: Configure node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
