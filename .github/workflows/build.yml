@@ -19,7 +19,7 @@ jobs:
     - name: Update package list
       run: sudo apt update
     - name: Install packages (gs, imagemagick)
-      run: sudo apt install ghostscript imagemagick)
+      run: sudo apt install ghostscript imagemagick
     - name: Configure node.js
       uses: actions/setup-node@v4
       with:
