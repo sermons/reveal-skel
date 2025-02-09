@@ -18,8 +18,8 @@ jobs:
       uses: actions/checkout@v4
     - name: Update package list
       run: sudo apt update
-    - name: Install gs
-      run: sudo apt install ghostscript
+    - name: Install packages (gs, imagemagick)
+      run: sudo apt install ghostscript imagemagick)
     - name: Configure node.js
       uses: actions/setup-node@v4
       with:
