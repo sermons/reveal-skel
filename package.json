@@ -83,7 +83,7 @@
     "grunt-contrib-connect": "^5.0.1",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-exec": "^3.0.0",
-    "grunt-sass": "^3.1.0",
+    "grunt-sass": "^4.0.0",
     "ini": "^5.0.0",
     "load-grunt-tasks": "^5.1.0",
     "sass": "^1.84.0",
