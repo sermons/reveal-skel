@@ -8,8 +8,8 @@
  */
 
 // Default mixins and settings -----------------
-@import "https://rawcdn.githack.com/hakimel/reveal.js/refs/heads/master/css/theme/template/mixins.scss";
-@import "https://rawcdn.githack.com/hakimel/reveal.js/refs/heads/master/css/theme/template/settings.scss";
+@import "template/mixins";
+@import "template/settings";
 // ---------------------------------------------
 
 // Include theme-specific fonts
@@ -49,8 +49,11 @@ $linkColor: #42affa;
 $linkColorHover: color.adjust( $linkColor, $lightness: 15% );
 $selectionBackgroundColor: color.adjust( $linkColor, $lightness: 25% );
 
+@include dark-bg-text-color(#fff);
+
 // Theme template ------------------------------
-@import "https://rawcdn.githack.com/hakimel/reveal.js/refs/heads/master/css/theme/template/theme.scss";
+// @include meta.load-css("template/theme");
+@import "template/theme";
 // ---------------------------------------------
 
 // Overrides
