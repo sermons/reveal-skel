@@ -8,8 +8,8 @@
  */
 
 // Default mixins and settings -----------------
-@import "https://raw.githubusercontent.com/hakimel/reveal.js/refs/heads/master/css/theme/template/mixins.scss";
-@import "https://raw.githubusercontent.com/hakimel/reveal.js/refs/heads/master/css/theme/template/settings.scss";
+@import "https://rawcdn.githack.com/hakimel/reveal.js/refs/heads/master/css/theme/template/mixins.scss";
+@import "https://rawcdn.githack.com/hakimel/reveal.js/refs/heads/master/css/theme/template/settings.scss";
 // ---------------------------------------------
 
 // Include theme-specific fonts
@@ -50,7 +50,7 @@ $linkColorHover: color.adjust( $linkColor, $lightness: 15% );
 $selectionBackgroundColor: color.adjust( $linkColor, $lightness: 25% );
 
 // Theme template ------------------------------
-@import "https://raw.githubusercontent.com/hakimel/reveal.js/refs/heads/master/css/theme/template/theme.scss";
+@import "https://rawcdn.githack.com/hakimel/reveal.js/refs/heads/master/css/theme/template/theme.scss";
 // ---------------------------------------------
 
 // Overrides
