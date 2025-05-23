@@ -5,7 +5,7 @@
   "keywords": [
     "slides"
   ],
-  "version": "2.5.15",
+  "version": "2.5.16",
   "author": "Sean Ho <seanho@seanho.com> (http://seanho.com)",
   "config": {
     "pretty_url": "",
@@ -29,7 +29,7 @@
     "slides": [
       "sample.md"
     ],
-    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0",
+    "reveal": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1",
     "css": [
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css",
@@ -44,8 +44,8 @@
         "integrity": "sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
       },
       {
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css",
-        "integrity": "sha512-0AUO8B5ll9y1ERV/55xq3HeccBGnvAJQsVGitNac/iQCLyDTGLUBMPqlupIWp/rJg0hV3WWHusXchEIdqFAv1Q=="
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css",
+        "integrity": "sha512-ZIo9ivf88U0L1S+0D/npMNTTkjez5B9cK5xIecN4IA2OmtbTNBbPAZo/0cBC195sq7FU7cEOVPwtit37f/+1rQ=="
       },
       {
         "href": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/atom-one-dark.min.css",
@@ -58,8 +58,8 @@
         "integrity": "sha512-6yoqbrcLAHDWAdQmiRlHG4+m0g/CT/V9AGyxabG8j7Jk8j3r3K6due7oqpiRMZqcYe9WM2gPcaNNxnl2ux+3tA=="
       },
       {
-        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js",
-        "integrity": "sha512-sMRSj1Ns64C2OE6VNS7WrV63OHW7dLAvi96CXRoy9AEe/tKF+868fhUJpc5ZKS166lwhe2ArCYjFitLJUY+VWA=="
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js",
+        "integrity": "sha512-lRYVCjdH7dCPCzqLL6eBn78p6WGK5pZxgYBgzTQfWlfX7yiZFLt/qHOMSETHUIz2aZIU/KbjwYHiMsmrcVgJnA=="
       }
     ],
     "plugins": [
@@ -73,7 +73,7 @@
   "private": true,
   "dependencies": {
     "highlight.js": "^11.10.0",
-    "reveal.js": "^5.1.0",
+    "reveal.js": "^5.2.1",
     "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
