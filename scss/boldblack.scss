@@ -1,3 +1,5 @@
+@use "sass:color";
+@use "sass:meta";
 /**
  * Black theme for reveal.js
  *
@@ -6,13 +8,13 @@
  */
 
 // Default mixins and settings -----------------
-@import "template/mixins";
-@import "template/settings";
+@import "https://raw.githubusercontent.com/hakimel/reveal.js/refs/heads/master/css/theme/template/mixins.scss";
+@import "https://raw.githubusercontent.com/hakimel/reveal.js/refs/heads/master/css/theme/template/settings.scss";
 // ---------------------------------------------
 
 // Include theme-specific fonts
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
-@import "_cwtexkai";
+@include meta.load-css("_cwtexkai");
 
 // Override theme settings (see template/settings.scss)
 $mainFont: 'Source Sans Pro', 'cwTeXKai', Helvetica, sans-serif;
@@ -44,11 +46,11 @@ $headingTextTransform: none;
 
 // Links
 $linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColorHover: color.adjust( $linkColor, $lightness: 15% );
+$selectionBackgroundColor: color.adjust( $linkColor, $lightness: 25% );
 
 // Theme template ------------------------------
-@import "template/theme";
+@import "https://raw.githubusercontent.com/hakimel/reveal.js/refs/heads/master/css/theme/template/theme.scss";
 // ---------------------------------------------
 
 // Overrides
