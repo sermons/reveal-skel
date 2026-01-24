@@ -74,7 +74,7 @@
   "dependencies": {
     "highlight.js": "^11.11.1",
     "reveal.js": "^5.2.1",
-    "socket.io-client": "^4.8.1"
+    "socket.io-client": "^4.8.3"
   },
   "devDependencies": {
     "coffeescript": "^2.7.0",
@@ -86,7 +86,7 @@
     "grunt-sass": "^4.0.1",
     "ini": "^6.0.0",
     "load-grunt-tasks": "^5.1.0",
-    "sass": "^1.97.2",
+    "sass": "^1.97.3",
     "qrcode": "^1.5.4"
   },
   "scripts": {
