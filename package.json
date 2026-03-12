@@ -73,7 +73,7 @@
   "private": true,
   "dependencies": {
     "highlight.js": "^11.11.1",
-    "reveal.js": "^5.2.1",
+    "reveal.js": "^6.0.0",
     "socket.io-client": "^4.8.3"
   },
   "devDependencies": {
