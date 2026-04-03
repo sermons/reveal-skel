@@ -86,7 +86,7 @@
     "grunt-sass": "^4.1.0",
     "ini": "^6.0.0",
     "load-grunt-tasks": "^5.1.0",
-    "sass": "^1.97.3",
+    "sass": "^1.98.0",
     "qrcode": "^1.5.4"
   },
   "scripts": {
